@@ -1,0 +1,135 @@
+<!--
+    文件描述：方案说明
+    创建人：卢信桥
+    创建时间：2020-11-02
+ -->
+<html>
+<head>
+    <title></title>
+    <style>
+        #main {
+            height: 100%;
+        }
+        #title {
+            display: none;
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 0.35rem;
+            text-align: center; line-height: 0.22rem;
+            font-size: 0.16rem; font-weight: bold;
+        }
+        #content {
+            padding: 0.21rem 0.13rem 0.2rem 0.13rem;
+            height: 100%;
+            overflow: auto;
+        }
+        .title {
+            height: 0.21rem;
+            line-height: 0.21rem;
+            font-size: 0.15rem; font-weight: bold;
+        }
+        .desc {
+            line-height: 0.2rem;
+            font-size: 0.13rem;
+            color: #666;
+        }
+        .subTitle {
+            position: relative;
+            padding-left: 0.09rem;
+        }
+        .subTitle>.mark {
+            position: absolute;
+            top: 0.07rem; left: 0;
+            width: 0.05rem; height: 0.05rem;
+            border-radius: 0.05rem;
+            background-color: #ff2c79;
+        }
+        .subTitle>.text {
+            line-height: 0.2rem;
+            font-size: 0.13rem;
+            color: #666;
+        }
+        .mt4 {
+            margin-top: 0.04rem;
+        }
+        .mt8 {
+            margin-top: 0.08rem;
+        }
+        .mt24 {
+            margin-top: 0.24rem;
+        }
+    </style>
+</head>
+<body>
+    <div id='main'>
+        <p id='title'>方案说明</p>
+        <div id='content'>
+            <!-- 动态添加内容 -->
+        </div>
+    </div>
+
+    <script type='text/javascript'>
+        $(function() {
+            CommonUtils.setHtmlTitle('方案说明')
+            initData()
+        })
+
+        /**
+            初始化数据
+            @param
+            @return
+         */
+        function initData() {
+            var requestUrl = ''
+            if (Router.getParameter('from') == 'independent') { //independent
+                requestUrl = request_path.independent+'/medical/wxck/course-desc'
+            } else if(Router.getParameter('from') == 'medical') {  //ha&hd
+                requestUrl = request_path.live+'medical/ck/course-desc'
+            } else { //lt01
+                requestUrl = request_path.rih+'/rih/wxck/course-desc'
+            }
+            AjaxUtils.ajax_new({
+                header: {
+                    REQUESTAPP: 1,
+                    REQUESTCLIENT: 4
+                },
+                type: 'POST',
+                url: requestUrl,
+                data: {
+                    tcUID: Router.getParameter('tcUID')
+                },
+                success: function(res, textStatus, jqXHR) {
+                    if (res.code == 200){
+                        $('#content').html(res.data.html_content)
+                        if ((CommonUtils.getBrowserType() == 'app')) {
+                            $('#title').show().css('padding-top', '0.13rem')
+                            $('#content').css('padding-top', '0.51rem')
+                        }
+                        initSkin()
+                    }
+                }
+            })
+        }
+        /**
+            初始化皮肤白色/黑暗
+            @param
+            @return
+         */
+        function initSkin() {
+            if (Router.getParameter('dark') == '1') {
+                $('#main').css('background-color', '#101026')
+                $('#title').css({
+                    'background-color': '#101026',
+                    'color': '#fff'
+                })
+                $('.title').css('color', '#f0f0f0')
+                $('.desc').css('color', '#9494a1')
+                $('.subTitle').css('color', '#666666')
+            } else {
+                $('#main').css('background-color', '#fff')
+                $('#title').css('background-color', '#fff')
+            }
+        }
+    </script>
+</body>
+</html>

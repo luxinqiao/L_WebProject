@@ -1,0 +1,472 @@
+<!--
+    文件描述：独立软件-盆底训练-新手必读（一代1+一代2+三代高端1+三代高端2+三代低端1+三代低端2）
+    创建人：卢信桥
+    创建时间：2021-03-22
+ -->
+<html>
+<head>
+    <title></title>
+    <style>
+        #main {
+            padding-bottom: 0.86rem;
+            background-color: #fff;
+        }
+        #banner>img {
+            width: 100%;
+        }
+        .title {
+            position: relative;
+            margin-left: 0.09rem;
+            height: 0.44rem;
+        }
+        .title>.no {
+            position: absolute;
+            top: 0; left: 0;
+            line-height: 0.44rem;
+            font-size: 0.36rem; font-weight: bold;
+            color: #ff2c79;
+            opacity: 0.29;
+        }
+        .title>.text {
+            position: absolute;
+            top: 0.18rem; left: 0.1rem;
+            line-height: 0.22rem;
+            font-size: 0.16rem; font-weight: bold;
+        }
+        .desc {
+            padding: 0 0.12rem;
+            line-height: 0.24rem;
+            font-size: 0.14rem;
+        }
+        .desc>.red {
+            font-size: 0.14rem;
+            color: #ff2c79;
+        }
+        .img {
+            display: block;
+            margin: auto 0.12rem;
+        }
+        .img>.left {
+            float: left;
+            width: 1.7rem; height: 100%;
+        }
+        .img>.right {
+            float: right;
+            width: 1.7rem; height: 100%;
+        }
+        .img>.full {
+            display: block;
+            margin: auto;
+            width: auto; height: 100%;
+        }
+        .subTitle {
+            position: relative;
+            margin-left: 0.12rem; padding-left: 0.08rem;
+        }
+        .subTitle>.mark {
+            position: absolute;
+            top: 0.09rem; left: 0;
+            width: 0.05rem; height: 0.05rem;
+            background: url(/src/assets/img/wireless/circle.png) no-repeat center center;
+            background-size: 0.05rem 0.05rem;
+        }
+        .subTitle>.text {
+            line-height: 0.24rem;
+            font-size: 0.14rem; font-weight: bold;
+            color: #ff2c79;
+        }
+        .bottom-item {
+            height: 0.29rem;
+            display: flex;
+            justify-content: center;
+        }
+        .bottom-item>span {
+            height: 0.29rem;
+            line-height: 0.29rem;
+            font-size: 0.13rem;
+        }
+        .bottom-item>img {
+            margin-left: 0.07rem;
+            width: 0.97rem; height: 0.29rem;
+        }
+        .bottom-item>a {
+            margin-left: 0.08rem;
+            height: 0.29rem;
+            line-height: 0.29rem;
+            font-size: 0.13rem;
+            color: #7694CF;
+        }
+        #try {
+            position: fixed;
+            bottom: 0.12rem; left: 0; right: 0;
+            margin: auto;
+            width: 3.51rem; height: 0.44rem;
+            text-align: center; line-height: 0.44rem;
+            border-radius: 0.23rem;
+            font-size: 0.16rem;
+            background-color: #ff2c79; color: #fff;
+        }
+        .mt6 {
+            margin-top: 0.06rem;
+        }
+        .mt8 {
+            margin-top: 0.08rem;
+        }
+        .mt12 {
+            margin-top: 0.12rem;
+        }
+        .mt24 {
+            margin-top: 0.24rem;
+        }
+        .mt30 {
+            margin-top: 0.3rem;
+        }
+    </style>
+</head>
+<body>
+    <div id='main'>
+        <div id='banner'></div>
+        <!-- 动态添加数据 -->
+        <div id='bottom' class='mt24'>
+            <p class='bottom-item'>
+                <span>如还有疑问请点击</span>
+                <img onclick='goAsk()' src='/src/assets/img/lt03/newer/bottom-contact.png'>
+            </p>
+            <p class='bottom-item mt12'>
+                <span>或拨打400电话咨询 </span>
+                <a href='tel:400-133-5668'>400-133-5668</a>
+            </p>
+        </div>
+        <div id='try' onclick='goTry()'>体验一下</div>
+    </div>
+
+    <script type='text/javascript'>
+        var from = Router.getParameter('from')
+        var previewImgs = []
+
+        $(function() {
+            $(window).scrollTop(sessionStorage.scrollTop)
+            sessionStorage.scrollTop = 0
+            CommonUtils.setHtmlTitle('新手必读')
+            CommonUtils.resetRem()
+            initPage()
+        })
+
+        function initPage() {
+            initBanner()
+            initCommonStep()
+            if (from == 'lt01-1') {
+                init_lt01_1_step()
+            } else if (from == 'lt01-2') {
+                init_lt01_2_step()
+            } else if (from == 'lt03high-1') {
+                init_lt03high_1_step()
+            } else if (from == 'lt03high-2') {
+                init_lt03high_2_step()
+            } else if (from == 'lt03low-1') {
+                init_lt03low_1_step()
+            } else if (from == 'lt03low-2') {
+                init_lt03low_2_step()
+            }
+            $('#main').append($('#bottom'))
+            $('#main').append($('#try'))
+        }
+
+        //初始化banner
+        function initBanner() {
+            var $img = $('<img>')
+            var src = ''
+            if (from == 'lt01-1' || from == 'lt01-2') {
+                src = '/src/assets/img/independent/newer/banner-lt01.png'
+            } else if (from == 'lt03high-1' || from == 'lt03high-2') {
+                src = '/src/assets/img/independent/newer/banner-lt03high.png'
+            } else if (from == 'lt03low-1' || from == 'lt03low-2') {
+                src = '/src/assets/img/independent/newer/banner-lt03low.png'
+            }
+            $img.prop('src', src).click(function() {
+                lookImg(src)
+            })
+            $('#banner').append($img)
+            previewImgs.push(src)
+        }
+        
+        //初始化共用步骤（步骤1+步骤2）
+        function initCommonStep() {
+            //01什么是盆底肌
+            var $step = $('<div class="step mt12"></div>')
+            addTitle($step, '01', '什么是盆底肌')
+            addDesc($step, 'mt6', '盆底肌是指像弹簧床一样承托和支撑膀胱、子宫、直肠等盆腔脏器的盆底底部肌肉，具有控制排尿排便，托起器官、维持阴道紧缩度和增进性快感等功能。')
+            addImg($step, 'mt8', '0.9', ['/src/assets/img/independent/newer/step1-1.png', '/src/assets/img/independent/newer/step1-2.png'])
+            $('#main').append($step)
+            //02如何找到盆底肌
+            var $step = $('<div class="step mt30"></div>')
+            addTitle($step, '02', '如何找到盆底肌')
+            addImg($step, 'mt6', '1.66', ['/src/assets/img/independent/newer/step2-1.png', '/src/assets/img/independent/newer/step2-2.png'])
+            addDesc($step, 'mt8', '<span class="red">注意：</span>日常生活中，不要刻意进行中断小便动作，养成这种不好的习惯或者在膀胱充盈的时候进行凯格尔运动，反而会削弱盆底肌的力量，甚至导致尿路感染。')
+            $('#main').append($step)
+        }
+        //添加步骤-一代1
+        function init_lt01_1_step() {
+            //03方案获取
+            var $step = $('<div class="step mt30"></div>')
+            addTitle($step, '03', '方案获取')
+            addImg($step, 'mt6', '1.44', ['/src/assets/img/independent/newer/lt01-1-step3.png'])
+            addDesc($step, 'mt8', '除内置方案外，您可选择通过盆底评估、电脑推送、顾问推送3种形式来获取更多训练方案。')
+            $('#main').append($step)
+            //04盆底评估
+            var $step4 = $('<div class="step mt30"></div>')
+            addTitle($step4, '04', '盆底评估')
+            addImg($step4, 'mt6', '1.04', ['/src/assets/img/independent/newer/lt01-1-step4.png'])
+            addDesc($step4, 'mt8', '选择盆底评估，填写您的个人信息，完成一系列盆底肌收缩和放松动作，通过相关参数分析，生成报告。')
+            $('#main').append($step4)
+            //05定制专属方案
+            var $step5 = $('<div class="step mt30"></div>')
+            addTitle($step5, '05', '定制专属方案')
+            addImg($step5, 'mt6', '1.44', ['/src/assets/img/independent/newer/lt01-1-step5.png'])
+            addDesc($step5, 'mt8', '选择您目前最严重的问题，将根据您的训练结果报告，结合澜渟大数据平台，为您定制只适合您的专属方案。')
+            $('#main').append($step5)
+            //06盆底康复训练
+            var $step6 = $('<div class="step mt30"></div>')
+            addTitle($step6, '06', '盆底康复训练')
+            addSubTitle($step6, 'mt6', '方案训练')
+            addDesc($step6, 'mt8', '方案训练会您的盆底肌状况及问题进行针对性治疗修复。训练有4种模式，分别是神经肌肉电刺激、肌电触发电刺激、凯格尔模板训练、多媒体游戏训练。')
+            addImg($step6, 'mt8', '1.01', ['/src/assets/img/independent/newer/lt01-1-step6-1.png'])
+            addDesc($step6, 'mt24', '建议您选择最近定制的专属方案进行训练，这是最适合您当前盆底肌状况的方案哦！')
+            addImg($step6, 'mt8', '1.44', ['/src/assets/img/independent/newer/lt01-1-step6-2.png'])
+            addDesc($step6, 'mt24', '方案要坚持训练，训练结束后，赶快进行盆底评估，看看自己的盆底肌力有没有提升，定制新的专属方案，继续下一轮方案训练哦！')
+            addImg($step6, 'mt8', '1.84', ['/src/assets/img/independent/newer/lt01-1-step6-3.png'])
+            addDesc($step6, 'mt12', '<span class="red">注：</span>如果您的医生或产康师为您推送了方案，也可遵从医生或产康师的要求训练。')
+            addSubTitle($step6, 'mt30', '自由训练')
+            addDesc($step6, 'mt8', '自由训练是开放式辅助训练，分为凯格尔训练和趣味游戏训练，跟着模板或游戏界面主动进行收缩放松训练，在方案治疗的同时可隔1天进行一次自由训练，提升治疗修复效果。')
+            addDesc($step6, 'mt8', '<span class="red">注：</span>如果您的肌力较差（快肌、慢肌肌力等级2级以下），自由训练难度较大，等到肌力提升后再做自由训练哦。')
+            $('#main').append($step6)
+        }
+        //添加步骤-一代2
+        function init_lt01_2_step() {
+            //03方案获取
+            var $step = $('<div class="step mt30"></div>')
+            addTitle($step, '03', '方案获取')
+            addImg($step, 'mt6', '1.44', ['/src/assets/img/independent/newer/lt01-2-step3.png'])
+            addDesc($step, 'mt8', '除内置方案外，您可选择通过盆底筛查、电脑推送、顾问推送3种形式来获取更多训练方案。')
+            $('#main').append($step)
+            //04盆底筛查
+            var $step4 = $('<div class="step mt30"></div>')
+            addTitle($step4, '04', '盆底筛查')
+            addImg($step4, 'mt6', '1.04', ['/src/assets/img/independent/newer/lt01-2-step4.png'])
+            addDesc($step4, 'mt8', '选择盆底筛查，填写您的个人信息，完成一系列盆底肌收缩和放松动作，通过相关参数分析，生成报告。')
+            $('#main').append($step4)
+            //05定制专属方案
+            var $step5 = $('<div class="step mt30"></div>')
+            addTitle($step5, '05', '定制专属方案')
+            addImg($step5, 'mt6', '1.44', ['/src/assets/img/independent/newer/lt01-2-step5.png'])
+            addDesc($step5, 'mt8', '选择您目前最严重的问题，将根据您的训练结果报告，结合澜渟大数据平台，为您定制只适合您的专属方案。')
+            $('#main').append($step5)
+            //06盆底康复训练
+            var $step6 = $('<div class="step mt30"></div>')
+            addTitle($step6, '06', '盆底康复训练')
+            addSubTitle($step6, 'mt6', '方案训练')
+            addDesc($step6, 'mt8', '方案训练会您的盆底肌状况及问题进行针对性治疗修复。训练有4种模式，分别是神经肌肉电刺激、肌电触发电刺激、凯格尔模板训练、多媒体游戏训练。')
+            addImg($step6, 'mt8', '1.01', ['/src/assets/img/independent/newer/lt01-2-step6-1.png'])
+            addDesc($step6, 'mt24', '建议您选择最近定制的专属方案进行训练，这是最适合您当前盆底肌状况的方案哦！')
+            addImg($step6, 'mt8', '1.44', ['/src/assets/img/independent/newer/lt01-2-step6-2.png'])
+            addDesc($step6, 'mt24', '方案要坚持训练，训练结束后，赶快进行盆底评估，看看自己的盆底肌力有没有提升，定制新的专属方案，继续下一轮方案训练哦！')
+            addImg($step6, 'mt8', '1.84', ['/src/assets/img/independent/newer/lt01-2-step6-3.png'])
+            addDesc($step6, 'mt12', '<span class="red">注：</span>如果您的医生或产康师为您推送了方案，也可遵从医生或产康师的要求训练。')
+            addSubTitle($step6, 'mt30', '自由训练')
+            addDesc($step6, 'mt8', '自由训练是开放式辅助训练，分为凯格尔训练和趣味游戏训练，跟着模板或游戏界面主动进行收缩放松训练，在方案治疗的同时可隔1天进行一次自由训练，提升治疗修复效果。')
+            addDesc($step6, 'mt8', '<span class="red">注：</span>如果您的肌力较差（快肌、慢肌肌力等级2级以下），自由训练难度较大，等到肌力提升后再做自由训练哦。')
+            $('#main').append($step6)
+        }
+        //添加步骤-三代高端1
+        function init_lt03high_1_step() {
+            //03方案获取
+            var $step = $('<div class="step mt30"></div>')
+            addTitle($step, '03', '方案获取')
+            addImg($step, 'mt6', '1.44', ['/src/assets/img/independent/newer/lt03high-1-step3.png'])
+            addDesc($step, 'mt8', '除内置方案外，您可选择通过盆底评估、紧致检测定制、电脑推送、顾问推送3种形式来获取更多训练方案。')
+            $('#main').append($step)
+            //04盆底评估
+            var $step4 = $('<div class="step mt30"></div>')
+            addTitle($step4, '04', '盆底评估')
+            addImg($step4, 'mt6', '1.04', ['/src/assets/img/independent/newer/lt03high-1-step4.png'])
+            addDesc($step4, 'mt8', '选择盆底评估，填写您的个人信息，完成一系列盆底肌收缩和放松动作，通过相关参数分析，生成报告。')
+            $('#main').append($step4)
+            //05紧致检测
+            var $step5 = $('<div class="step mt30"></div>')
+            addTitle($step5, '05', '紧致检测')
+            addImg($step5, 'mt6', '1.04', ['/src/assets/img/independent/newer/lt03high-1-step5.png'])
+            addDesc($step5, 'mt8', '选择紧致检测，填写您的个人信息，完成一系列盆底肌收缩和放松动作，通过相关参数分析，生成报告。')
+            $('#main').append($step5)
+            //06定制专属方案
+            var $step6 = $('<div class="step mt30"></div>')
+            addTitle($step6, '06', '定制专属方案')
+            addImg($step6, 'mt6', '1.44', ['/src/assets/img/independent/newer/lt03high-1-step6.png'])
+            addDesc($step6, 'mt8', '选择您目前最严重的问题，将根据您的训练结果报告，结合澜渟大数据平台，为您定制只适合您的专属方案。')
+            $('#main').append($step6)
+            //07盆底康复训练
+            var $step6 = $('<div class="step mt30"></div>')
+            addTitle($step6, '07', '盆底康复训练')
+            addSubTitle($step6, 'mt6', '方案训练')
+            addDesc($step6, 'mt8', '方案训练会您的盆底肌状况及问题进行针对性治疗修复。训练有4种模式，分别是神经肌肉电刺激、肌电触发电刺激、凯格尔模板训练、多媒体游戏训练。')
+            addImg($step6, 'mt8', '1.01', ['/src/assets/img/independent/newer/lt03high-1-step7-1.png'])
+            addDesc($step6, 'mt24', '建议您选择最近定制的专属方案进行训练，这是最适合您当前盆底肌状况的方案哦！')
+            addImg($step6, 'mt8', '1.44', ['/src/assets/img/independent/newer/lt03high-1-step7-2.png'])
+            addDesc($step6, 'mt24', '方案要坚持训练，训练结束后，赶快进行盆底评估，看看自己的盆底肌力有没有提升，定制新的专属方案，继续下一轮方案训练哦！')
+            addImg($step6, 'mt8', '1.84', ['/src/assets/img/independent/newer/lt03high-1-step7-3.png'])
+            addDesc($step6, 'mt12', '<span class="red">注：</span>如果您的医生或产康师为您推送了方案，也可遵从医生或产康师的要求训练。')
+            addSubTitle($step6, 'mt30', '自由训练')
+            addDesc($step6, 'mt8', '自由训练是开放式辅助训练，分为凯格尔训练和趣味游戏训练，跟着模板或游戏界面主动进行收缩放松训练，在方案治疗的同时可隔1天进行一次自由训练，提升治疗修复效果。')
+            addDesc($step6, 'mt8', '<span class="red">注：</span>如果您的肌力较差（快肌、慢肌肌力等级2级以下），自由训练难度较大，等到肌力提升后再做自由训练哦。')
+            $('#main').append($step6)
+        }
+        //添加步骤-三代高端2
+        function init_lt03high_2_step() {
+            //03方案获取
+            var $step = $('<div class="step mt30"></div>')
+            addTitle($step, '03', '方案获取')
+            addImg($step, 'mt6', '1.44', ['/src/assets/img/independent/newer/lt03high-2-step3.png'])
+            addDesc($step, 'mt8', '除内置方案外，您可选择通过盆底筛查、紧致检测定制、电脑推送、顾问推送3种形式来获取更多训练方案。')
+            $('#main').append($step)
+            //04盆底筛查
+            var $step4 = $('<div class="step mt30"></div>')
+            addTitle($step4, '04', '盆底筛查')
+            addImg($step4, 'mt6', '1.04', ['/src/assets/img/independent/newer/lt03high-2-step4.png'])
+            addDesc($step4, 'mt8', '选择盆底筛查，填写您的个人信息，完成一系列盆底肌收缩和放松动作，通过相关参数分析，生成报告。')
+            $('#main').append($step4)
+            //05紧致检测
+            var $step5 = $('<div class="step mt30"></div>')
+            addTitle($step5, '05', '紧致检测')
+            addImg($step5, 'mt6', '1.04', ['/src/assets/img/independent/newer/lt03high-2-step5.png'])
+            addDesc($step5, 'mt8', '选择紧致检测，填写您的个人信息，完成一系列盆底肌收缩和放松动作，通过相关参数分析，生成报告。')
+            $('#main').append($step5)
+            //06定制专属方案
+            var $step6 = $('<div class="step mt30"></div>')
+            addTitle($step6, '06', '定制专属方案')
+            addImg($step6, 'mt6', '1.44', ['/src/assets/img/independent/newer/lt03high-2-step6.png'])
+            addDesc($step6, 'mt8', '选择您目前最严重的问题，将根据您的训练结果报告，结合澜渟大数据平台，为您定制只适合您的专属方案。')
+            $('#main').append($step6)
+            //07盆底康复训练
+            var $step6 = $('<div class="step mt30"></div>')
+            addTitle($step6, '07', '盆底康复训练')
+            addSubTitle($step6, 'mt6', '方案训练')
+            addDesc($step6, 'mt8', '方案训练会您的盆底肌状况及问题进行针对性治疗修复。训练有4种模式，分别是神经肌肉电刺激、肌电触发电刺激、凯格尔模板训练、多媒体游戏训练。')
+            addImg($step6, 'mt8', '1.01', ['/src/assets/img/independent/newer/lt03high-2-step7-1.png'])
+            addDesc($step6, 'mt24', '建议您选择最近定制的专属方案进行训练，这是最适合您当前盆底肌状况的方案哦！')
+            addImg($step6, 'mt8', '1.44', ['/src/assets/img/independent/newer/lt03high-2-step7-2.png'])
+            addDesc($step6, 'mt24', '方案要坚持训练，训练结束后，赶快进行盆底评估，看看自己的盆底肌力有没有提升，定制新的专属方案，继续下一轮方案训练哦！')
+            addImg($step6, 'mt8', '1.84', ['/src/assets/img/independent/newer/lt03high-2-step7-3.png'])
+            addDesc($step6, 'mt12', '<span class="red">注：</span>如果您的医生或产康师为您推送了方案，也可遵从医生或产康师的要求训练。')
+            addSubTitle($step6, 'mt30', '自由训练')
+            addDesc($step6, 'mt8', '自由训练是开放式辅助训练，分为凯格尔训练和趣味游戏训练，跟着模板或游戏界面主动进行收缩放松训练，在方案治疗的同时可隔1天进行一次自由训练，提升治疗修复效果。')
+            addDesc($step6, 'mt8', '<span class="red">注：</span>如果您的肌力较差（快肌、慢肌肌力等级2级以下），自由训练难度较大，等到肌力提升后再做自由训练哦。')
+            $('#main').append($step6)
+        }
+        //添加步骤-三代低端1
+        function init_lt03low_1_step() {
+            //03方案获取
+            var $step = $('<div class="step mt30"></div>')
+            addTitle($step, '03', '方案获取')
+            addImg($step, 'mt6', '1.44', ['/src/assets/img/independent/newer/lt03low-1-step3.png'])
+            addDesc($step, 'mt8', '除内置方案外，您可选择通过盆底评估、电脑推送、顾问推送3种形式来获取更多训练方案。')
+            $('#main').append($step)
+            //04盆底评估
+            var $step4 = $('<div class="step mt30"></div>')
+            addTitle($step4, '04', '盆底评估')
+            addImg($step4, 'mt6', '1.04', ['/src/assets/img/independent/newer/lt03low-1-step4.png'])
+            addDesc($step4, 'mt8', '选择盆底评估，填写您的个人信息，完成一系列盆底肌收缩和放松动作，通过相关参数分析，生成报告。')
+            $('#main').append($step4)
+            var $step5 = $('<div class="step mt30"></div>')
+            //05定制专属方案
+            addTitle($step5, '05', '定制专属方案')
+            addImg($step5, 'mt6', '1.44', ['/src/assets/img/independent/newer/lt03low-1-step5.png'])
+            addDesc($step5, 'mt8', '选择您目前最严重的问题，将根据您的训练结果报告，结合澜渟大数据平台，为您定制只适合您的专属方案。')
+            $('#main').append($step5)
+            //06盆底康复训练
+            var $step6 = $('<div class="step mt30"></div>')
+            addTitle($step6, '06', '盆底康复训练')
+            addSubTitle($step6, 'mt6', '方案训练')
+            addDesc($step6, 'mt8', '方案训练会根据您的盆底肌状况及问题进行针对性治疗修复。您可根据影响自身最为严重的问题，选取方案开始训练。若您已拥有定制方案，建议您选择最近定制的专属方案进行训练，这是最适合您当前盆底肌状况的方案哦！')
+            addImg($step6, 'mt8', '1.44', ['/src/assets/img/independent/newer/lt03low-1-step6-1.png'])
+            addDesc($step6, 'mt24', '方案要坚持训练，训练结束后，赶快进行盆底评估，看看自己的盆底肌力有没有提升，定制新的专属方案，继续下一轮方案训练哦！')
+            addImg($step6, 'mt8', '1.84', ['/src/assets/img/independent/newer/lt03low-1-step6-2.png'])
+            addDesc($step6, 'mt12', '<span class="red">注：</span>如果您的医生或产康师为您推送了方案，也可遵从医生或产康师的要求训练。')
+            $('#main').append($step6)
+        }
+        //添加步骤-三代低端2
+        function init_lt03low_2_step() {
+            //03方案获取
+            var $step = $('<div class="step mt30"></div>')
+            addTitle($step, '03', '方案获取')
+            addImg($step, 'mt6', '1.44', ['/src/assets/img/independent/newer/lt03low-2-step3.png'])
+            addDesc($step, 'mt8', '除内置方案外，您可选择通过电脑推送、顾问推送2种形式来获取更多训练方案。')
+            $('#main').append($step)
+            //04盆底康复训练
+            var $step4 = $('<div class="step mt30"></div>')
+            addTitle($step4, '04', '盆底康复训练')
+            addSubTitle($step4, 'mt6', '方案训练')
+            addDesc($step4, 'mt8', '方案训练会根据您的盆底肌状况及问题进行针对性治疗修复。您可根据影响自身最为严重的问题，选取方案开始训练。')
+            addImg($step4, 'mt8', '1.44', ['/src/assets/img/independent/newer/lt03low-2-step4.png'])
+            addDesc($step4, 'mt24', '为了达到更好的训练效果，建议您坚持每天合理的训练，请勿过量训练。')
+            $('#main').append($step4)
+        }
+
+        //添加标题
+        function addTitle($dom, no, title) {
+            $dom.append('<div class="title"><span class="no">'+no+'</span><span class="text">'+title+'</span></div>')
+        }
+        //添加子标题
+        function addSubTitle($dom, topClass, sbuTitle) {
+            $dom.append('<div class="subTitle '+topClass+'"><span class="mark"></span><span class="text">'+sbuTitle+'</span></div>')
+        }
+        //添加描述
+        function addDesc($dom, topClass, desc) {
+            $dom.append('<div class="desc '+topClass+'">'+desc+'</div>')
+        }
+        //添加图片
+        function addImg($dom, topClass, height, imgs) {
+            var $imgDiv = $('<div class="img '+topClass+'" style="height: '+height+'rem;"></div>')
+            if (imgs.length == 1) {
+                var $img = $('<img class="full">').prop('src', imgs[0]).click(function() {
+                    lookImg(imgs[0])
+                })
+                $imgDiv.append($img)
+                previewImgs.push(imgs[0])
+            } else if (imgs.length == 2) {
+                var $leftImg = $('<img class="left">').prop('src', imgs[0]).click(function() {
+                    lookImg(imgs[0])
+                })
+                var $rightImg = $('<img class="right">').prop('src', imgs[1]).click(function() {
+                    lookImg(imgs[1])
+                })
+                $imgDiv.append($leftImg).append($rightImg)
+                previewImgs.push(imgs[0])
+                previewImgs.push(imgs[1])
+            }
+            $dom.append($imgDiv)
+        }
+
+        //页面跳转-训练顾问
+        function goAsk() {
+            CommonUtils.appFun(function() {
+                window.jsInterface.jumpToCustomer(JSON.stringify({type:'CSP0001'}))
+            }, function() {
+                window.webkit.messageHandlers.jumpToCustomer.postMessage({type:'CSP0001'})
+            })
+        }
+        //页面跳转-体验一下
+        function goTry() {
+            CommonUtils.appFun(function() {
+                window.jsInterface.tryIt()
+            }, function() {
+                window.webkit.messageHandlers.tryIt.postMessage(null)
+            })
+        }
+
+        //查看图片
+        function lookImg(src) {
+            sessionStorage.scrollTop = $(window).scrollTop()
+            CommonUtils.lookImg(src, previewImgs)
+        }
+    </script>
+</body>
+</html>

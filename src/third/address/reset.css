@@ -1,0 +1,11 @@
+.picker-choose {
+    background-color: #ef5e8f !important;
+}
+.picker-choose>.cancel {
+    left: 20px !important;
+    color: #fff !important;
+}
+.picker-choose>.confirm {
+    right: 20px !important;
+    color: #fff !important;
+}

@@ -1,0 +1,49 @@
+<!--
+    文件描述：百科-详情
+    创建人：卢信桥
+    创建时间：2020-08-05
+-->
+<html>
+<head>
+	<link rel='stylesheet' href='/src/assets/css/knowledge/detail.css?t=20200416'>
+</head>
+<body>
+	<div id='main' class='content'>
+        <div id='title'>
+            <img src='/src/assets/img/knowledge/common/back.png' onclick='back()' class='back_btn'>
+            <div>盆底百科</div>
+        </div>
+        <div class='question'>
+            <img src='' class='question_img'>
+            <div class='question_dec'></div>
+            <div class='question_edit' onclick='ask()'>
+                <img src='/src/assets/img/knowledge/detail/edit.png' class='question_edit_img'>
+                <div>编辑问题</div>
+            </div>
+        </div>
+        <div class='answer'>
+            <div class='no_answer'>
+                <img src='/src/assets/img/knowledge/detail/none.png'>
+                <div>正在为您寻找答案</div>
+            </div>
+        </div>
+        <div class='btn'>
+            <div class='btn_list btn_good' onclick='setGood()'>
+                <img src='/src/assets/img/knowledge/detail/nogood.png'>
+                <div>点赞</div>
+            </div>
+            <div class='btn_list btn_collect' onclick='setCollect()'>
+                <img src='/src/assets/img/knowledge/detail/nostart.png'>
+                <div>收藏</div>
+            </div>
+        </div>
+    </div>
+    <script type='text/javascript' src='/src/utils/CommonUtils.js?t=20200416'></script>
+	<script type='text/javascript'>
+        CommonUtils.loadCommon()
+        CommonUtils.appendScript('/src/third/oss/aliyun-oss-sdk.min.js?t=20200416')
+        CommonUtils.appendScript('/src/page/js/knowledge/poster.js?t=20200416')
+        CommonUtils.appendScript('/src/page/js/knowledge/detail.js?t=20200416')
+	</script>
+</body>
+</html>

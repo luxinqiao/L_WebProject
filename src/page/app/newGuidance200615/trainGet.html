@@ -1,0 +1,108 @@
+<!--
+ * 文件描述：新手指导（训练方案获取方式）
+ * 创建人：赵志银
+ * 创建时间：2020-06-15
+-->
+<html>
+<head>
+    <title>训练方案获取方式</title>
+    <link rel="stylesheet prefetch" href="./src/third/jquery/photoswipe/photoswipe.css">
+    <link rel="stylesheet prefetch" href="./src/third/jquery/photoswipe/default-skin.css">
+</head>
+<body>
+    <div class='content' style='padding-bottom: 30px;'>
+        <h2>训练方案获取方式</h2>
+        <p style="font-size: 14px;color: #999;">您需要知道的获取来源</p>
+        <p style='margin-top:20px;'>训练方案获取有四种方式：</p>
+        <div class='img_des' style='margin-top:20px;padding-bottom: 0;'>
+            <div class="roundNum">1</div>
+            <p>方式1</p>
+        </div>
+        <p style="text-align: center;color: #ef5e8f;font-weight: bold;padding-bottom: 12px;">进行盆底筛查/评估，定制专属方案</p>
+        <p>具体攻略详见
+            <span style='text-decoration:underline;color:#3333ff;' onclick='goCreenIntegrat()'>盆底筛查/评估</span>。
+        </p>
+        <br/>
+        <div class="my-gallery" data-pswp-uid="1" style='margin-bottom:30px;'>
+            <figure>
+                <div class="img-dv">
+                    <a href="./src/assets/img/newGuidance200615/trainGet/p1.png" data-size="702x480">
+                        <img src="./src/assets/img/newGuidance200615/trainGet/p1.png">
+                    </a>
+                </div>
+                <figcaption style="display:none;"></figcaption>
+                <div class='img_des' style='padding-bottom: 0;'>
+                    <div class="roundNum">2</div>
+                    <p>方式2</p>
+                </div>
+                <p style="text-align: center;color: #ef5e8f;font-weight: bold;padding-bottom: 12px;">咨询训练顾问，获取方案</p>
+                <p>打开澜渟APP，在澜渟首页点击并进入【盆底肌修复仪】页面，点击【咨询顾问】，描述您的问题，盆底康复专家会为您推荐合适的方案。</p>
+            </figure>
+            <figure>
+                <div class="img-dv">
+                    <a href="./src/assets/img/newGuidance200615/trainGet/p2.png" data-size="702x482">
+                        <img src="./src/assets/img/newGuidance200615/trainGet/p2.png">
+                    </a>
+                </div>
+                <figcaption style="display:none;"></figcaption>
+                <div class='img_des' style='padding-bottom: 0;'>
+                    <div class="roundNum">3</div>
+                    <p>方式3</p>
+                </div>
+                <p style="text-align: center;color: #ef5e8f;font-weight: bold;padding-bottom: 12px;">从麦澜德大设备接收方案</p>
+                <p>打开澜渟APP，在澜渟首页点击并进入【盆底肌修复仪】页面，点击【接收方案】，搜索麦澜德大设备，接收传输的方案。</p>
+            </figure>
+            <figure>
+                <div class="img-dv">
+                    <a href="./src/assets/img/newGuidance200615/trainGet/p3.png" data-size="704x482">
+                        <img src="./src/assets/img/newGuidance200615/trainGet/p3.png">
+                    </a>
+                </div>
+                <figcaption style="display:none;"></figcaption>
+                <div class='img_des' style='padding-bottom: 0;'>
+                    <div class="roundNum">4</div>
+                    <p>方式4</p>
+                </div>
+                <p style="text-align: center;color: #ef5e8f;font-weight: bold;padding-bottom: 12px;">咨询绑定的医生，获取方案</p>
+                <p>打开澜渟APP，在【发现】页面选择【我的医生】，向您绑定的医生描述您的问题，您的医生会为您推荐合适的方案。</p>
+            </figure>
+            <figure>
+                <div class="img-dv">
+                    <a href="./src/assets/img/newGuidance200615/trainGet/p4.png" data-size="704x484">
+                        <img src="./src/assets/img/newGuidance200615/trainGet/p4.png">
+                    </a>
+                </div>
+                <figcaption style="display:none;"></figcaption>
+                <p>温馨提示：</p>
+                <p>1）必须是麦澜德的设备，才可以传输方案到澜渟APP上哦；</p>
+                <p>2）接收麦澜德大设备传输的方案，手机连接的网络必须跟大设备在同一个网络下，否则接收不到方案哦。</p>
+                <p>注：部分型号不支持方式3和方式4，具体根据您所购买的设备型号配置决定。</p>
+                <p>通过上述4种方式获取的方案，可在【盆底肌修复仪页面】--【我的方案】模块下查看。</p>
+            </figure>
+            <figure>
+                <div class="img-dv" style="padding-bottom: 0;">
+                    <a href="./src/assets/img/newGuidance200615/trainGet/p5.png" data-size="702x482">
+                        <img src="./src/assets/img/newGuidance200615/trainGet/p5.png">
+                    </a>
+                </div>
+                <figcaption style="display:none;"></figcaption>
+            </figure>
+        </div>
+    </div>
+    <script src="./src/third/jquery/photoswipe/photoswipe.js"></script>
+    <script src="./src/third/jquery/photoswipe/photoswipe-ui-default.js"></script>
+    <script type='text/javascript' src='./src/utils/CommonUtils.js'></script>
+    <script type='text/javascript'>
+        CommonUtils.setHtmlTitle('训练方案获取方式');
+        /**
+            跳转--盆底肌筛查一体化
+            @param
+            @return
+        */
+        function goCreenIntegrat() {
+            CommonUtils.stopProp();
+            window.location.href = '/#/newGuidance200615/creenIntegrat'
+        }
+    </script>
+</body>
+</html>

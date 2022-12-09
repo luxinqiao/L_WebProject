@@ -1,0 +1,494 @@
+<!--
+    文件描述：方案准备
+    创建人：卢信桥
+    创建时间：2020-11-02
+ -->
+<html>
+<head>
+    <title></title>
+    <style>
+        #main {
+            position: relative;
+            padding: 0.52rem 0 0.7rem 0;
+        }
+        #head {
+            position: fixed; z-index: 98;
+            top: 0; left: 0; right: 0;
+            height: 0.52rem;
+            background-color: #fff9f5;
+        }
+        .head-logo {
+            position: absolute;
+            top: 0.07rem; left: 0.12rem;
+            width: 0.34rem; height: 0.35rem;
+        }
+        .head-title {
+            position: absolute;
+            top: 0.05rem; left: 0.55rem;
+            line-height: 0.22rem;
+            font-size: 0.15rem;
+            color: #ff2c79;
+        }
+        .head-desc {
+            position: absolute;
+            top: 0.25rem; left: 0.55rem;
+            line-height: 0.18rem;
+            font-size: 0.13rem;
+            color: #C79AAD;
+        }
+        .head-button {
+            position: absolute;
+            top: 0.1rem; right: 0.12rem;
+            width: 0.74rem; height: 0.28rem;
+            text-align: center; line-height: 0.28rem;
+            font-size: 0.12rem;
+            border-radius: 0.15rem;
+            background-color: #ff2c79; color: #fff;
+        }
+        #banner {
+            position: absolute; z-index: -1;
+            top: 0.52rem; left: 0; right: 0;
+            height: 2.24rem;
+        }
+        #banner>.banner-img {
+            position: absolute; z-index: 1;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+        }
+        #banner>.banner-title {
+            position: absolute; z-index: 2;
+            bottom: 0.44rem; left: 0.12rem;
+            width: 3rem;
+            line-height: 0.33rem;
+            font-size: 0.24rem; font-weight: bold;
+            color: #fff;
+        }
+        #trans {
+            display: none;
+            position: absolute;
+            top: 2.06rem; left: 0; right: 0;
+            height: 0.5rem;
+        }
+        #trans>.trans-button {
+            position: absolute;
+            top: 0; right: 0.12rem;
+            width: 0.76rem; height: 0.24rem;
+        }
+        #trans>.trans-descBg {
+            position: absolute; z-index: 1;
+            bottom: 0; right: 0.12rem;
+            width: 2.98rem; height: 0.23rem;
+        }
+        #trans>.trans-desc {
+            position: absolute; z-index: 2;
+            bottom: 0; right: 0.12rem;
+            width: 2.98rem; height: 0.2rem;
+            text-align: center; line-height: 0.2rem;
+            font-size: 0.12rem;
+            color: #fff;
+        }
+        #content {
+            margin-top: 2.06rem;
+            background-color: #fafafa;
+            border-radius: 0.1rem;
+        }
+        .content-head {
+            position: relative;
+            height: 0.81rem;
+            background-color: #fff;
+            border-radius: 0.1rem;
+        }
+        .content-head>.title {
+            position: absolute;
+            top: 0.15rem;
+            width: 0.71rem; height: 0.3rem;
+            text-align: center; line-height: 0.3rem;
+        }
+        .content-head>.title>.large {
+            font-size: 0.22rem; font-weight: bold;
+        }
+        .content-head>.title>.normal {
+            font-size: 0.12rem;
+        }
+        .content-head>.desc {
+            position: absolute;
+            top: 0.52rem;
+            width: 0.68rem; height: 0.17rem;
+            text-align: center; line-height: 0.17rem;
+            font-size: 0.12rem;
+            color: #999;
+        }
+        .content-head>.left {
+            left: 0.7rem;
+        }
+        .content-head>.right {
+            right: 0.7rem;
+        }
+        
+        .content-info {
+            margin-top: 0.1rem; padding: 0.12rem 0.12rem 0 0.12rem;
+            background-color: #fff;
+        }
+        .content-info>.title {
+            height: 0.21rem;
+            line-height: 0.21rem;
+            font-size: 0.15rem; font-weight: bold;
+        }
+        .content-info>.desc {
+            position: relative;
+            margin-top: 0.05rem;
+        }
+        .content-info>.desc>.text {
+            line-height: 0.22rem;
+            font-size: 0.13rem;
+            color: #666;
+        }
+        .content-info>.desc>.red {
+            position: absolute;
+            bottom: 0; right: 0;
+            height: 0.22rem;
+            line-height: 0.22rem;
+            font-size: 0.13rem;
+            color: #ff2c79;
+        }
+        .content-project {
+            display: none;
+            padding: 0.24rem 0.12rem 0 0.12rem;
+            background-color: #fff;
+        }
+        .content-project>.title {
+            height: 0.21rem;
+            line-height: 0.21rem;
+            font-size: 0.15rem; font-weight: bold;
+        }
+        .content-project>.desc {
+            margin-top: 0.1rem;
+            box-shadow: 0 0 0.1rem #e5e5e5;
+            overflow: hidden;
+        }
+        .content-project>.desc>.subTitle {
+            padding: 0 0.12rem;
+            height: 0.4rem;
+            line-height: 0.4rem;
+            border-bottom: 0.01rem solid #f4f4f4;
+            font-size: 0.13rem;
+        }
+        .content-project>.desc>.item {
+            position: relative;
+            margin: 0.22rem 0.12rem 0.2rem 0.12rem;
+            height: 0.18rem;
+        }
+        .content-project>.desc>.item>.mark {
+            position: absolute;
+            top: 0.07rem; left: 0;
+            width: 0.05rem; height: 0.05rem;
+            border-radius: 0.06rem;
+            background-color: #ff2c79;
+        }
+        .content-project>.desc>.item>.text {
+            position: absolute;
+            top: 0; left: 0.1rem;
+            line-height: 0.18rem;
+            font-size: 0.13rem;
+        }
+        .content-project>.desc>.item>.time {
+            position: absolute;
+            top: 0; right: 0;
+            line-height: 0.18rem;
+            font-size: 0.13rem;
+        }
+        .content-train {
+            padding: 0.24rem 0.12rem 0 0.12rem;
+            background-color: #fff;
+        }
+        .content-train>.title {
+            height: 0.21rem;
+            line-height: 0.21rem;
+            font-size: 0.15rem; font-weight: bold;
+        }
+        .content-train>.desc {
+            margin-top: 0.08rem;
+            height: 0.22rem;
+            line-height: 0.22rem;
+            font-size: 0.14rem;
+        }
+        .content-train>.desc>.red {
+            font-size: 0.14rem;
+            color: #ff2c79;
+        }
+        .content-train>.desc>.count {
+            font-size: 0.14rem;
+        }
+        .content-train>.equip {
+            position: relative;
+            margin: 0.06rem auto 0 auto;
+            width: 3.51rem; height: 1.4rem;
+            background-color: #fafafa;
+        }
+        .content-train>.equip>.unAdd {
+            position: absolute;
+            top: 0.28rem; left: 0; right: 0;
+            margin: auto;
+            width: 0.62rem; height: 0.2rem;
+        }
+        .content-train>.equip>.unAdd.left {
+            left: 0.69rem; right: unset;
+            margin: 0;
+        }
+        .content-train>.equip>.unAdd.right {
+            left: unset; right: 0.69rem;
+            margin: 0;
+        }
+        .content-train>.equip>.unAdd>img {
+            position: absolute;
+            top: 0.03rem; left: 0;
+            width: 0.14rem; height: 0.14rem;
+        }
+        .content-train>.equip>.unAdd>span {
+            position: absolute;
+            top: 0; right: 0;
+            height: 0.2rem;
+            line-height: 0.2rem;
+            font-size: 0.14rem;
+            color: #666;
+        }
+        .content-train>.equip>button {
+            position: absolute;
+            top: 0.83rem; left: 0; right: 0;
+            margin: auto;
+            width: 1.2rem; height: 0.32rem;
+            line-height: 0.32rem;
+            border: 0.01rem solid #ff2c79; border-radius: 0.16rem;
+            font-size: 0.14rem;
+            color: #ff2c79; background-color: #fff;
+        }
+        .content-djp {
+            padding-top: 0.15rem;
+            background-color: #fff;
+        }
+        .content-djp>.title {
+            padding: 0 0.12rem;
+            line-height: 0.22rem;
+            font-size: 0.14rem;
+        }
+        .content-djp>.img {
+            display: block;
+            margin: 0.08rem auto 0 auto;
+            width: 3.51rem;
+        }
+        #button {
+            position: fixed; z-index: 98;
+            bottom: 0; left: 0; right: 0;
+            height: 0.55rem;
+            box-shadow: 0 -0.02rem 0.08rem 0 #f2f2f2;
+            background-color: #fff;
+        }
+        #button>button {
+            position: absolute;
+            top: 0; bottom: 0; left: 0; right: 0;
+            margin: auto;
+            width: 3.51rem; height: 0.44rem;
+            text-align: center; line-height: 0.44rem;
+            border-radius: 0.22rem;
+            font-size: 0.16rem;
+            background-color: #ff2c79; color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='main'>
+        <div id='head'>
+            <img class='head-logo' src='./src/assets/img/wireless/logo.png'>
+            <span class='head-title'>澜渟</span>
+            <span class='head-desc'>盆底肌修复 免费凯格尔运动</span>
+            <button class='head-button' onclick='openWrightin()'>下载App</button>
+        </div>
+        <div id='banner'>
+            <img class='banner-img'>
+            <span class='banner-title ellipsis'></span>
+        </div>
+        <div id='trans'>
+            <img class='trans-button' src='./src/assets/img/wireless/trans.png' onclick='openWrightin()'>
+            <img class='trans-descBg' src='./src/assets/img/wireless/transDesc.png'>
+            <p class='trans-desc'>本方案支持单机训练(可传输到设备中，脱离App训练)</p>
+        </div>
+        <div id='content'>
+            <div class='content-head'>
+                <p class='title left'>
+                    <span class='large time'></span>
+                    <span class='normal'>分钟</span>
+                </p>
+                <p class='desc left'>训练时长</p>
+                <p class='title right'>
+                    <span class='large count'></span>
+                    <span class='normal'>个</span>
+                </p>
+                <p class='desc right'>所需设备</p>
+            </div>
+            <div class='content-info'>
+                <div class='title'>方案说明</div>
+                <div class='desc'>
+                    <div class='text'></div>
+                    <span class='red' onclick='goProgramInfo()'>查看更多</span>
+                </div>
+            </div>
+            <div class='content-project'>
+                <div class='title'>训练项目</div>
+                <div class='desc'>
+                    <!-- 动态添加内容 -->
+                </div>
+            </div>
+            <div class='content-train'>
+                <div class='title'>训练方式</div>
+                <div class='desc'>设备选择：<font class='red'>必须选择添加</font> <font class='count'></font>个设备才可进入训练</div>
+                <div class='equip'>
+                    <!-- 动态添加内容 -->
+                    <button onclick='openWrightin()'>选择设备</button>
+                </div>
+            </div>
+            <div class='content-djp'>
+                <div class='title'></div>
+                <img class='img'>
+            </div>
+        </div>
+        <div id='button'>
+            <button onclick='openWrightin()'>我也要练</button>
+        </div>
+    </div>
+    
+    <script type='text/javascript' src='/src/utils/downloadApp.js?t=202012091602'></script>
+    <script type='text/javascript' src='/src/utils/openApp.js?t=202012091602'></script>
+    <script type='text/javascript'>
+        $(function() {
+            CommonUtils.resetRem()
+            CommonUtils.setHtmlTitle('方案准备')
+            initData()
+            initProject()
+        })
+
+        /**
+            初始化数据
+            @param
+            @return
+         */
+        function initData() {
+            AjaxUtils.ajax_new({
+                header: {
+                    REQUESTAPP: 1,
+                    REQUESTCLIENT: 4
+                },
+                type: 'POST',
+                url: request_path.rih+'/rih/wxck/course-prepare',
+                data: {
+                    tcUID: Router.getParameter('tcUID')
+                },
+                success: function(res, textStatus, jqXHR) {
+                    if (res.code == 200) {
+                        $('.banner-img').attr('src', res.data.image)
+                        $('.banner-title').text(res.data.name)
+                        if (res.data.plan_type == '3') { //1.产康方案 2.放松方案 3.传输方案 4.疗程方案
+                            $('#trans').show()
+                        }
+                        $('.content-head').children('.title').children('.time').text(res.data.minute)
+                        $('.content-head').children('.title').children('.count').text(res.data.device_num)
+                        res.data.detail = countRow(res.data.detail, 3) + '...'
+                        $('.content-info').children('.desc').children('.text').html(res.data.detail)
+                        $('.content-djp').children('.title').text(res.data.detail_djp)
+                        $('.content-djp').children('.img').attr('src', res.data.image_djp)
+                        $('.content-train').children('.desc').children('.count').text(res.data.device_num)
+                        if (res.data.device_num == 2) {
+                            var $unAddLeft = $('<div class="unAdd left"></div>')
+                            $unAddLeft.append('<img src="./src/assets/img/wireless/equip-add.png">')
+                            $unAddLeft.append('<span>未添加</span>')
+                            var $unAddRight = $('<div class="unAdd right"></div>')
+                            $unAddRight.append('<img src="./src/assets/img/wireless/equip-add.png">')
+                            $unAddRight.append('<span>未添加</span>')
+                            $('.content-train').children('.equip').prepend($unAddRight).prepend($unAddLeft)
+                        } else {
+                            var $unAdd = $('<div class="unAdd"></div>')
+                            $unAdd.append('<img src="./src/assets/img/wireless/equip-add.png">')
+                            $unAdd.append('<span>未添加</span>')
+                            $('.content-train').children('.equip').prepend($unAdd)
+                        }
+                    }
+                }
+            })
+        }
+
+        function countRow(detail, row) {
+            var currRow = 1, currIndex = 0
+            var getWidth = function () {
+                var width = $('.content-info').width()
+                if (currRow >= row) {
+                    return width - countWidth('...查看更多')
+                }
+                return width
+            }
+            for (var i=0; i<detail.length; i++) {
+                if (countWidth(detail.substring(currIndex, i+1)) > getWidth()) {
+                    currIndex = i
+                    if (currRow >= row) {
+                        return detail.substring(0, currIndex)
+                    } else {
+                        currRow++
+                    }
+                }
+            }
+            return ''
+        }
+        
+        function countWidth(detail) {
+            var $tmpSpan = $('<span style="display:none;font-size:0.13rem;"></span>').text(detail).appendTo('body')
+            var resultWidth = $tmpSpan.width()
+            $tmpSpan.remove()
+            return resultWidth
+        }
+
+        /**
+            初始化项目
+            @param
+            @return
+         */
+        function initProject() {
+            var project = decodeURIComponent(Router.getParameter('project'))
+            var arr = project.substr(1, project.length - 2).split(',')
+            if (arr.length > 2) {
+                $('.content-project').show()
+                var $desc = $('.content-project').find('.desc')
+                $desc.append('<p class="subTitle">本方案共分为'+arr.length/2+'个阶段</p>')
+                for (var i=0; i<arr.length/2; i++) {
+                    var $item = $('<p class="item"></p>')
+                    $item.append('<span class="mark"></span>')
+                    $item.append('<span class="text">'+decodeURI(arr[i*2])+'</span>')
+                    $item.append('<span class="time">'+decodeURI(arr[i*2+1])+'</span>')
+                    $desc.append($item)
+                }
+            }
+        }
+
+        /**
+            页面跳转-方案说明
+            @param
+            @return
+         */
+        function goProgramInfo() {
+            Router.jump('wireless/programInfo', '?tcUID='+Router.getParameter('tcUID'))
+        }
+        /**
+            打开澜渟App
+            @param
+            @return
+         */
+        function openWrightin() {
+            if ((CommonUtils.getBrowserType() == 'wechat')) {
+                Download_wechat('user')
+            } else {
+                openApp('lanting://',()=>{
+                    Download('user',()=>{})
+                },'inviteApp/downUser') 
+            }
+        }
+    </script>
+</body>
+</html>

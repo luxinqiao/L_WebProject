@@ -1,0 +1,534 @@
+.programDetail {
+    height: 100%;
+}
+.programDetail-card {
+    height: 100%;
+    border: 1px solid #ebeef5; border-radius: 4px;
+    background-color: #fff;
+    overflow: hidden;
+    transition: .3s;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    color: #303133;
+}
+.programDetail-tbody-card {
+    width: 350px;
+    border: 1px solid #ebeef5; border-radius: 4px;
+    background-color: #fff;
+    overflow: hidden;
+    transition: .3s;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    color: #303133;
+}
+.programDetail-tbody-header {
+    position: relative;
+    padding: 5px 10px;
+    border-bottom: 1px solid #ebeef5;
+    box-sizing: border-box;
+}
+.programDetail-header {
+    position: relative;
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+.programDetail-cardBody {
+    padding: 0 15px;
+    height: calc(100% - 130px);
+    overflow-x: auto; overflow-y: auto;
+}
+.programDetail-title {
+    height: 100%;
+}
+.programDetail-title-item {
+    display: inline-block;
+    margin-right: 12px;
+    height: 30px;
+}
+.programDetail-btn {
+    position: absolute;
+    min-width: 60px; height: 40px;
+    user-select: none;
+    cursor: pointer;
+}
+.programDetail-btn>img {
+    position: absolute;
+    top: 0; bottom: 0; left: 0;
+    margin: auto;
+    width: 16px; height: 16px;
+}
+.programDetail-btn>span {
+    position: absolute;
+    top: 0; bottom: 0; left: 20px;
+    margin: auto;
+    width: 50px; height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+}
+.programDetail-btn.edit {
+    bottom: 10px; right: 20px;
+}
+.programDetail-btn.addStep {
+    display: none;
+    bottom: 10px; right: 140px;
+    width: 110px;
+}
+.programDetail-btn.addStep>span {
+    width: 70px;
+}
+.programDetail-btn.exitEdit {
+    display: none;
+    bottom: 10px; right: 90px;
+}
+.programDetail-btn.save {
+    display: none;
+    bottom: 10px; right: 20px;
+}
+.programDetail-title-name {
+    box-sizing: border-box;
+    float: left;
+    padding-right: 5px;
+    height: 30px;
+    text-align: right; line-height: 30px; vertical-align: middle;
+    font-size: 14px;
+    color: #969799;
+}
+.programDetail-title-content {
+    box-sizing: border-box;
+    float: left;
+    height: 30px;
+    line-height: 30px; vertical-align: middle;
+    font-size: 14px;
+    color: #606266;
+}
+.programDetail-title-programName-input {
+    display: none;
+    padding: 0 8px;
+    width: 150px;
+    border: 1px solid #ddd; border-radius: 5px;
+}
+.programDetail-title-programName-input:focus {
+    border: 1px solid #3698ef;
+}
+.programDetail-title-remake-input {
+    display: none;
+    padding: 0 8px;
+    width: 150px;
+    border: 1px solid #ddd; border-radius: 5px;
+}
+.programDetail-title-remake-input:focus {
+    border: 1px solid #3698ef;
+}
+.programDetail-title-clinic-input {
+    display: none;
+    padding: 0 8px;
+    width: 150px;
+    border: 1px solid #ddd; border-radius: 5px;
+}
+.programDetail-title-clinic-input:focus {
+    border: 1px solid #3698ef;
+}
+.programDetail-title-medicalName-input {
+    display: none;
+    padding: 0 8px;
+    width: 150px;
+    border: 1px solid #ddd; border-radius: 5px;
+}
+.programDetail-title-medicalName-input:focus {
+    border: 1px solid #3698ef;
+}
+.programDetail-title-medicalRemake-input {
+    display: none;
+    padding: 0 8px;
+    width: 150px;
+    border: 1px solid #ddd; border-radius: 5px;
+}
+.programDetail-title-medicalRemake-input:focus {
+    border: 1px solid #3698ef;
+}
+.programDetail-title-medicalClinic-input {
+    display: none;
+    padding: 0 8px;
+    width: 150px;
+    border: 1px solid #ddd; border-radius: 5px;
+}
+.programDetail-title-medicalClinic-input:focus {
+    border: 1px solid #3698ef;
+}
+.programDetail-title-train-select {
+    display: none;
+    width: 150px;
+    border: 1px solid #ddd; border-radius: 5px;
+}
+.programDetail-title-type-select {
+    display: none;
+    width: 150px;
+    border: 1px solid #ddd; border-radius: 5px;
+}
+#programDetail-train {
+    display: none;
+}
+.programDetail-title-subtype-select {
+    display: none;
+    width: 130px;
+    border: 1px solid #ddd; border-radius: 5px;
+}
+.programDetail-content {
+    position: relative;
+    width: 100%;
+    overflow: auto;
+    border-left: 1px solid #eee; border-right: 1px solid #eee; border-bottom: 1px solid #eee;
+}
+.programDetail-thead {
+    background-color: #f5f7fa;
+    color: #909399;
+}
+.programDetail-thead>tr>th {
+    padding: 12px 10px;
+    text-align: left;
+    border-right: 1px solid #eee;
+    font-size: 14px;
+    color: #606266;
+}
+.programDetail-tbody>tr>td {
+    position: relative;
+    border-top: 1px solid #eee; border-right: 1px solid #eee;
+}
+.programDetail-tbody>tr>td.no {
+    padding-left: 10px;
+}
+.programDetail-tbody>tr>td.desc>p {
+    width: 80px;
+    padding-left: 10px;
+    font-size: 14px;
+    color: #606266;
+}
+.programDetail-tbody>tr>td.step>.shade {
+    position: absolute; z-index: 99;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.programDetail-tbody>tr>td.step>.shade>span {
+    position: absolute;
+    padding-left: 20px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+}
+.programDetail-tbody>tr>td.step>.shade>span.add {
+    top: 5px; right: 12px;
+    background: url(../../img/programNew/btn-add.png) no-repeat left center;
+    background-size: 16px 16px;
+}
+.programDetail-tbody>tr>td.step>.shade>span.edit {
+    top: 5px; right: 12px;
+    background: url(../../img/programNew/btn-edit.png) no-repeat left center;
+    background-size: 16px 16px;
+}
+.programDetail-tbody>tr>td.step>.shade>span.delete {
+    top: 30px; right: 12px;
+    background: url(../../img/programNew/btn-delete.png) no-repeat left center;
+    background-size: 16px 16px;
+}
+.programDetail-tbody>tr>td>.arrowRight {
+    position: absolute;
+    top: 0; bottom: 0; right: 3px;
+    margin: auto;
+    width: 15px; height: 15px;
+}
+.programDetail-tbody>tr>td.actionTd>div {
+    margin-bottom: 8px;
+    width: 150px;
+}
+.programDetail-tbody>tr>td.actionTd>div>.sessionAddUp {
+    display: inline-block;
+    margin-left: 5px; padding-left: 13px;
+    color: #00b9ef;
+    background: url(../../img/programNew/btn-arrowUp.png) no-repeat left center;
+    background-size: 15px 18px;
+    cursor: pointer;
+}
+.programDetail-tbody>tr>td.actionTd>div>.sessionAddDown {
+    display: inline-block;
+    margin-left: 8px; padding-left: 13px;
+    color: #00b9ef;
+    background: url(../../img/programNew/btn-arrowDown.png) no-repeat left center;
+    background-size: 15px 18px;
+    cursor: pointer;
+}
+.programDetail-tbody>tr>td.actionTd>div>.sessionDelete {
+    display: inline-block;
+    margin-left: 8px;
+    color: #ff6666;
+    cursor: pointer;
+}
+.programDetail-tbody>tr>td.actionTd>div>.sessionMoveUp {
+    display: inline-block;
+    margin-left: 8px; padding-left: 13px;
+    color: #888;
+    background: url(../../img/programNew/btn-moveUp.png) no-repeat left center;
+    background-size: 15px 18px;
+    cursor: pointer;
+}
+.programDetail-tbody>tr>td.actionTd>div>.sessionMoveDown {
+    display: inline-block;
+    margin-left: 8px; padding-left: 13px;
+    color: #888;
+    background: url(../../img/programNew/btn-moveDown.png) no-repeat left center;
+    background-size: 15px 18px;
+    cursor: pointer;
+}
+
+.programDetail-tbody-header-item {
+    display: inline-block;
+    box-sizing: border-box;
+    text-align: right; vertical-align: middle;
+    font-size: 14px;
+}
+.programDetail-tbody-header-item>span {
+    font-size: 14px;
+    color: #00b9ef;
+}
+.programDetail-tbody-header-img {
+    position: relative;
+    top: 6px;
+    margin-right: 6px;
+    width: 20px; height: 20px;
+}
+.programDetail-tbody-cardBody {
+    padding: 5px;
+    overflow: hidden;
+    max-height: 140px;
+}
+.programDetail-tbody-cardBody-title {
+    font-size: 14px;
+}
+.programDetail-tbody-cardBody-item {
+    padding: 2px 0;
+    float: left;
+    min-width: 50%;
+}
+.programDetail-tbody-cardBody-name {
+    box-sizing: border-box;
+    font-size: 13px;
+    color: #969799;
+}
+.programDetail-tbody-cardBody-content {
+    font-size: 13px;
+    color: #303133;
+}
+.programDetail-cardBody-img {
+    width: 100%; height: 122px;
+    object-fit: contain;
+}
+.program-loading {
+    position: fixed; z-index: 99;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: #fefefe;
+}
+.program-loading-box {
+    position: absolute;
+    top: 0; bottom: 30%; left: 0; right: 0;
+    width: 88px; height: 128px;
+    margin: auto;
+}
+.program-loading-box>img {
+    display: block;
+    margin: auto;
+    height: 88px; width: 88px;
+}
+.program-loading-box>div {
+    text-align: center;
+    color: #00b9ef;
+    letter-spacing: 2px;
+}
+
+.dialog-shade {
+    display: none;
+    position: fixed; z-index: 99;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.dialog-left {
+    position: absolute; z-index: 2;
+    top: 0; bottom: 0; left: -790px; right: 0;
+    margin: auto;
+    width: 200px; height: 680px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.component-title {
+    padding-left: 10px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 16px; font-weight: bold;
+    background-color: #a9d0fd; color: #3366ff;
+}
+.component-content {
+    padding: 10px 0;
+    height: 630px;
+    overflow-y: auto;
+    cursor: pointer;
+}
+.component-content>p {
+    display: flex; align-items: center; justify-content: center;
+    margin: 10px auto 0 auto;
+    width: 80%; height: 100px;
+    border: 1px solid #eee; border-radius: 5px;
+    text-align: center;
+}
+.component-content>p.active {
+    background-color: #3698ef; color: #fff;
+}
+.dialog-main {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    width: 580px; height: 680px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+.dialog-head {
+    height: 50px;
+    border-top-left-radius: 5px; border-top-right-radius:5px;
+    background-color: #a9d0fd;
+}
+.dialog-head-title {
+    position: absolute;
+    top: 10px; left: 15px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px; font-weight: bold;
+    color: #3366ff;
+}
+.dialog-head-close {
+    position: absolute;
+    top: 5px; right: 5px;
+    width: 40px; height: 40px;
+    background: url(../../img/programNew/dialog-close.png) no-repeat center center;
+    background-size: 12px 12px;
+    cursor: pointer;
+}
+
+.dialog-content {
+    padding: 24px 12px;
+    height: 550px;
+    overflow: auto;
+}
+.dialog-content-condition {
+    height: 40px;
+}
+.dialog-content-condition>.label {
+    float: left;
+    width: 140px; height: 40px;
+    text-align: right; line-height: 40px;
+}
+.dialog-content-condition>.checkbox {
+    margin-left: 150px;
+    height: 40px;
+}
+.dialog-content-condition>.checkbox>span {
+    display: inline-block;
+    margin-left: 12px; padding-left: 22px;
+    height: 40px;
+    line-height: 40px;
+    background: url(../../img/programNew/form-radio-gray.png) no-repeat left center;
+    background-size: 18px 18px;
+    cursor: pointer;
+}
+.dialog-content-condition>.checkbox>span:nth-child(1) {
+    margin-left: 0;
+}
+.dialog-content-condition>.checkbox>span.active {
+    background: url(../../img/programNew/form-radio-active.png) no-repeat left center;
+    background-size: 18px 18px;
+}
+.dialog-content-condition>.input {
+    margin-left: 150px; margin-right: 60px;
+    height: 40px;
+}
+.dialog-content-condition>.input>input {
+    margin-top: 7px; padding: 0 10px;
+    width: 100%; height: 26px;
+    border: 1px solid #ddd; border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+}
+.dialog-content-condition>.input>input:focus {
+    border: 1px solid #3698ef;
+}
+.dialog-content-condition>.select {
+    margin-left: 150px; margin-right: 60px;
+    height: 40px;
+}
+.dialog-content-condition>.select>select {
+    margin-top: 7px; padding: 0 5px;
+    width: 100%; height: 26px;
+    border: 1px solid #ddd; border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+}
+#conditions-kegel>#kegelChart {
+    margin: 20px 48px 0 60px;
+    height: 260px;
+}
+#conditions-game>div {
+    margin: 30px 24px 0 24px;
+    height: 260px;
+}
+#conditions-game>div>#gameImg {
+    width: 100%; height: 100%;
+}
+
+.dialog-button {
+    position: relative;
+    height: 80px;
+    border-top: 1px solid #eee;
+}
+.dialog-button>.dialog-button-saveTemplate {
+    position: absolute;
+    top: 22px; left: 30px;
+    height: 36px;
+    line-height: 36px;
+    color: #3698ef;
+    cursor: pointer;
+}
+.dialog-button>button {
+    width: 80px; height: 36px;
+    line-height: 36px;
+    border: none; border-radius: 3px;
+    outline: none;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.dialog-button>.dialog-button-cancel {
+    position: absolute;
+    top: 22px; right: 130px;
+    border: 1px solid #ddd;
+    color: #666;
+}
+.dialog-button>.dialog-button-confirm {
+    position: absolute;
+    top: 22px; right: 30px;
+    background-color: #3698ef; color: #fff;
+}
+
+.dialog-error {
+    margin-top: -8px; padding-left: 160px;
+    font-size: 14px;
+    color: #ff6666;
+}
+
+#dialog-tip {
+    display: none;
+    position: fixed; z-index: 99;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    width: 180px; height: 40px;
+    text-align: center; line-height: 40px;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.6); color: #fff;
+}

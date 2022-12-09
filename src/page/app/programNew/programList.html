@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/src/assets/css/programNew/programList.css?t=20200805">
+</head>
+<body>
+    <div class="programList">
+        <div class="programList-card">
+            <div class="programList-header">
+                治疗方案库
+                <span class="programList-header-signOut" onclick="showSignOut()">
+                    <span>退出登录</span>
+                    <img src="/src/assets/img/programNew/signOut.png" alt="">
+                </span>
+            </div>
+            <div class="programList-cardBody">
+                <div class="programList-content">
+                    <div class="programList-thead">
+                        <div class="programList-thead-0">序号</div>
+                        <div class="programList-thead-1">生成时间</div>
+                        <div class="programList-thead-2">方案名称</div>
+                        <div class="programList-thead-3">总次数</div>
+                        <div class="programList-thead-4">总时间(分)</div>
+                        <div class="programList-thead-5">描述</div>
+                        <div class="programList-thead-6">操作</div>
+                    </div>
+
+                    <div class="programList-tbody">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="programList-login">
+        <div class="programList-login-content">
+            <div class="programList-login-title">请先登录</div>
+            <div class="programList-login-item">
+                <label for="phone">手机号：</label>
+                <input onfocus="phoneFocus()" class="programList-login-input" id="phone" type="text" placeholder='请输入手机号' maxlength='11' onkeyup='value=value.replace(/[^0-9]/g, "")'>
+                <div class="programList-login-prompt">请填写正确的手机号</div>
+            </div>
+            <div class="programList-login-item programList-login-password">
+                <label for="password">验证码：</label>
+                <input class="programList-login-captcha-input" onfocus="captchaFocus()" id="password" type="text" maxlength="6" placeholder='请输入验证码' onkeyup='value=value.replace(/[^0-9]/g, "")'>
+                <button class="programList-login-getCaptcha" onclick="getCaptcha()">获取验证码</button>
+                <div class="programList-login-captcha-prompt">请输入验证码</div>
+            </div>
+            <button onclick="goLogin()" class="programList-login-btn">登录</button>
+        </div>
+    </div>
+
+    <div class="programList-dialog">
+        <div class="programList-dialog-box">
+            <div class="programList-dialog-header">提示</div>
+            <div class="programList-dialog-content">
+                <img src="/src/assets/img/programNew/warning.png" alt="">
+                <span>是否退出登录</span>
+            </div>
+            <div class="programList-dialog-bottom">
+                <button onclick="signOut()">确定</button>
+                <button onclick="hideSignOut()">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="programList-message">验证码发送成功!</div>
+</body>
+<script type="application/javascript" src="/src/page/js/programNew/programlist.js?t=20200805"></script>
+<script type='text/javascript' src='/src/utils/RegUtils.js?t=20200805'></script>
+</html>

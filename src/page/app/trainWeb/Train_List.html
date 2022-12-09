@@ -1,0 +1,46 @@
+<html>
+<head>
+	<link rel='stylesheet' href='/src/assets/css/trainWeb/Train_List.css'>
+</head>
+<body>
+	<div id='main'>
+        <div class='conditionGroup' style='background-color: white;'>
+            <div class='title'>
+                <span></span>
+                <span>基本信息</span>
+            </div>
+            <div class='condition'>
+                <label class='label'>手机号 : </label>
+                <label class='input' id='phoneLabel'></label>
+            </div>
+            <div class='condition'>
+                <label class='label'>昵 称 : </label>
+                <label class='input' id='nickLabel'></label>
+            </div>
+            <div class='condition'>
+                <label class='label'>姓 名 : </label>
+                <label class='input' id='nameLabel'></label>
+            </div>
+        </div>
+        <div class='conditionGroup' id='recordListDiv'>
+            <div class='title'>
+                <span></span>
+                <span>用户筛查记录</span>
+            </div>
+            <!-- 动态添加数据 -->
+        </div>
+        <div class='conditionGroup' id='trainListDiv'>
+            <div class='title'>
+                <span></span>
+                <span>用户方案</span>
+            </div>
+            <!-- 动态添加数据 -->
+        </div>
+    </div>
+    <script type='text/javascript' src='/src/utils/CommonUtils.js'></script>
+	<script type='text/javascript'>
+        CommonUtils.loadCommon();
+        CommonUtils.appendScript('/src/page/js/trainWeb/Train_List.js');
+	</script>
+</body>
+</html>

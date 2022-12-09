@@ -1,0 +1,46 @@
+<!--
+    文件描述：百科-主页
+    创建人：卢信桥
+    创建时间：2020-08-05
+-->
+<html>
+<head>
+	<link rel='stylesheet' href='/src/assets/css/knowledge/index.css?t=20200815'>
+	<link rel='stylesheet' href='/src/assets/css/common/scroll.css'>
+</head>
+<body>
+    <div class='scroll_refresh'>刷新中...</div>
+
+    <div id='main' >
+        <div id='top'>
+            <div id='search' onclick='goSearch()'>搜索关键字</div>
+        </div>
+        <div id='hot'>
+            <div id='hotTitle'>热门搜索</div>
+            <div id='hotContent'>
+                <div id='hotContentLeft'>
+                    <!-- 动态添加内容 -->
+                </div>
+                <div id='hotContentRight'>
+                    <!-- 动态添加内容 -->
+                </div>
+            </div>
+        </div>
+        <div id='goCollege' onclick='goCollege()'></div>
+        <div id='tab'>
+            <!-- 动态添加内容 -->
+        </div>
+        <div id='tabContent'>
+            <!-- 动态添加内容 -->
+        </div>
+    </div>
+
+    <img id='goAsk' src='/src/assets/img/knowledge/common/ask.png' onclick='goAsk()'></img>
+    <script type='text/javascript' src='/src/utils/CommonUtils.js?t=20210413'></script>
+    <script type='text/javascript' src='/src/utils/scroll.js?t=20210413'></script>
+	<script type='text/javascript'>
+        CommonUtils.loadCommon()
+        CommonUtils.appendScript('/src/page/js/knowledge/index.js?t=20200815')
+	</script>
+</body>
+</html>

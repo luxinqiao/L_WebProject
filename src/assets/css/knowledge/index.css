@@ -1,0 +1,179 @@
+#main {
+    padding-bottom: 0.2rem;
+    height: 100%;
+    background-color: #f8f8f8;
+    overflow-y: auto;
+}
+
+/** 顶部-搜索关键字 **/
+#top {
+    padding-top: 0.28rem;
+    height: 0.64rem;
+    background-color: #fff;
+}
+#search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 0 auto; padding: 0.08rem 0 0.08rem 0.32rem ;
+    width: 3.51rem; 
+    border-radius: 0.05rem;
+    font-size: 0.14rem;
+    background: url(/src/assets/img/knowledge/common/search.png) no-repeat 0.1rem center;
+    background-size: 0.11rem 0.11rem;
+    background-color: #f6f6f6; color: #999;
+}
+
+/** 热门搜索 **/
+#hot {
+    float: left;
+    padding: 0.13rem 0.12rem 0 0.12rem;
+    width: 100%;
+    background-color: #fff;
+}
+#hotTitle {
+    padding-left: 0.16rem;
+    height: 0.21rem;
+    line-height: 0.21rem;
+    font-size: 0.15rem; font-weight: bold;
+    color: #333;
+    background: url(/src/assets/img/knowledge/index/hot.png) no-repeat left center;
+    background-size: 0.1rem 0.13rem;
+}
+#hotContent {
+    float: left;
+    padding-top: 0.12rem;
+    width: 100%;
+}
+#hotContentLeft {
+    float: left;
+    width: 50%;
+    border-right: 0.01rem solid #f4f4f4;
+}
+#hotContentRight {
+    float: right;
+    padding-left: 0.12rem;
+    width: 50%;
+}
+#hotContentLeft>.hotContentItem:nth-child(1), #hotContentRight>.hotContentItem:nth-child(1) {
+    margin-top: 0;
+}
+.hotContentItem {
+    margin-top: 0.12rem;
+    width: 1.56rem; height: 0.2rem;
+}
+.hotContentItem>span:nth-child(1) {
+    float: left;
+    width: 0.08rem; height: 0.2rem;
+    line-height: 0.2rem;
+    font-size: 0.14rem;
+}
+.hotContentItem>span:nth-child(2) {
+    float: left;
+    margin-left: 0.08rem;
+    width: 1.4rem; height: 0.2rem;
+    line-height: 0.2rem;
+    font-size: 0.14rem;
+    color: #333;
+}
+.hotContentItem>span.before {
+    color: #f7534f;
+}
+.hotContentItem>span.after {
+    color: #f59500;
+}
+
+/** 立即前往-极致学院 **/
+#goCollege {
+    clear: both;
+    height: 1.04rem;
+    background: url(/src/assets/img/knowledge/index/goCollege.png) no-repeat center bottom;
+    background-size: 3.53rem 0.94rem;
+    background-color: #fff;
+}
+
+/** 5个tab **/
+#tab {
+    padding: 0.17rem 0.22rem 0 0.22rem;
+    height: 0.49rem;
+    border-bottom: 0.01rem solid #f4f4f4;
+    white-space: nowrap;
+    overflow-x: scroll; overflow-y: hidden; scrollbar-width: none;-ms-overflow-style: none;
+    background-color: #fff;
+}
+#tab::-webkit-scrollbar {
+    display: none;
+}
+#tab>span {
+    position: relative;
+    display: inline-block;
+    margin-left: 0.28rem;
+    height: 0.31rem;
+    font-size: 0.15rem;
+    color: #999;
+}
+#tab>span:nth-child(1) {
+    margin-left: 0;
+}
+#tab>span.active {
+    font-weight: bold;
+    color: #333;
+}
+#tab>span.active>.activeLine {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    margin: auto;
+    width: 0.14rem; height: 0.025rem;
+    background-color: #333;
+}
+
+/** 分类列表 **/
+#tabContent {
+    background-color: #fff;
+}
+.contentItem {
+    padding: 0.16rem 0.12rem 0.12rem 0.12rem;
+    border-bottom: 0.01rem solid #f4f4f4;
+}
+.contentItem>.itemTitle {
+    line-height: 0.22rem;
+    font-size: 0.16rem;
+    color: #333;
+}
+.contentItem>.itemContent {
+    margin-top: 0.08rem;
+    line-height: 0.22rem;
+    font-size: 0.14rem;
+    color: #666;
+}
+.contentItem>.itemContentImg {
+    position: relative;
+    margin-top: 0.08rem;
+    height: 0.66rem;
+}
+.contentItem>.itemContentImg>span {
+    width: 2.39rem; max-height: 0.66rem;
+    line-height: 0.22rem;
+    font-size: 0.14rem;
+    color: #666;
+}
+.contentItem>.itemContentImg>.itemCover {
+    position: absolute;
+    top: 0; right: 0;
+    width: 0.92rem; height: 0.68rem;
+    border-radius: 2px;
+}
+.contentItem>.itemRead {
+    margin-top: 0.08rem;
+    height: 0.16rem;
+    line-height: 0.16rem;
+    font-size: 0.11rem;
+    color: #999;
+}
+
+/** 提问 **/
+#goAsk {
+    position: fixed;
+    bottom: 0.6rem; right: 0;
+    width: 0.82rem; height: 0.54rem;
+}

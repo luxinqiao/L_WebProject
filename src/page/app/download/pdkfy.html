@@ -1,0 +1,27 @@
+<!--
+    文件描述：盆底康复治疗仪软件-澜渟三代高端版
+    创建人：卢信桥
+    创建时间：2021-02-06
+ -->
+ <html>
+    <head>
+        <style>
+        </style>
+    </head>
+    <body>
+        <div class='banner'>
+            <img src='/src/assets/img/download/ltpd/bg.png'>
+        </div>
+        <div class='btn' onClick='downloadLtpd()'>下载盆底康复治疗仪软件App</div>
+        
+        <script type='text/javascript' src='/src/utils/CommonUtils.js'></script>
+        <script type='text/javascript' src='/src/utils/downloadApp.js'></script>
+        <script type='text/javascript'>
+            CommonUtils.loadCommon()
+            
+            $(function() {
+                window.location.replace(request_path.medhd_mobile + 'apps/pfmedhd')
+            })
+        </script>
+    </body>
+</html>

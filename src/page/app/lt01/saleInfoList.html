@@ -1,0 +1,67 @@
+<!--
+    文件描述：售后说明列表
+    创建人：卢信桥
+    创建时间：2021-06-01
+ -->
+<html>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <meta http-equiv='X-UA-Compatible' content='ie=edge'>
+    <title>售后说明</title>
+    <style>
+        #main {
+            height: 100%;
+            background-color: #fafafa;
+        }
+        #content {
+            height: 100%;
+            background-color: #fff;
+        }
+        .item {
+            position: relative;
+            margin-left: 0.24rem;
+            height: 0.98rem;
+            border-bottom: 0.02rem solid #f4f4f4;
+        }
+        .item>span {
+            line-height: 0.98rem;
+            font-size: 0.32rem;
+        }
+        .item>img {
+            position: absolute;
+            top: 0.42rem; right: 0.24rem;
+            width: 0.14rem; height: 0.2rem;
+        }
+    </style>
+</head>
+<body>
+    <div id='main'>
+        <div id='content'>
+            <p class='item' onClick='goDetail("lt01/saleInfo_zlyy")'>
+                <span>盆底肌修复仪(升级款)售后管理</span>
+                <img src='/src/assets/img/lt01/saleInfoList/arrow-right.png'>
+            </p>
+            <p class='item' onClick='goDetail("lt01/saleInfo_pdjxfy")'>
+                <span>盆底肌修复仪售后管理</span>
+                <img src='/src/assets/img/lt01/saleInfoList/arrow-right.png'>
+            </p>
+            <p class='item' onClick='goDetail("lt01/saleInfo_wireless")'>
+                <span>无线产后恢复仪售后管理</span>
+                <img src='/src/assets/img/lt01/saleInfoList/arrow-right.png'>
+            </p>
+            <p class='item' onClick='goDetail("lt01/saleInfo_kegel")'>
+                <span>盆底肌肉康复器售后管理</span>
+                <img src='/src/assets/img/lt01/saleInfoList/arrow-right.png'>
+            </p>
+        </div>
+    </div>
+</body>
+
+<script type='text/javascript' src='/src/utils/remStyle.js'></script>
+<script>
+    function goDetail(route) {
+        Router.jump(route)
+    }
+</script>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>康复器训练使用全攻略</title>
+    <link rel="stylesheet prefetch" href="./src/third/jquery/photoswipe/photoswipe.css">
+    <link rel="stylesheet prefetch" href="./src/third/jquery/photoswipe/default-skin.css">
+    <style>
+        .content_radius:before {
+            content: "";
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            display: inline-block;
+            background-color: rgb(239,94,143);
+            margin-top: 14px;
+            margin-left: 6px;
+            margin-right: 8px;
+        }
+
+        .toHowToClean {
+            color:rgb(239,94,143);
+            padding-bottom: 2px;
+            border-bottom:1px solid rgb(239,94,143);
+        }
+    </style>
+</head>
+<body>
+<div class='content'>
+    <h2>康复器训练使用全攻略</h2>
+    <p class='subHead' style="color:#999999;">解锁训练前中后的那些事</p>
+    <p style="margin-top: 18px;">使用前需要对康复器清洗。具体见
+        <a class='toHowToClean' onclick="toHowToClean()">如何清洗，有诀窍。</a>
+        </br>清洗完成后，在康复器的前端涂抹少量水溶性润滑剂，增加润滑度。
+    </p>
+    <div class="my-gallery" data-pswp-uid="1">
+        <figure>
+            <div class="img-dv" style="padding:35px 75px;"><a href="./src/assets/img/newGuidance/userStrategy/t1@3x.png" data-size="1920x1920"><img src="./src/assets/img/newGuidance/userStrategy/t1.png"></a></div>
+            <figcaption style="display:none;"></figcaption>
+            <div class='img_des' style="width:200px;margin-top: 15px;margin-bottom: 8px;">
+                <div class="roundNum">1</div>
+                <p>移入康复器至阴道</p>
+            </div>
+            <p>首先选用仰卧姿势，使用最大最轻的1号球（随着训练的进度可更换球的型号，尽可能保证1-5号球都训练一遍。）将康复器推入阴道，
+                使球体末端距离阴道口1-2厘米左右。收缩盆底肌，应感到球体上升，2-3天后可站立起来进行训练。
+            </p>
+        </figure>
+        <figure>
+            <div class="img-dv" style="padding:35px 75px;"><a href="./src/assets/img/newGuidance/userStrategy/t2@3x.png" data-size="1920x1920"><img src="./src/assets/img/newGuidance/userStrategy/t2.png"></a></div>
+            <figcaption style="display:none;"></figcaption>
+            <div class='img_des' style="margin-top: 15px;margin-bottom: 8px;">
+                <div class="roundNum">2</div>
+                <p>开始训练</p>
+            </div>
+            <p>打开澜渟APP，选择训练课程，进入，然后根据语言提示，对盆底肌进行收缩放松训练。</p>
+        </figure>
+        <figure>
+            <div class="img-dv" style="padding:35px 40px;"><a href="./src/assets/img/newGuidance/userStrategy/t3@3x.png" data-size="526x935"><img src="./src/assets/img/newGuidance/userStrategy/t3.png"></a></div>
+            <figcaption style="display:none;"></figcaption>
+            <div class='img_des' style="width:220px;margin-top: 15px;margin-bottom: 8px;">
+                <div class="roundNum">3</div>
+                <p>训练结束，取出康复器</p>
+            </div>
+            <p>训练结束后，取出康复器，并用洗手液或沐浴液清洗干净，晾干，放入收纳盒，以备下次使用。</p>
+        </figure>
+        <figure>
+            <div class="img-dv" style="padding:35px 0px;"><a href="./src/assets/img/newGuidance/userStrategy/t4@3x.png" data-size="1920x1080"><img src="./src/assets/img/newGuidance/userStrategy/t4.png"></a></div>
+            <figcaption style="display:none;"></figcaption>
+            <div class='img_des' style="margin-top: 15px;margin-bottom: 8px;">
+                <p>温馨提示</p>
+            </div>
+            <div style="display:flex;">
+                <span class='content_radius'></span>
+                <p>何时更换下一个球体</p>
+            </div>
+            <p>站立时双脚叉开与肩同宽。站立状态无法夹住球体时，仍需进行仰卧位训练。站立状态下球体不掉出，2-3天后可一次进行走路、爬楼梯、咳嗽、
+                跳跃等动作来进行练习。跳跃时可夹住球体不掉，一段时间后即可更换2号球，依次类推。
+            </p>
+        </figure>
+        <figure>
+            <div class="img-dv" style="padding:35px 125px;"><a href="./src/assets/img/newGuidance/userStrategy/t5@3x.png" data-size="176x340"><img src="./src/assets/img/newGuidance/userStrategy/t5.png"></a></div>
+            <figcaption style="display:none;"></figcaption>
+            <div style="display:flex;">
+                <span class='content_radius'></span>
+                <p>每个球的训练频率</p>
+            </div>
+            <p style="margin-bottom: 90px;">每号球可训练2周或以上时间，不要急于更换下一个球体，建议每次训练15-30分钟。</p>
+        </figure>
+    </div>
+</div>
+</body>
+<script src="./src/third/jquery/photoswipe/photoswipe.js"></script>
+<script src="./src/third/jquery/photoswipe/photoswipe-ui-default.js"></script>
+<script>
+    $('.index_title').text('康复器训练使用全攻略');
+
+    function toHowToClean() {
+        var url = window.location.origin+'/#/newGuidance/howToClean';
+        CommonUtils.appFun(function() {
+            window.jsInterface.jumpPage_guidance(url);
+        }, function() {
+            window.webkit.messageHandlers.jumpPage_guidance.postMessage(url);
+        });
+    }
+</script>
+</html>

@@ -1,0 +1,47 @@
+<!--
+    文件描述：品牌营销-首页
+    创建人：卢信桥
+    创建时间：2021-07-20
+ -->
+<html>
+    <head>
+        <link rel='stylesheet' href='/src/assets/css/brandMarketing/index.css'>
+    </head>
+    <body>
+        <div id='main'>
+            <div id='banner'>
+                <img class='banner-img'>
+                <button class='banner-rule' style='display: none;' onClick='showRule()'>规<br/>则</button>
+                <img class='banner-task' src='/src/assets/img/brandMarketing/index/task.png'>
+                <img class='banner-cash' src='/src/assets/img/brandMarketing/index/cash.png'>
+            </div>
+            <div id='bottomBg'>
+                <div class='bottom-content'>
+                    <img class='bottom-content-article-title' src='/src/assets/img/brandMarketing/index/bottom-content-article.png'>
+                    <img class='bottom-content-article left' src='/src/assets/img/brandMarketing/index/bottom-content-article-left.png' onClick='lookImg("/src/assets/img/brandMarketing/index/bottom-content-article-left.png")'>
+                    <img class='bottom-content-article right' src='/src/assets/img/brandMarketing/index/bottom-content-article-right.png' onClick='lookImg("/src/assets/img/brandMarketing/index/bottom-content-article-right.png")'>
+                    <img class='bottom-content-video-title' src='/src/assets/img/brandMarketing/index/bottom-content-video.png'>
+                    <div class='bottom-content-video left' onClick='lookVideo("https://rightinhome.oss-cn-hangzhou.aliyuncs.com/appvideo/example1.mp4")'>
+                        <img src='/src/assets/img/brandMarketing/index/video-play.png'>
+                    </div>
+                    <div class='bottom-content-video center' onClick='lookVideo("https://rightinhome.oss-cn-hangzhou.aliyuncs.com/appvideo/example2.mp4")'>
+                        <img src='/src/assets/img/brandMarketing/index/video-play.png'>
+                    </div>
+                    <div class='bottom-content-video right' onClick='lookVideo("https://rightinhome.oss-cn-hangzhou.aliyuncs.com/appvideo/example3.mp4")'>
+                        <img src='/src/assets/img/brandMarketing/index/video-play.png'>
+                    </div>
+                </div>
+                <img class='bottom-join' onClick='join()' src='/src/assets/img/brandMarketing/index/bottom-join.png'>
+                <img class='bottom-qrcode' src='/src/assets/img/brandMarketing/index/bottom-qrcode.png'>
+            </div>
+        </div>
+        <script type='text/javascript' src='/src/utils/CommonUtils.js'></script>
+        <script type='text/javascript' src='/src/utils/StatisticUtils.js'></script>
+        <script type='text/javascript' src='/src/utils/downloadApp.js'></script>
+        <script type='text/javascript' src='/src/utils/openApp.js'></script>
+        <script type='text/javascript'>
+            CommonUtils.loadCommon()
+            CommonUtils.appendScript('/src/page/js/brandMarketing/index.js')
+        </script>
+    </body>
+</html>

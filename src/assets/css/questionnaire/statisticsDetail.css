@@ -1,0 +1,76 @@
+#rootPage {
+    background-color: rgb(247,248,248);
+    height: auto;
+}
+
+.searchBtn {
+    background-color: #26c2c4;
+}
+
+.suggestList {
+    font-size: 14px;
+    display:list-item;
+    list-style-type:disc;
+}
+
+.weui-progress__bar {
+    height:15px;
+    border-radius: 30px;
+}
+
+.weui-progress__inner-bar {
+    background-color: #26c2c4;
+}
+
+.contentSub {
+    margin-top: 10px;
+    padding:14px 15px 35px 15px;
+    background-color: #ffffff;
+}
+
+.searchCondition {
+    padding:38px 10px 14px 10px;
+    background-color: #ffffff;
+}
+
+.suggest_all {
+    padding-left: 25px;
+}
+
+.selectSub {
+    margin-top: 10px;
+    background-color: #ffffff;
+}
+
+.js_progress {
+    border-radius: 30px;
+}
+
+.selectTable {
+    width:100%;
+    padding-left:15px;
+}
+
+.department {
+    margin-top: 5px;
+}
+
+#start_date, #end_date {
+    width:57%;
+    font-size: 14px;
+    border: none;
+    margin-left:3px;
+    text-align: center;
+    background-color: #efefef;
+    border-radius: 5px;
+}
+
+.selectTable tr p{
+    font-size: 14px;
+}
+
+.paperName {
+    font-weight: bold;
+    text-align: center;
+    font-size: 18px;
+}

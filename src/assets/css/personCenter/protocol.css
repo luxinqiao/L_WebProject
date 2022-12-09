@@ -1,0 +1,23 @@
+#main {
+    padding: 0.13rem 0.12rem 0 0.12rem;
+}
+
+.p1 {
+    margin-top: 0.18rem; margin-bottom: 0.06rem;
+}
+.p1:nth-child(1) {
+    margin-top: 0;
+}
+.p1>span {
+    display: inline-block;
+    height: 0.2rem;
+    line-height: 0.2rem;
+    font-size: 0.14rem; font-weight: bold;
+    color: #333;
+}
+
+.p2>span, .p3>span {
+    line-height: 0.23rem;
+    font-size: 0.12rem;
+    color: #333;
+}

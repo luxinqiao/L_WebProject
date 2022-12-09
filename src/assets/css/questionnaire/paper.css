@@ -1,0 +1,138 @@
+#rootPage {
+    background-color: rgb(247,248,248);
+    height:auto;
+}
+
+.answerTitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom:25px;
+}
+
+.answerContent {
+    font-size: 16px;
+    line-height: 1.35rem;
+    margin-bottom: 1.25rem;
+}
+
+.weui-article {
+    color:#333333;
+    padding:25px 15px 5px 15px;
+    background: #ffffff url("../../img/questionnaire/bg.png") no-repeat 60% 60%;
+}
+
+.weui-cells {
+    margin-top: 10px;
+    padding: 20px 0;
+}
+
+.weui-cells:after {
+    border-bottom: 0px;
+}
+
+.questionContent {
+    padding: 0 15px 10px 15px;
+    display:flex;
+}
+
+.radio_checked {
+    display: flex;
+    width:25px;
+    height:25px;
+    background: url("../../img/questionnaire/radio_checked.png") no-repeat ;
+    background-size:100% 100%;-moz-background-size:100% 100%;
+}
+
+.radio_uncheck {
+    display: flex;
+    width:25px;
+    height:25px;
+    background: url("../../img/questionnaire/radio_uncheck.png") no-repeat ;
+    background-size:100% 100%;-moz-background-size:100% 100%;
+}
+
+.weui-cell__bd {
+    margin-left: 20px;
+}
+
+.weui-cell:before {
+    border-top: 0px;
+}
+
+.suggest {
+    width:88%;
+    height:150px;
+    margin: 10px 20px 0 20px;
+    border: 2px solid rgb(243,243,243);
+}
+
+.submmitPaper {
+    width: 90%;
+    background-color: #eb5e8b;
+    margin-bottom: 20px;
+    height:50px;
+}
+
+.button_gray {
+    background-color: #cccccc;
+}
+
+button.weui-btn {
+    width: 90%;
+}
+
+.disabled{
+　　pointer-events:none;
+　　cursor:default;
+}
+
+.box_checked {
+    display:flex;
+    width:23px;
+    height:23px;
+    background: url("../../img/questionnaire/box_checked.png") no-repeat ;
+    background-size:100% 100%;-moz-background-size:100% 100%;
+}
+
+.box_uncheck {
+    display:flex;
+    width:23px;
+    height:23px;
+    background: url("../../img/questionnaire/box_uncheck.png") no-repeat ;
+    background-size:100% 100%;-moz-background-size:100% 100%;
+}
+
+.weui-cell__hd img {
+    margin-right: 0;
+}
+
+.weui-cells_checkbox .weui-cell__hd {
+    padding-left: .4em;
+    padding-right: 0;
+}
+
+.weui-check_div {
+    display: flex;
+}
+
+.codeHiden {
+    display: none;
+}
+
+.paper_content {
+    margin-top: 3px;
+    border-top:1px solid #efefef;
+    height:100%;
+    letter-spacing:1px;
+}
+
+.required {
+    color:red;
+    margin-left:3px;
+}
+
+.hint {
+    color:red;
+    margin-left: 25px;
+}

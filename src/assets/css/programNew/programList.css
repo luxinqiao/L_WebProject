@@ -1,0 +1,400 @@
+.programList {
+    display: none;
+    padding: 15px;
+    height: 100%;
+}
+.programList-card {
+    max-height: 100%;
+    border-radius: 4px;
+    border: 1px solid #ebeef5;
+    background-color: #fff;
+    overflow: hidden;
+    transition: .3s;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,.1);
+    color: #303133;
+}
+.programList-header {
+    padding: 18px 20px;
+    border-bottom: 1px solid #ebeef5;
+    box-sizing: border-box;
+}
+.programList-header-signOut {
+    cursor: pointer;
+    float: right;
+}
+.programList-header-signOut img {
+    float: right;
+    height: 22px;
+    width: 22px;
+}
+.programList-header-signOut span{
+    margin-left: 5px;
+    font-size: 14px;
+    line-height: 22px;
+    float: right;
+}
+.programList-cardBody {
+    padding: 20px;
+}
+.programList-content {
+    position: relative;
+    overflow-y: auto;
+    border: 1px solid #ebeef5;
+}
+.programList-thead {
+    position: absolute;
+    display: table;
+    width: 100%;
+    font-weight: 500;
+    overflow: hidden;
+    background-color: #f5f7fa;
+    color: #909399;
+    z-index: 8;
+}
+.programList-tbody>div:nth-child(2n) {
+    background-color: #fafafa;
+}
+.programList-tbody {
+    overflow: auto;
+    padding-top: 47px;
+}
+.programList-tbody-item {
+    display: table;
+    width: 100%;
+    overflow: hidden;
+    border-top: 1px solid #ebeef5;
+}
+.programList-tbody .programList-tbody-item:hover {
+    background-color: #f5f7fa;
+}
+.programList-thead>div, .programList-tbody-item>div {
+    display: table-cell;
+    padding: 12px 10px;
+    min-width: 0;
+    height: 100%;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    position: relative;
+    border-right: 1px solid #ebeef5;
+    text-align: left;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-collapse: separate;
+    white-space: normal;
+    word-break: break-all;
+    line-height: 23px;
+    color: #606266;
+}
+.programList-thead .programList-thead-0, .programList-tbody-item .programList-tbody-0{
+    width: 6%;
+}
+.programList-thead .programList-thead-1, .programList-tbody-item .programList-tbody-1 {
+    width: 12%;
+}
+.programList-thead .programList-thead-2, .programList-tbody-item .programList-tbody-2 {
+    width: 25%;
+}
+.programList-thead .programList-thead-3, .programList-tbody-item .programList-tbody-3 {
+    width: 6%;
+}
+.programList-thead .programList-thead-4, .programList-tbody-item .programList-tbody-4 {
+    width: 8%;
+}
+.programList-thead .programList-thead-5, .programList-tbody-item .programList-tbody-5 {
+    min-height: 45px;
+    width: 28%;
+    padding: 12px 10px;
+}
+.programList-thead .programList-thead-6, .programList-tbody-item .programList-tbody-6 {
+    width: 8%;
+    cursor: pointer;
+    border-right: none;
+}
+.programList-tbody-item .programList-tbody-6 {
+    color: #409eff;
+}
+.programList-login {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.programList-login-content {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0; left: 0;
+    right: 0; bottom: 30%;
+    margin: auto;
+    height: 350px; width: 360px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+.programList-login-content-show {
+    animation: fadeIn .3s forwards;
+    -webkit-animation: fadeIn .3s forwards; /* Safari 和 Chrome */
+}
+.programList-login-content-hide {
+    animation: fadeOut .3s forwards;
+    -webkit-animation: fadeOut .3s forwards; /* Safari 和 Chrome */
+}
+.programList-login-title {
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+.programList-login-item {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 20px;
+}
+.programList-login-item label {
+    display: block;
+    margin-right: 6px;
+    font-size: 16px;
+    line-height: 40px;
+}
+.programList-login-item input {
+    padding: 0 16px;
+    height: 40px;
+    width: 100%;
+    transition: border-color .2s cubic-bezier(.645,.045,.355,1);
+    color: #606266;
+    display: inline-block;
+    border: 1px solid #dcdfe6;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.programList-login-item .programList-login-input-error {
+    border: 1px solid #f56c6c;
+}
+.programList-login-item input:focus {
+    outline: none;
+    border-color: #409eff;
+}
+.programList-login-item button {
+    float: right;
+    height: 32px;
+    width: 90px;
+    margin-left: 5px;
+    margin-top: 4px;
+    font-size: 14px;
+    border-radius: 5px;
+    background-color: #409eff;
+    color: #fff;
+}
+.programList-login-item button:active {
+    background-color: #3a8ee6;
+}
+.programList-login-item .programList-login-disabled {
+    background-color: #c8c9cc;
+    border-color: #c8c9cc;
+    cursor: not-allowed
+}
+.programList-login-item .programList-login-disabled:active {
+    background-color: #c8c9cc;
+    border-color: #c8c9cc;
+    cursor: not-allowed
+}
+.programList-login-prompt, .programList-login-captcha-prompt {
+    position: absolute;
+    bottom: 0;
+    display: none;
+    color: #f56c6c;
+    font-size: 12px;
+}
+.programList-login-password input {
+    float: left;
+    width: 200px;
+}
+.programList-login-btn {
+    position: absolute;
+    display: block;
+    height: 40px;
+    width: 300px;
+    bottom: 40px;
+    border-radius: 5px;
+    background-color: #409eff;
+    color: #fff;
+}
+.programList-login-btn:active {
+    background-color: #3a8ee6;
+}
+.programList-dialog {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 11;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.programList-dialog-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 420px;
+    height: 140px;
+    padding-bottom: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 12px 0 rgba(0,0,0,0.1);
+    background-color: #fff;
+}
+.programList-dialog-header {
+    position: relative;
+    padding: 15px 15px 10px 15px;
+    font-size: 18px;
+}
+.programList-dialog-content {
+    padding: 10px 15px;
+}
+.programList-dialog-content img {
+    float: left;
+    height: 25px;
+    width: 25px;
+}
+.programList-dialog-content span {
+    padding-left: 12px;
+    line-height: 24px;
+    font-size: 16px;
+}
+.programList-dialog-bottom {
+    padding: 5px 15px 0;
+}
+.programList-dialog-bottom>button {
+    float: right;
+    padding: 9px 15px;
+    font-size: 12px;
+    border-radius: 3px;
+    display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #dcdfe6;
+    color: #606266;
+    -webkit-appearance: none;
+    text-align: center;
+    box-sizing: border-box;
+    outline: none;
+    margin: 0;
+    transition: .1s;
+    font-weight: 500;
+}
+.programList-dialog-bottom>button:nth-child(1) {
+     margin-left: 15px;
+     border: 1px solid #409eff;
+     background-color: #409eff;
+     color: #fff;
+ }
+.programList-dialog-bottom>button:nth-child(1):active {
+    background-color: rgba(58, 140, 230);
+}
+.programList-dialog-bottom>button:nth-child(2):active {
+    background-color: #f4f4f4;
+}
+.programList-message {
+    display: none;
+    position: fixed;
+    padding: 5px 15px 5px 20px;
+    left: 50%;
+    opacity: 1;
+    top: 20px;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    transform: translate( -50%, 0);
+    -webkit-transform: translate( -50%, 0);
+    z-index: 91;
+    font-size: 14px;
+}
+.programList-message-slideIn {
+    animation: slideIn .3s forwards;
+    -webkit-animation: slideIn .3s forwards; /* Safari 和 Chrome */
+}
+.programList-message-slideOut {
+    animation: slideOut .3s forwards;
+    -webkit-animation: slideOut .3s forwards; /* Safari 和 Chrome */
+}
+
+.programList-message-success {
+    background-color: #f0f9eb;
+    border-color: #e1f3d8;
+    color: #67c23a;
+}
+.programList-message-error {
+    background-color: #fef0f0;
+    border-color: #fde2e2;
+    color: #f56c6c;
+}
+.programList-default {
+    padding-top: 80px;
+    text-align: center;
+}
+@keyframes fadeIn {
+    0% {
+        -webkit-transform: scale3d(0, 0, 0);
+        transform: scale3d(0.5, 0.5, 0.5);
+        opacity: 0;
+    }
+    50% {
+        -webkit-animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+        animation-timing-function: cubic-bezier(0.47, 0, 0.745, 0.715);
+    }
+    100% {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+        -webkit-animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.9, 0.9, 1);
+        transform: scale3d(0.9, 0.9, 1);
+    }
+}
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        top: 0;
+        transform: translate( -50%, -100%);
+        -webkit-transform: translate( -50%, -100%);
+    }
+    100% {
+        opacity: 1;
+        top: 20px;
+        transform: translate( -50%, 0);
+        -webkit-transform: translate( -50%, 0);
+    }
+}
+@keyframes slideOut {
+    0% {
+        opacity: 1;
+        top: 20px;
+        transform: translate( -50%, 0);
+        -webkit-transform: translate( -50%, 0);
+    }
+    100% {
+        opacity: 0;
+        top: 0;
+        transform: translate( -50%, -100%);
+        -webkit-transform: translate( -50%, -100%);
+    }
+}

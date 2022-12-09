@@ -1,0 +1,30 @@
+<!--
+ * 文件描述：意见反馈
+ * 创建人：赵志银
+ * 创建时间：2020-08-13
+-->
+<html>
+    <head>
+        <title>意见反馈</title>
+        <link rel="stylesheet" href="./src/assets/css/personCenter/feedback.css">
+    </head>
+    <body>
+        <div id='form'>
+            <div id='title'>
+                <input type='text' placeholder='标题'></input>
+            </div>
+            <div id='desc'>
+                <textarea placeholder='意见描述'></textarea>
+            </div>
+            <div id='add'>
+                <!-- 动态添加 -->
+                <img src='./src/assets/img/personCenter/pic-add.png' id='addImg' onClick='addImg()'>
+            </div>
+        </div>
+        <div id='button' onClick='submit()'>
+            <span>提交</span>
+        </div>
+        <script type='text/javascript' src='./src/third/oss/aliyun-oss-sdk.min.js'></script>
+        <script type='text/javascript' src='./src/page/js/personCenter/feedback.js'></script>
+    </body>
+</html>

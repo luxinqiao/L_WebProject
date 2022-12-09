@@ -1,0 +1,32 @@
+#main {
+    padding: 10px 20px;
+}
+
+table {
+    width: 100%;
+}
+
+thead {
+    
+}
+thead>tr {
+    height: 30px;
+}
+thead>tr>th {
+    text-align: left;
+}
+
+tbody {
+
+}
+tbody>tr {
+    height: 30px;
+}
+tbody>tr>td.button {
+    cursor: pointer;
+    color: #ef5e8f;
+}
+
+#page {
+    
+}

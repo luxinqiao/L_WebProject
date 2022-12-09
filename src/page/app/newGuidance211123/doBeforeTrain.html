@@ -1,0 +1,182 @@
+<!--
+ * 文件描述：新手指导（智能训练有准备：训练前要做哪些准备工作？）
+ * 创建人：赵志银
+ * 创建时间：2021-11-23
+-->
+<html>
+<head>
+    <title>智能训练有准备</title>
+    <link rel="stylesheet prefetch" href="./src/third/jquery/photoswipe/photoswipe.css">
+    <link rel="stylesheet prefetch" href="./src/third/jquery/photoswipe/default-skin.css">
+    <style>
+        .document {
+            display: none;
+            padding: 0 12px 40px 12px;
+        }
+        .document-title {
+            font-size: 18px;
+            color: #285edd;
+        }
+        .document-content {
+            margin-top: 10px;
+            line-height: 22px;
+            font-size: 14px;
+        }
+        .document-content>span:nth-child(1) {
+            color: #888;
+        }
+        .document-content>span:nth-child(2) {
+            color: #6592fa;
+        }
+    </style>
+</head>
+<body>
+    <div class='content' style='padding-bottom:30px;'>
+        <h2>智能训练有准备</h2>
+        <p style="font-size: 14px;color: #999;">训练前要做哪些准备工作？</p>
+        <p>选择舒适安静的环境，接下来我们要开始训练了。正确的训练姿势很重要哦，还有疑问去看看
+            <span style='text-decoration:underline;color:#3333ff;' onclick='goCorrectTrain()'>解剖正确训练姿势</span>。
+        </p>
+        <br/>
+        <div class='img_des' style='margin-top:20px;'>
+            <div class="roundNum">1</div>
+            <p>提前充电</p>
+        </div>
+        <p>在使用设备前，需要先进行充电，确保在训练过程中，正常工作。</p>
+        <p>首次充电，请先充满电至绿灯亮，再开机使用。（正常情况下，设备完全充满电的时间约2-3小时），充电中，指示灯显示为<span style='color:red;'>红色</span>。</p>
+        <div class="my-gallery" data-pswp-uid="1">
+            <figure>
+                <div class="img-dv">
+                    <a href="./src/assets/img/newGuidance211123/doBeforeTrain/p1.png" data-size="702x362">
+                        <img src="./src/assets/img/newGuidance211123/doBeforeTrain/p1.png">
+                    </a>
+                </div>
+                <figcaption style="display:none;"></figcaption>
+                <p>充电完成后，指示灯显示为<span style='color:red;'>绿色</span>。</p>
+            </figure>
+            <figure> 
+                <div class="img-dv">
+                    <a href="./src/assets/img/newGuidance211123/doBeforeTrain/p2.png" data-size="702x362">
+                        <img src="./src/assets/img/newGuidance211123/doBeforeTrain/p2.png">
+                    </a>
+                </div>
+                <figcaption style="display:none;"></figcaption>
+                <p>充电完成后，即可停止充电，为了延长设备的使用寿命，请勿长时间充电。</p>
+                <div class='img_des' style='margin-top:20px;'>
+                    <div class="roundNum">2</div>
+                    <p>清洗主机和双手</p>
+                </div>
+                <p>在使用设备前，需要用清水冲洗设备和双手，保证干净卫生。</p>
+            </figure>
+            <figure>
+                <div class="img-dv">
+                    <a href="./src/assets/img/newGuidance211123/doBeforeTrain/p3.png" data-size="704x362">
+                        <img src="./src/assets/img/newGuidance211123/doBeforeTrain/p3.png">
+                    </a>
+                </div>
+                <div class='img_des' style='margin-top:20px;'>
+                    <div class="roundNum">3</div>
+                    <p>开启设备</p>
+                </div>
+                <p>长按设备电源开关3秒，电源指示灯显示为绿色，表示开机完成。</p>
+                <figcaption style="display:none;"></figcaption>
+            </figure>
+            <figure>
+                <div class="img-dv">
+                    <a href="./src/assets/img/newGuidance211123/doBeforeTrain/p4.png" data-size="702x362">
+                        <img src="./src/assets/img/newGuidance211123/doBeforeTrain/p4.png">
+                    </a>
+                </div>
+                <figcaption style="display:none;"></figcaption>
+                <div class='img_des' style='margin-top:20px;'>
+                    <div class="roundNum">4</div>
+                    <p>打开蓝牙</p>
+                </div>
+                <p>进行训练前，打开手机蓝牙（只需要打开手机蓝牙，不需要配对哦）</p>
+            </figure>
+            <figure>
+                <div class="img-dv">
+                    <a href="./src/assets/img/newGuidance211123/doBeforeTrain/p5.png" data-size="702x480">
+                        <img src="./src/assets/img/newGuidance211123/doBeforeTrain/p5.png">
+                    </a>
+                </div>
+                <figcaption style="display:none;"></figcaption>
+                <div class='img_des' style='margin-top:20px;'>
+                    <div class="roundNum">5</div>
+                    <p>连接蓝牙</p>
+                </div>
+                <p>点击【连接设备】按钮，进入【搜索设备页面】，将手机与设备靠近，选择您的设备进行连接。</p>
+            </figure>
+            <figure>
+                <div class="img-dv">
+                    <a href="./src/assets/img/newGuidance211123/doBeforeTrain/p6.png" data-size="704x480">
+                        <img src="./src/assets/img/newGuidance211123/doBeforeTrain/p6.png">
+                    </a>
+                </div>
+                <figcaption style="display:none;"></figcaption>
+                <div class='img_des' style='margin-top:20px;'>
+                    <div class="roundNum">6</div>
+                    <p>涂抹润滑剂放入阴道</p>
+                </div>
+                <p>在设备阴道电极顶部涂抹一点润滑剂，如图所示，缓缓将设备插入阴道内，设备柄部接触外阴唇为较佳位置。</p>
+            </figure>
+            <figure>
+                <div class="img-dv">
+                    <a href="./src/assets/img/newGuidance211123/doBeforeTrain/p7.png" data-size="704x362">
+                        <img src="./src/assets/img/newGuidance211123/doBeforeTrain/p7.png">
+                    </a>
+                </div>
+                <figcaption style="display:none;"></figcaption>
+            </figure>
+        </div>
+    </div>
+    <div class='document'>
+        <p class='document-title'>参考文献[6]</p>
+        <p class='document-content' onclick='window.location.href="https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFDAUTO&filename=SZZX202013051&uid=WEEvREcwSlJHSldTTEYzVDhUSFJNSUtxR0c0b1V0RUZHekJ4Q25BMnJXRT0="'>
+            <span>[1] </span>
+            <span>生物反馈+电刺激对产后盆底肌功能的影响</span>
+        </p>
+        <p class='document-content' onclick='window.location.href="https://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CJFQ&dbname=CJFDAUTO&filename=ZDYS202016020&uid=WEEvREcwSlJHSldTTEYzVDhUSFJNSUtxR0c0b1V0RUZHekJ4Q25BMnJXRT0="'>
+            <span>[2] </span>
+            <span>盆底肌电生物反馈疗法对初产妇产后盆底肌力及性功能的影响</span>
+        </p>
+        <p class='document-content' onclick='window.location.href="https://kns.cnki.net/kcms/detail/detail.aspx?filename=XKXZ201806027&dbcode=CJFQ&dbname=CJFDTEMP&v="'>
+            <span>[3] </span>
+            <span>盆底肌功能锻炼与电刺激联合生物反馈对产后盆底功能障碍的干预效果及对性生活质量的影响</span>
+        </p>
+        <p class='document-content' onclick='window.location.href="https://www.sciencedirect.com/science/article/pii/S2050116120300076"'>
+            <span>[4] </span>
+            <span>Electromyographic Evaluation of the Pelvic Muscles Activity After High-Intensity Focused Electromagnetic Procedure and Electrical Stimulation in Women With Pelvic Floor Dysfunction</span>
+        </p>
+        <p class='document-content' onclick='window.location.href="https://rightinhome.oss-accelerate.aliyuncs.com/wenxian/jmtt_yln.pdf"'>
+            <span>[5] </span>
+            <span>按摩结合电刺激对盆底肌筋膜疼痛综合征的治疗效果研究</span>
+        </p>
+        <p class='document-content' onclick='window.location.href="https://rightinhome.oss-accelerate.aliyuncs.com/wenxian/kflc3.pdf"'>
+            <span>[6] </span>
+            <span>产后盆底康复流程第三部分——产后盆底康复措施及实施方案</span>
+        </p>
+    </div>
+    
+    <script src="./src/third/jquery/photoswipe/photoswipe.js"></script>
+    <script src="./src/third/jquery/photoswipe/photoswipe-ui-default.js"></script>
+    <script type='text/javascript'>
+        CommonUtils.setHtmlTitle('智能训练有准备')
+        CommonUtils.checkIos(function(is_submit) {
+            if (is_submit == '1') {
+                $('.document').css('display', 'block')
+            }
+        })
+
+        /**
+            跳转--解剖正确的训练姿势
+            @param
+            @return
+        */
+        function goCorrectTrain() {
+            CommonUtils.stopProp()
+            window.location.href = '/#/newGuidance200615/correctTrain'
+        }
+    </script>
+</body>
+</html>

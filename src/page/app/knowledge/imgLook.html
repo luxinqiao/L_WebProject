@@ -1,0 +1,29 @@
+<!--
+    文件描述：图片查看
+    创建人：赵志银
+    创建时间：2021-04-13
+ -->
+ <html>
+    <head>
+        <link rel='stylesheet' href='/src/assets/css/knowledge/imgLook.css?t=20210413'>
+    </head>
+    <body>
+        <div id='main' ontouchstart='back()'>
+            <span id='tip'></span>
+            <div id='look'>
+                <!-- 动态添加图片 -->
+            </div>
+            <div id='menu' ontouchstart='hideMenu(true)'>
+                <div class='menu-content'>
+                    <p class='save' ontouchstart='saveImg()'>保存图片</p>
+                    <p class='cancel' ontouchstart='cancel()'>取消</p>
+                </div>
+            </div>
+        </div>
+        <script type='text/javascript' src='/src/utils/CommonUtils.js?t=20210413'></script>
+        <script type='text/javascript'>
+            CommonUtils.loadCommon()
+            CommonUtils.appendScript('/src/page/js/knowledge/imgLook.js?t=20210413')
+        </script>
+    </body>
+</html>

@@ -1,0 +1,116 @@
+<!--
+ * 文件描述：下载澜渟医生和澜渟医生
+ * 创建人：赵志银
+ * 创建时间：2019-12-25
+-->
+<html>
+    <head>
+        <link rel='stylesheet' href='/src/assets/css/inviteAPP/downAll.css'>
+    </head>
+    <body>
+        <div id='head' style='display: none;'>澜渟平台</div>
+        <div id='main'>
+            <div class='list'>
+                <img class='list-logo' src="/src/assets/img/inviteAPP/download/userLogo.png">
+                <p class='list-title'>澜渟</p>
+                <p class='list-subTitle'>您的随身家庭盆底训练助手</p>
+                <button class='list-downloadBtn' onclick='userDown()'>立即下载</button>
+                <img class='list-contentImg' src='/src/assets/img/inviteAPP/download/user.png'>
+                <p class='list-contentDesc' style='top: 2.64rem; left: 2.96rem;'>
+                    <span class='mark'></span>
+                    <span class='text'>盆底肌修复</span>
+                </p>
+                <p class='list-contentDesc' style='top: 3.14rem; left: 2.96rem;'>
+                    <span class='mark'></span>
+                    <span class='text'>凯格尔运动</span>
+                </p>
+                <p class='list-contentDesc' style='top: 3.64rem; left: 2.96rem;'>
+                    <span class='mark'></span>
+                    <span class='text'>腹式呼吸</span>
+                </p>
+                <p class='list-contentDesc' style='top: 2.64rem; left: 4.96rem;'>
+                    <span class='mark'></span>
+                    <span class='text'>腹直肌恢复</span>
+                </p>
+                <p class='list-contentDesc' style='top: 3.14rem; left: 4.96rem;'>
+                    <span class='mark'></span>
+                    <span class='text'>孕产知识</span>
+                </p>
+                <p class='list-contentDesc' style='top: 3.64rem; left: 4.96rem;'>
+                    <span class='mark'></span>
+                    <span class='text'>互动交流</span>
+                </p>
+                <div class='list-detail' onclick="goUser()">
+                    <span>了解详情</span>
+                    <img src="/src/assets/img/inviteAPP/download/next.png">
+                </div>
+            </div>
+            <div class='list'>
+                <img class='list-logo' style='top: 0.32rem; left: 0.26rem; width: 1rem; height: 1rem;' src="/src/assets/img/inviteAPP/download/userMedicalLogo.png">
+                <p class='list-title' style='top:0.4rem; font-size: 0.28rem; letter-spacing: 0;'>盆底生物刺激反馈仪软件</p>
+                <p class='list-subTitle' style='top:0.82rem;'>您的随身家用盆底训练助手</p>
+                <button class='list-downloadBtn' style='top: 0.42rem;' onclick='userMedicalDown()'>立即下载</button>
+                <img class='list-contentImg' src='/src/assets/img/inviteAPP/download/userMedical.png'>
+                <p class='list-contentDesc' style='top: 2.54rem; left: 3.48rem;'>
+                    <span class='mark'></span>
+                    <span class='text'>盆底肌修复</span>
+                </p>
+                <p class='list-contentDesc' style='top: 3.08rem; left: 3.48rem;'>
+                    <span class='mark'></span>
+                    <span class='text'>腹式呼吸</span>
+                </p>
+                <p class='list-contentDesc' style='top: 3.62rem; left: 3.48rem;'>
+                    <span class='mark'></span>
+                    <span class='text'>盆底百科</span>
+                </p>
+                <p class='list-contentDesc' style='top: 4.16rem; left: 3.48rem;'>
+                    <span class='mark'></span>
+                    <span class='text'>互动交流</span>
+                </p>
+                <div class='list-detail' onclick="goUserMedical()">
+                    <span>了解详情</span>
+                    <img src="/src/assets/img/inviteAPP/download/next.png">
+                </div>
+            </div>
+            <div class='list'>
+                <img class='list-logo' src="/src/assets/img/inviteAPP/download/doclogo.png">
+                <p class='list-title'>澜渟医生</p>
+                <p class='list-subTitle'>盆底康复医生成长必备</p>
+                <button class='list-downloadBtn' style='background-color: #26C2C4;' onclick='docDown()'>立即下载</button>
+                <img class='list-contentImg' src='/src/assets/img/inviteAPP/download/doc.png'>
+                <p class='list-contentDesc' style='top: 2.54rem; left: 2.94rem;'>
+                    <span class='mark' style='background-color: #26C2C4;'></span>
+                    <span class='text'>进修学习</span>
+                </p>
+                <p class='list-contentDesc' style='top: 3.08rem; left: 2.94rem;'>
+                    <span class='mark' style='background-color: #26C2C4;'></span>
+                    <span class='text'>参会考证</span>
+                </p>
+                <p class='list-contentDesc' style='top: 3.62rem; left: 2.94rem;'>
+                    <span class='mark' style='background-color: #26C2C4;'></span>
+                    <span class='text'>专家直播</span>
+                </p>
+                <p class='list-contentDesc' style='top: 2.54rem; left: 4.94rem;'>
+                    <span class='mark' style='background-color: #26C2C4;'></span>
+                    <span class='text'>专业课程</span>
+                </p>
+                <p class='list-contentDesc' style='top: 3.08rem; left: 4.94rem;'>
+                    <span class='mark' style='background-color: #26C2C4;'></span>
+                    <span class='text'>互动交流</span>
+                </p>
+                <div class='list-detail' onclick="goDoc()">
+                    <span>了解详情</span>
+                    <img src="/src/assets/img/inviteAPP/download/next.png">
+                </div>
+            </div>
+        </div>
+
+        <script type='text/javascript' src='/src/utils/remStyle.js'></script>
+        <script type='text/javascript' src='/src/utils/CommonUtils.js'></script>
+        <script type='text/javascript' src='/src/utils/downloadApp.js'></script>
+        <script type='text/javascript'>
+            CommonUtils.loadCommon();
+            CommonUtils.appendScript('/src/page/js/inviteAPP/downAll.js');
+        </script>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+<!--
+    文件描述：商品延保
+    创建人：卢信桥
+    创建时间：unknown
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购买延保</title>
+    <link rel='stylesheet' href='/src/assets/css/guarantee/buy.css'>
+    <link rel='stylesheet' href='/src/assets/css/guarantee/dialog.css'>
+</head>
+<body>
+    <div id="main">
+        <div class="banner">
+            <img src="./src/assets/img/guarantee/buy/banner.png">
+            <div class="yearHalf year shop" onclick="checkHalf()">
+                <h1 class="titles"></h1>
+                <p class="price"></p>
+                <p class="dates">购买后将延保至<span></span></p>
+            </div>
+            <div class="yearAll year" onclick="checkFull()">
+                <h1 class="titles"></h1>
+                <p class="price"></p>
+                <p class="dates">购买后将延保至<span></span></p>
+            </div>
+        </div>
+        <div class="information">
+            <h1>您的设备</h1>
+            <h6>提示：每个产品仅支持购买一次延保服务，不可叠加购买。</h6>
+            <div class="numberTimes">
+                <h2><h3 style="margin-bottom: 0.24rem;">设备编号:</h3><p class="number"><span class="numFirst"></span></p></h2>
+                <h2><h3>设备当前质保期：</h3><p class="times"><span class="firstTime"></span>至<span class="nextTime"></span></p></h2>
+            </div>
+        </div>
+        <div class="service">
+            <div class="serviceKnow">
+                <h1>服务须知</h1>
+                <div style="display: flex;margin: 0 auto;">
+                    <dl style="margin-left: 0.2rem;">
+                        <dt><img src="./src/assets/img/guarantee/buy/s1.png"></dt>
+                        <dd>
+                            <h2>保障期限</h2>
+                            <p>半年—1年</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="./src/assets/img/guarantee/buy/s2.png"></dt>
+                        <dd>
+                            <h2>保障方式</h2>
+                            <p>维修</p>
+                        </dd>
+                    </dl>
+                    <dl>
+                        <dt><img src="./src/assets/img/guarantee/buy/s3.png"></dt>
+                        <dd>
+                            <h2>申请方式</h2>
+                            <p>在线申请</p>
+                        </dd>
+                    </dl>
+                    <dl style="margin-right: 0;">
+                        <dt><img src="./src/assets/img/guarantee/buy/s4.png"></dt>
+                        <dd>
+                            <h2>申请时间</h2>
+                            <p>7×24小时</p>
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+            <div class="serviceDetails">
+                <h1>服务详情</h1>
+                <p>1.产品可在激活日起7天内补充延保服务，通过线上渠道购买产品可同时一并购买延保服务，购买延保服务时需提供产品编号。</p>
+                <p>2.延保服务是在产品质保期1年的基础上，从产品原有质保期结束次日起开始计算，主机延长半年或1年（具体以您所购买的延保期限为准）保修服务。</p>
+                <p>3.延保服务仅限主机，不包括充电盒、充电线等附件及赠品。</p>
+                <p>4.每个产品仅支持购买一次延保服务，不可叠加购买。</p>
+                <p>延保服务为增值服务产品，支付成功立即生效，不支持无理由退款。</p>
+                <p class="customer">如果对设备质保有疑问，可以<a href="tel:400-133-5668">联系客服</a>为您解答哦！</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p class="total">金额：<span>元</span></p>
+        <a href="javascript:;" onclick="checkbuy()">立即延保</a>
+    </div>
+</body>
+<script type='text/javascript' src='/src/utils/CommonUtils.js'></script>
+<script type='text/javascript' src='/src/utils/remStyle.js'></script>
+<script type='text/javascript' src='/src/utils/DialogUtils.js'></script>
+<script type='text/javascript'>
+    CommonUtils.loadCommon();
+    CommonUtils.appendScript('/src/page/js/guarantee/buy.js');
+</script>
+</html>

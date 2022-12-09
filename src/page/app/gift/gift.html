@@ -1,0 +1,63 @@
+<!--
+    文件描述：新手大礼包
+    创建人：卢信桥
+    创建时间：2019-11-04
+-->
+<html>
+<head>
+    <title>填问卷领豪礼</title>
+    <!-- 时间控件 -->
+    <link rel='stylesheet' type='text/css' href='./src/third/LCalendar/index.css' />
+    <link rel='stylesheet' type='text/css' href='./src/third/LCalendar/LCalendar.css' />
+    <link rel='stylesheet' href='./src/assets/css/gift/gift.css'>
+</head>
+<body>
+  <div id='content' >
+    <div id='top' style='display:none;'>
+        <span id='rule' onclick='goRule()'>活动规则</span>
+        <span id='title'></span>
+    </div>
+    <div id='main' style='padding: 0.13rem 0.16rem 0.38rem 0.16rem;display:none;'>
+        <div class='moudle' style='border-radius: 0.16rem; background-color: #460895;'>
+            <p class='title'>
+                <span></span>
+                <span></span>
+                <span>活动奖品</span>
+            </p>
+            <div>
+              <p>填写下方问卷即可领取好礼</p>
+              <img src='/src/assets/img/gift/arrow.png'>
+            </div>
+        </div>
+        <div class='test moudle' style='border-radius: 0.16rem; background-color: #460895;'>
+          <p class='title'>
+            <span></span>
+            <span></span>
+            <span>问卷题目</span>
+          </p>
+          <img src='/src/assets/img/gift/waves.png'>
+          <div class='question'>
+
+          </div>
+        </div>
+        <div class='btn' onclick='getGift()'>提交并领取好礼</div>
+    </div>
+  </div>
+
+    <div id='success' style='display:none;'>
+      <div>
+        <img src='/src/assets/img/gift/getSuccess.png'>
+        <div>
+          <p>恭喜您领取成功</p>
+          <p onclick='goGift()'>去查看</p>
+        </div>
+      </div>
+    </div>
+
+    <script src='./src/third/jquery/photoswipe/photoswipe.js'></script>
+    <script src='./src/third/LCalendar/LCalendar.js' type='text/javascript' ></script>
+    <script type='text/javascript'>
+        CommonUtils.appendScript('/src/page/js/gift/gift.js');
+    </script>
+</body>
+</html>

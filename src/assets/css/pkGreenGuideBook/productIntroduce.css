@@ -1,0 +1,54 @@
+/**
+* 文件描述：产品介绍css样式表
+* 创建人：殷俊
+* 创建时间：2019-07-10
+*/
+
+.img_des {
+    margin-top:20px;
+}
+
+figcaption {
+    display:none;
+}
+
+.context {
+    display:inline-block;
+    width: 12px;
+    height:12px;
+    border-radius: 12px;
+    margin-right:5px;
+    background-color: #ef5e8f;
+}
+
+.context {
+    margin-top: 20px;
+}
+
+.first {
+    margin-top: 0;
+}
+
+.forbidden {
+    margin: 22px 0 30px 0;
+}
+
+.document {
+    display: none;
+    padding: 0 12px 40px 12px;
+}
+.document-title {
+    font-size: 18px;
+    color: #285edd;
+}
+.document-content {
+    margin-top: 10px;
+    line-height: 22px;
+    font-size: 14px;
+}
+.document-content>span:nth-child(1) {
+    color: #888;
+}
+.document-content>span:nth-child(2) {
+    color: #6592fa;
+}

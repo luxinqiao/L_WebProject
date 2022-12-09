@@ -1,0 +1,101 @@
+<html>
+<head>
+	<link rel='stylesheet' href='/src/assets/css/trainWeb/Train_Record.css'>
+</head>
+<body>
+	<div id='main'>
+        <div id='scoreDiv'>
+            <p>您的盆底肌力总得分</p>
+            <p></p>
+        </div>
+        <div id='tableDiv'>
+            <div class='title'>
+                <span></span>
+                <span>评估结果</span>
+            </div>
+            <div class='rowGroup height_one'>
+                <span class='cell row1 col1 height_one bg-green'>阶段名称</span>
+                <span class='cell row1 col2 height_one bg-green'>参数名称</span>
+                <span class='cell row1 col3 height_one bg-green'>测试值(盆底)</span>
+                <span class='cell row1 col4 height_one bg-green'>参考值</span>
+                <span class='cell row1 col5 height_one bg-green'>分项得分</span>
+            </div>
+            <div class='rowGroup height_two'>
+                <span class='cell row1 col1 height_two bg-green'>前静息阶段</span>
+                <span class='cell row1 col2 height_one bg-green'>平均值</span>
+                <span class='cell row1 col3 height_one' id='first_avg'></span>
+                <span class='cell row1 col4 height_one'>&lt4μv</span>
+                <span class='cell row2 col2 height_one bg-green'>变异性</span>
+                <span class='cell row2 col3 height_one' id='first_variability'></span>
+                <span class='cell row2 col4 height_one'>&lt0.2</span>
+                <span class='cell row1 col5 height_two' id='first_score'></span>
+            </div>
+            <div class='rowGroup height_three'>
+                <span class='cell row1 col1 height_three bg-green'>快肌(Ⅱ类纤维)阶段</span>
+                <span class='cell row1 col2 height_one bg-green'>最大值</span>
+                <span class='cell row1 col3 height_one' id='second_max'></span>
+                <span class='cell row1 col4 height_one'>&gt40μv</span>
+                <span class='cell row2 col2 height_one bg-green'>上升时间</span>
+                <span class='cell row2 col3 height_one' id='second_uptime'></span>
+                <span class='cell row2 col4 height_one'>&lt0.5s</span>
+                <span class='cell row3 col2 height_one bg-green'>恢复时间</span>
+                <span class='cell row3 col3 height_one' id='second_downtime'></span>
+                <span class='cell row3 col4 height_one'>&lt0.5s</span>
+                <span class='cell row1 col5 height_three' id='second_score'></span>
+            </div>
+            <div class='rowGroup height_two'>
+                <span class='cell row1 col1 height_two bg-green'>慢肌(Ⅰ类纤维)阶段</span>
+                <span class='cell row1 col2 height_one bg-green'>平均值</span>
+                <span class='cell row1 col3 height_one' id='third_avg'></span>
+                <span class='cell row1 col4 height_one'>&gt35μv</span>
+                <span class='cell row2 col2 height_one bg-green'>变异性</span>
+                <span class='cell row2 col3 height_one' id='third_variability'></span>
+                <span class='cell row2 col4 height_one'>&lt0.2</span>
+                <span class='cell row1 col5 height_two' id='third_score'></span>
+            </div>
+            <div class='rowGroup height_two'>
+                <span class='cell row1 col1 height_two bg-green'>后静息阶段</span>
+                <span class='cell row1 col2 height_one bg-green'>平均值</span>
+                <span class='cell row1 col3 height_one' id='fifth_avg'></span>
+                <span class='cell row1 col4 height_one'>&lt4μv</span>
+                <span class='cell row2 col2 height_one bg-green'>变异性</span>
+                <span class='cell row2 col3 height_one' id='fifth_variability'></span>
+                <span class='cell row2 col4 height_one'>&lt0.2</span>
+                <span class='cell row1 col5 height_two' id='fifth_score'></span>
+            </div>
+            <div class='rowGroup height_one'>
+                <span class='cell row1 col1 height_one bg-green' style='width:36%;border-bottom: 1px solid #666;'>总得分</span>
+                <span class='cell row1 col3 height_one'>--</span>
+                <span class='cell row1 col4 height_one'>--</span>
+                <span class='cell row1 col5 height_one' id='total_score'></span>
+            </div>
+        </div>
+        <div id='emgDiv'>
+            <div class='title'>
+                <span></span>
+                <span>盆底表面肌电图</span>
+            </div>
+            <div id='emgChart'></div>
+        </div>
+        <div id='infoDiv'>
+            <div class='title'>
+                <span></span>
+                <span>报告解读简要说明</span>
+            </div>
+            <p>1、前静息阶段：测试静态盆底肌张力，大于4uv提示盆底肌静息张力升高，容易导致盆底肌缺血，引起性交痛、尿潴留、便秘等病症。</p>
+            <p>2、快肌（Ⅱ类肌）阶段：主要测试动态的快肌（II类纤维）的肌力和反应速度，快肌的肌力不足容易引发尿失禁、粪失禁、性冷淡和性体验下降。</p>
+            <p>3、慢肌（Ⅰ类肌）阶段：主要测试动态的慢肌（I类纤维）的肌力和收缩控制的稳定性，肌力下降和变异性增大超过0.2，容易引发压力性尿失禁、盆腔器官脱垂、排便功能障碍等病症。</p>
+            <p>4、耐力测试阶段：测试盆底肌尤其是慢肌（I类纤维）的耐力，平均值的下降和后前比值的下降表示慢肌（I类纤维）耐力下降。</p>
+            <p>5、后静息阶段：测试静态盆底肌张力，大于4uv提示盆底肌静息张力升高，容易导致盆底肌缺血，引起性交痛、尿潴留、便秘等临床病症。</p>
+        </div>
+    </div>
+    <script type='text/javascript' src='/src/utils/CommonUtils.js'></script>
+	<script type='text/javascript'>
+        CommonUtils.loadCommon();
+        CommonUtils.appendScript('/src/third/highcharts-6.2.0/code/Highcharts.js');
+        CommonUtils.appendScript('/src/third/protobuf/Protobuf.js');
+        CommonUtils.appendScript('/src/utils/ProtoUtils.js');
+        CommonUtils.appendScript('/src/page/js/trainWeb/Train_Record.js');
+	</script>
+</body>
+</html>

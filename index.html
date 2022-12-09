@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'/>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0'>
+	<meta http-equiv='Expires' content='0'>
+	<meta http-equiv='Pragma' content='no-cache'>
+	<meta http-equiv='Cache-control' content='no-cache'>
+	<meta http-equiv='Cache' content='no-cache'>
+	<title class='index_title'></title>
+	<link rel="shortcut icon" href="#"/>
+	<link rel='stylesheet' href='./src/assets/css/common/Common.css?t=20220121'>
+	<link rel='stylesheet' href='./src/assets/css/common/Dialog.css?t=20220121'>
+</head>
+<body ondragstart='return false'>
+	<div id='rootPage'></div>
+	<script type='text/javascript' src='./src/config/Index.js?t=20220121'></script>
+	<script type='text/javascript' src='./src/third/jquery/Jquery-2.1.1.min.js'></script>
+	<script type='text/javascript' src='./src/router/Index.js?t=20220121'></script>
+	<script type='text/javascript' src='./src/router/StaticRoute.js?t=20220121'></script>
+	<script type='text/javascript' src='./src/utils/crypto-js.min.js?t=20220121'></script>
+	<script type='text/javascript' src='./src/utils/AjaxUtils.js?t=20220121'></script>
+	<script type='text/javascript' src='./src/utils/DialogUtils.js?t=20220121'></script>
+	<script type='text/javascript'>
+		loadScript('/src/utils/CommonUtils.js?'+new Date().getTime(), function() {
+			var version = getIEVersion()
+			if (version=='-1' || version=='edge') {
+				loadScript('./src/utils/UploadUtils.js?t=20220121')
+			}
+		})
+		function getIEVersion() {
+			var userAgent = navigator.userAgent
+			var isIE = userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1
+			var isEdge = userAgent.indexOf("Edge") > -1 && !isIE
+			var isIE11 = userAgent.indexOf('Trident') > -1 && userAgent.indexOf("rv:11.0") > -1
+			if(isIE) {
+				var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
+				reIE.test(userAgent);
+				var version = parseFloat(RegExp["$1"]);
+				if (version == 7) {
+					return 'ie7'
+				} else if (version == 8) {
+					return 'ie8'
+				} else if (version == 9) {
+					return 'ie9'
+				} else if (version == 10) {
+					return 'ie10'
+				} else {
+					return 'ie6'
+				}
+			} else if (isEdge) {
+				return 'edge'
+			} else if (isIE11) {
+				return 'ie11'  
+			} else {
+				return '-1'
+			}
+		}
+		function loadScript(url, callback) {
+			var script = document.createElement('script')
+			script.type = 'text/javascript'
+			script.onload = function () {
+				typeof(callback) == 'function' ? callback() : ''
+			}
+			script.src = url
+			document.body.appendChild(script)
+        }
+	</script>
+</body>
+</html>

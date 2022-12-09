@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/src/assets/css/programNew/programListEdit.css?t=20200805">
+</head>
+<body>
+    <div class="programList">
+        <div class="pageRow">
+            <div id="pageination"></div>
+        </div>
+        <div class="programList-card">
+            <div class="programList-header">治疗方案库</div>
+            <div class="programList-search">
+                <div class="programList-search-list">
+                    <span>方案类型：</span>
+                    <select id="searchSel">
+                        <option value="system" selected>系统方案</option>
+                        <!--
+                            <option value="auto">自动生成</option>
+                            <option value="train">自由训练</option>
+                        -->
+                    </select>
+                </div>
+                <div class="programList-search-list">
+                    <span>方案名称：</span>
+                    <input type="text" id="searchName" placeholder="方案名称">
+                </div>
+                <div class="programList-search-btn operate-btn"  onclick="search()">
+                    <img src="/src/assets/img/programNew/search.png" alt="">
+                    <span>搜索</span>
+                </div>
+            </div>
+            <div class="programList-cardBody">
+                <div class="programList-tab">
+                    <span class="act system-tab">系统方案</span>
+                    <!--
+                        <span class="auto-tab">自动生成</span>
+                        <span class="train-tab">自由训练</span>
+                    -->
+                </div>
+                <div class="programList-btn" onclick="add()">
+                    <img src="/src/assets/img/programNew/btn-add.png" alt="">
+                    <span>新增</span>
+                </div>
+                <div class="programList-content">
+                    <div class="programList-thead">
+                        <div class="programList-thead-0">序号</div>
+                        <div class="programList-thead-1">生成时间</div>
+                        <div class="programList-thead-2">类型</div>
+                        <!--
+                            <div class="programList-thead-3">子类型</div>
+                        -->
+                        <div class="programList-thead-4">方案名称</div>
+                        <div class="programList-thead-5">总次数</div>
+                        <div class="programList-thead-6">总时间(分)</div>
+                        <div class="programList-thead-7">描述</div>
+                        <div class="programList-thead-8">操作</div>
+                    </div>
+                    <div class="programList-tbody system">
+                        <!-- 系统方案数据 -->
+                    </div>
+                    <div class="programList-tbody auto">
+                        <!-- 自动生成数据 -->
+                    </div>
+                    <div class="programList-tbody train">
+                        <!-- 自由训练数据 -->
+                    </div>
+                </div>
+                <div class="page">
+                    <div class="page-btn pre-btn" onclick="getPre()">上一页</div>
+                    <div class="page-mid">
+
+                    </div>
+                    <div class="page-btn next-btn" onclick="getnNext()">下一页</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="programList-login">
+        <div class="programList-login-content">
+            <div class="programList-login-title">请先登录</div>
+            <div class="programList-login-item">
+                <label for="phone">手机号：</label>
+                <input onfocus="phoneFocus()" class="programList-login-input" id="phone" type="text" placeholder='请输入手机号' maxlength='11' onkeyup='value=value.replace(/[^0-9]/g, "")'>
+                <div class="programList-login-prompt">请填写正确的手机号</div>
+            </div>
+            <div class="programList-login-item programList-login-password">
+                <label for="password">验证码：</label>
+                <input class="programList-login-captcha-input" onfocus="captchaFocus()" id="password" type="text" maxlength="6" placeholder='请输入验证码' onkeyup='value=value.replace(/[^0-9]/g, "")'>
+                <button class="programList-login-getCaptcha" onclick="getCaptcha()">获取验证码</button>
+                <div class="programList-login-captcha-prompt">请输入验证码</div>
+            </div>
+            <button onclick="goLogin()" class="programList-login-btn">登录</button>
+        </div>
+    </div>
+
+    <div class="programList-dialog">
+        <div class="programList-dialog-box">
+            <div class="programList-dialog-header">提示</div>
+            <div class="programList-dialog-content">
+                <img src="/src/assets/img/programNew/warning.png" alt="">
+                <span>是否退出登录</span>
+            </div>
+            <div class="programList-dialog-bottom">
+                <button onclick="signOut()">确定</button>
+                <button onclick="hideSignOut()">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 删除确认框 -->
+    <div class="programList-dialog dele-dialog">
+        <div class="programList-dialog-box dele-dialog-box">
+            <div class="programList-dialog-header">提示</div>
+            <div class="programList-dialog-content dele-dialog-content">
+                <img src="/src/assets/img/programNew/warning.png" alt="">
+                <span class="dele-con">是否删除该方案</span>
+            </div>
+            <div class="programList-dialog-bottom">
+                <button onclick="deleConfirm()">确定</button>
+                <button onclick="hideSignOut()">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 新增 -->
+    <div class="programList-dialog add-dialog">
+        <div class="programList-dialog-box add-dialog-box">
+            <div class="programList-dialog-header">新增方案</div>
+            <div class="programList-dialog-content add-dialog-content">
+                <div class="add-dialog-list">
+                    <span>方案类型：</span>
+                    <select id="select">
+                        <option value="system" selected>系统方案</option>
+                        <option value="auto">自动生成</option>
+                        <option value="train">自由训练</option>
+                    </select>
+                    <img src="/src/assets/img/programNew/cuo.png" alt="" class='add-type'>
+                </div>
+                <div class="add-dialog-list">
+                    <span>方案名称：</span>
+                    <input type="text" id="name" placeholder="方案名称">
+                    <img src="/src/assets/img/programNew/cuo.png" alt="" class='add-name'>
+                </div>
+                <div class="add-dialog-list">
+                    <span>方案描述：</span>
+                    <textarea name="" id="des" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="programList-dialog-bottom">
+                <button onclick="addPlane()">确定</button>
+                <button onclick="hideSignOut()">取消</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="programList-message">验证码发送成功!</div>
+</body>
+<script type="application/javascript" src="/src/page/js/programNew/programlistEdit.js?t=20200805"></script>
+<script type='text/javascript' src='/src/utils/RegUtils.js?t=20200805'></script>
+</html>

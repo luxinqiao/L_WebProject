@@ -1,0 +1,689 @@
+<!--
+    文件描述：新手必读-盆底康复仪（澜渟3代低端）
+    创建人：卢信桥
+    创建时间：2021-08-25
+-->
+<html>
+<head>
+    <title>新手必读</title>
+    <link rel='stylesheet' href='/src/assets/css/utilStyle/swiper.css'>
+    <style>
+        * {
+            user-select: none;
+        }
+
+        /* tab头部 */
+        #tab {
+            display: none;
+            height: 0.4rem;
+            justify-content: space-around; align-items: center;
+        }
+        .tab-item {
+            flex: 1;
+            padding-top: 0.1rem;
+            height: 0.4rem;
+        }
+        .tab-item>.tab-item-text {
+            display: block;
+            height: 0.21rem;
+            text-align: center; line-height: 0.21rem;
+            font-size: 0.15rem;
+            color: #999;
+        }
+        .tab-item>.tab-item-bottomLine {
+            display: none;
+            margin: 0.02rem auto 0 auto;
+            width: 0.14rem; height: 0.02rem;
+            background-color: #333;
+        }
+        .tab-item.active>.tab-item-text {
+            font-weight: bold;
+            color: #333;
+        }
+        .tab-item.active>.tab-item-bottomLine {
+            display: block;
+        }
+
+        /* 盆底训练 */
+        #pd {
+            display: none;
+        }
+        #pd.active {
+            display: block;
+        }
+        #pd-banner {
+            display: block;
+            width: 100%;
+        }
+        /* 如何使用康复仪 */
+        .pd-use-title {
+            margin-left: auto; margin-right: auto;
+            width: 1.64rem; height: 0.32rem;
+            text-align: center; line-height: 0.32rem;
+            font-size: 0.16rem; font-weight: bold;
+            border-radius: 0.16rem;
+            color: #957F5C; background-color: #FBF8F1;
+        }
+        .pd-use-camera {
+            margin: 0.21rem 0 0 0.13rem;
+        }
+        .pd-use-camera-title {
+            display: block;
+            height: 0.27rem;
+        }
+        .pd-use-camera-swiper {
+            margin-top: 0.18rem;
+        }
+        .pd-use-electrode {
+            margin: 0.21rem 0 0 0.13rem;
+        }
+        .pd-use-electrode-title {
+            display: block;
+            height: 0.27rem;
+        }
+        .pd-use-electrode-swiper {
+            margin-top: 0.18rem;
+        }
+        .mdSwiper {
+            height: 1.36rem;
+        }
+        .swiper-notice {
+            margin-left: 0.12rem;
+        }
+        .swiper-notice>.red {
+            color: #ff2c79;
+        }
+        .pd-use-electrode-tip>span:nth-child(1) {
+            height: 0.24rem;
+            line-height: 0.24rem;
+            color: #FF2C79;
+        }
+        .pd-use-electrode-tip>span:nth-child(2) {
+            margin-left: -0.05rem;
+            height: 0.24rem;
+            line-height: 0.24rem;
+            color: #333;
+        }
+        /* 如何开启训练 */
+        #pd-train {
+            margin: auto 0.11rem auto 0.13rem;
+        }
+        .pd-train-title {
+            margin-left: auto; margin-right: auto;
+            width: 1.64rem; height: 0.32rem;
+            text-align: center; line-height: 0.32rem;
+            font-size: 0.16rem; font-weight: bold;
+            border-radius: 0.16rem;
+            color: #957F5C; background-color: #FBF8F1;
+        }
+        .pd-train-subTitle {
+            display: block;
+            height: 0.27rem;
+        }
+        .pd-train-desc {
+            line-height: 0.24rem;
+            font-size: 0.14rem;
+            color: #333;
+        }
+        .pd-train-img {
+            display: block;
+            width: 3.51rem;
+        }
+        .pd-train-markTitle {
+            display: flex;
+        }
+        .pd-train-markTitle>.mark {
+            margin-top: 0.1rem;
+            width: 0.05rem; height: 0.05rem;
+            border-radius: 0.05rem;
+            background-color: #ff2c79;
+        }
+        .pd-train-markTitle>.text {
+            margin-left: 0.07rem;
+            color: #ff2c79;
+        }
+        /* 如何获取方案 */
+        #pd-programme {
+            margin: auto 0.11rem auto 0.13rem;
+        }
+        .pd-programme-title {
+            margin-left: auto; margin-right: auto;
+            width: 1.64rem; height: 0.32rem;
+            text-align: center; line-height: 0.32rem;
+            font-size: 0.16rem; font-weight: bold;
+            border-radius: 0.16rem;
+            color: #957F5C; background-color: #FBF8F1;
+        }
+        .pd-programme-subTitle {
+            display: block;
+            height: 0.27rem;
+        }
+        .pd-programme-desc {
+            line-height: 0.24rem;
+            font-size: 0.14rem;
+            color: #333;
+        }
+        .pd-programme-img {
+            display: block;
+            width: 3.51rem;
+        }
+        /* 联系训练顾问 */
+        #pd-contact {
+            padding-bottom: 0.46rem;
+        }
+        .pd-contact-customer {
+            display: none;
+            justify-content: center;
+        }
+        .pd-contact-customer>.customerText {
+            line-height: 0.5rem;
+        }
+        .pd-contact-customer>.customerImg {
+            margin-left: 0.03rem;
+            width: 1.07rem; height: 0.35rem;
+        }
+        .pd-contact-customer>.phone {
+            margin-left: 0.08rem;
+            text-decoration: none;
+            color: #7694CF;
+        }
+        .pd-contact-phone {
+            display: none;
+            justify-content: center;
+        }
+        .pd-contact-phone>.phone {
+            margin-left: 0.08rem;
+            text-decoration: none;
+            color: #7694CF;
+        }
+
+        /* 产康训练 */
+        #ck {
+            display: none;
+        }
+        #ck.active {
+            display: block;
+        }
+        #ck-banner {
+            display: block;
+            width: 100%;
+        }
+        .ck-step {
+            position: relative;
+        }
+        .ck-step-circle {
+            position: absolute;
+            top: 0.1rem; left: 0.12rem;
+            width: 0.05rem; height: 0.05rem;
+            border-radius: 0.05rem;
+            background-color: #ff2c79;
+        }
+        .ck-step-title {
+            margin: 0 0.12rem 0 0.19rem;
+            line-height: 0.24rem;
+            font-size: 0.14rem;
+            color: #333;
+        }
+        .ck-step-img {
+            display: block;
+            margin: 0.08rem auto 0 auto;
+            width: 3.51rem;
+        }
+        .ck-step-desc {
+            margin: 0 0.12rem;
+            line-height: 0.24rem;
+            font-size: 0.14rem;
+            color: #333;
+        }
+        #ck-contact {
+            padding-bottom: 0.46rem;
+        }
+        .ck-contact-customer {
+            display: none;
+            justify-content: center;
+        }
+        .ck-contact-customer>.customerText {
+            line-height: 0.5rem;
+        }
+        .ck-contact-customer>.customerImg {
+            margin-left: 0.03rem;
+            width: 1.07rem; height: 0.35rem;
+        }
+        .ck-contact-customer>.phone {
+            margin-left: 0.08rem;
+            text-decoration: none;
+            color: #7694CF;
+        }
+        .ck-contact-phone {
+            display: none;
+            justify-content: center;
+        }
+        .ck-contact-phone>.phone {
+            margin-left: 0.08rem;
+            text-decoration: none;
+            color: #7694CF;
+        }
+        /* 共用 */
+        .red {
+            font-size: 0.14rem;
+            color: #ff2c79;
+        }
+        .mt5 {
+            margin-top: 0.05rem;
+        }
+        .mt8 {
+            margin-top: 0.08rem;
+        }
+        .mt12 {
+            margin-top: 0.12rem;
+        }
+        .mt14 {
+            margin-top: 0.14rem;
+        }
+        .mt15 {
+            margin-top: 0.15rem;
+        }
+        .mt18 {
+            margin-top: 0.18rem;
+        }
+        .mt20 {
+            margin-top: 0.2rem;
+        }
+        .mt22 {
+            margin-top: 0.22rem;
+        }
+        .mt24 {
+            margin-top: 0.24rem;
+        }
+        .mt35 {
+            margin-top: 0.35rem;
+        }
+        .mt38 {
+            margin-top: 0.38rem;
+        }
+        .ml12 {
+            margin-left: 0.12rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div id='main'>
+        <div id='tab'>
+            <div id='tab-pd' class='tab-item active' onclick='changeTab("pd")'>
+                <span class='tab-item-text'>盆底训练</span>
+                <span class='tab-item-bottomLine'></span>
+            </div>
+            <div id='tab-ck' class='tab-item' onclick='changeTab("ck")'>
+                <span class='tab-item-text'>产康训练</span>
+                <span class='tab-item-bottomLine'></span>
+            </div>
+        </div>
+        <div id='pd' class='tab-content'>
+            <img id='pd-banner' src='/src/assets/img/products/pfmedhaqg/pd/banner.png'>
+            <div id='pd-use'>
+                <p class='pd-use-title mt20'>如何使用康复仪</p>
+                <div class='pd-use-camera mt20'>
+                    <img class='pd-use-camera-title' src='/src/assets/img/products/pfmedhaqg/pd/use-camera-title.png'>
+                    <div class='pd-use-camera-swiper'>
+                        <div id='pd-use-camera-swiper-item' class='mdSwiper mt12'></div>
+                    </div>
+                </div>
+                <div class='pd-use-electrode mt20'>
+                    <img class='pd-use-electrode-title' src='/src/assets/img/products/pfmedhaqg/pd/use-electrode-title.png'>
+                    <div class='pd-use-electrode-swiper'>
+                        <div id='pd-use-electrode-swiper-item' class='mdSwiper mt12'></div>
+                    </div>
+                </div>
+                <p class='pd-use-electrode-tip mt12 ml12'>
+                    <span>注意：</span>
+                    <span>设备使用前，建议先充满电再开始使用。</span>
+                </p>
+            </div>
+            <div id='pd-train'>
+                <p class='pd-train-title mt24'>如何开启训练</p>
+                <img class='pd-train-subTitle mt20' src='/src/assets/img/products/pfmedhaqg/pd/train-subTitle-01.png'>
+                <p class='pd-train-desc mt14'>
+                    选择【盆底评估】，填写您的个人信息，完成一系列盆底肌收缩和放松动作，通过相关参数分析，生成报告。
+                </p>
+                <img class='pd-train-img mt8' src='/src/assets/img/products/pfmedhaqg/pd/train-img-01.png' onClick='lookPdImg(this)'>
+                <img class='pd-train-subTitle mt35' src='/src/assets/img/products/pfmedhaqg/pd/train-subTitle-02.png'>
+                <p class='pd-train-desc mt14'>
+                    盆底评估结束后，进行盆底健康测评，选择您的康复需求及目前最严重的问题，澜渟将根据您的报告结果，结合大数据平台，为您定制专属盆底方案。
+                </p>
+                <img class='pd-train-img mt8' src='/src/assets/img/products/pfmedhaqg/pd/train-img-02.png' onclick='lookPdImg(this)'>
+                <img class='pd-train-subTitle mt35' src='/src/assets/img/products/pfmedhaqg/pd/train-subTitle-03.png'>
+                <p class='pd-train-desc mt14'>
+                    完成专属方案定制后，澜渟平台将在3分钟内快速为您生成专属疗程方案，并发送到【盆底训练-我的方案】内。
+                </p>
+                <img class='pd-train-img mt8' src='/src/assets/img/products/pfmedhaqg/pd/train-img-03.png' onclick='lookPdImg(this)'>
+                <img class='pd-train-subTitle mt35' src='/src/assets/img/products/pfmedhaqg/pd/train-subTitle-04.png'>
+                <p class='pd-train-markTitle mt14'>
+                    <span class='mark'></span>
+                    <span class='text'>疗程方案</span>
+                </p>
+                <p class='pd-train-desc mt14'>
+                    专属疗程方案是根据您的盆底肌状况及问题进行针对性治疗修复。1个疗程方案由多节训练方案组成，每节训练方案是由3种模式中的1种或多种模式组合而成。
+                </p>
+                <img class='pd-train-img mt5' src='/src/assets/img/products/pfmedhaqg/pd/train-img-04-1.png' onclick='lookPdImg(this)'>
+                <p class='pd-train-desc mt18'>
+                    1个疗程方案训练结束后，建议您重新进行盆底评估，看看自己的盆底肌力有没有提升，定制新的专属方案，继续下一轮疗程训练哦！坚持训练2-3个疗程，效果更佳！
+                </p>
+                <img class='pd-train-img' src='/src/assets/img/products/pfmedhaqg/pd/train-img-04-2.png' onclick='lookPdImg(this)'>
+                <p class='pd-train-desc mt18'>
+                    <span class='red'>注：</span>如果您的医生或产康师为您推送了方案，也可遵从医生或产康师的要求训练。
+                </p>
+            </div>
+            <div id='pd-programme'>
+                <p class='pd-programme-title mt38'>如何获取方案</p>
+                <p class='pd-programme-desc mt14'>
+                    除了【盆底评估定制专属方案】，您还可以通过【麦澜德大设备接收】、【咨询训练顾问接收】、【咨询绑定的医生接收】3种方式来获取更多疗程方案。
+                </p>
+                <img class='pd-programme-img mt8' src='/src/assets/img/products/pfmedhaqg/pd/programme-img-01.png' onclick='lookPdImg(this)'>
+                <p class='pd-programme-desc mt8'>
+                    <span class='red'>*</span>：部分型号不支持【麦澜德大设备接收】、【咨询绑定的医生接收】两种获取方案的方式，具体根据您所购买的设备型号配置决定。
+                </p>
+            </div>
+            <div id='pd-contact' class='mt22'>
+                <div class='pd-contact-customer'>
+                    <span class='customerText'>如有疑问请点击</span>
+                    <img class='customerImg' src='/src/assets/img/kegelxcx/quickStart/customer.png' onClick='goPdCustomer()'>
+                </div>
+                <div class='pd-contact-customer'>
+                    <span>或拨打400电话咨询 </span>
+                    <a href="tel:400-133-5668" class='phone'>400-133-5668</a>
+                </div>
+                <div class='pd-contact-phone'>
+                    <span>如有疑问请拨打400电话咨询</span>
+                    <a href="tel:400-133-5668" class='phone'>400-133-5668</a>
+                </div>
+            </div>
+        </div>
+        <div id='ck' class='tab-content'>
+            <img id='ck-banner' src='/src/assets/img/products/pfmedhaqg/ck/banner.png'>
+            <div class='ck-step mt24'>
+                <span class='ck-step-circle'></span>
+                <div class='ck-step-title'>
+                    主机开机：长按主机的开关键3秒，指示灯为白色，开机成功。
+                </div>
+                <img class='ck-step-img' src='/src/assets/img/products/pfmedhaqg/ck/step-01.png' onclick='lookCkImg(this)'></img>
+            </div>
+            <div class='ck-step mt20'>
+                <span class='ck-step-circle'></span>
+                <div class='ck-step-title'>
+                    蓝牙连接：首次连接蓝牙时，点击【蓝牙标识】自动蓝牙搜索，选择设备进行连接。
+                </div>
+                <img class='ck-step-img' src='/src/assets/img/products/pfmedhaqg/ck/step-02.png' onclick='lookCkImg(this)'></img>
+            </div>
+            <div class='ck-step mt15'>
+                <span class='ck-step-circle'></span>
+                <div class='ck-step-title'>
+                    获取方案：根据自身需要，从【方案库】中获取产康方案。
+                </div>
+                <img class='ck-step-img' src='/src/assets/img/products/pfmedhaqg/ck/step-03.png' onclick='lookCkImg(this)'></img>
+            </div>
+            <div class='ck-step mt20'>
+                <span class='ck-step-circle'></span>
+                <div class='ck-step-title'>
+                    电极片连接主机：将“电极片”与“电极连接线”连接完成后，然后将“电极连接线”的另一端插入设备主机“电刺激通道”。
+                </div>
+                <img class='ck-step-img' src='/src/assets/img/products/pfmedhaqg/ck/step-04.png' onclick='lookCkImg(this)'></img>
+            </div>
+            <div class='ck-step mt24'>
+                <span class='ck-step-circle'></span>
+                <div class='ck-step-title'>
+                    贴附电极片：根据不同方案图示指导，将电极片贴附在需要训练的部位，确保电极片与训练部位紧密接触。
+                </div>
+                <img class='ck-step-img' src='/src/assets/img/products/pfmedhaqg/ck/step-05.png' onclick='lookCkImg(this)'></img>
+            </div>
+            <div class='ck-step mt20'>
+                <span class='ck-step-circle'></span>
+                <div class='ck-step-title'>
+                    开始训练：点击【开始第xx次训练】后，预设适当的电流强度，立即训练。
+                </div>
+                <img class='ck-step-img' src='/src/assets/img/products/pfmedhaqg/ck/step-06.png' onclick='lookCkImg(this)'></img>
+            </div>
+            <div class='ck-step mt20'>
+                <span class='ck-step-circle'></span>
+                <div class='ck-step-title'>
+                    训练结束：训练结束后，长按设备开关键3秒，指示灯不亮，关机成功。取下电极片，将电极片贴附到收纳膜上，以备下次使用。
+                </div>
+                <img class='ck-step-img' src='/src/assets/img/products/pfmedhaqg/ck/step-07.png' onclick='lookCkImg(this)'></img>
+            </div>
+            <div class='ck-step mt20'>
+                <div class='ck-step-desc'>
+                    使用澜渟您可以体验到最科学的锻炼方法，为了防止肌肉疲劳，我们建议您同一部位的每天训练次数不宜超过
+                    <span class='red'>2次</span>
+                    ，同一部位单次连续训练时长不宜超过
+                    <span class='red'>1小时</span>
+                    ，请勿过量训练。
+                </div>
+            </div>
+            <div id='ck-contact' class='mt22'>
+                <div class='ck-contact-customer'>
+                    <span class='customerText'>如有疑问请点击</span>
+                    <img class='customerImg' src='/src/assets/img/kegelxcx/quickStart/customer.png' onClick='goCkCustomer()'>
+                </div>
+                <div class='ck-contact-customer'>
+                    <span>或拨打400电话咨询 </span>
+                    <a href="tel:400-133-5668" class='phone'>400-133-5668</a>
+                </div>
+                <div class='ck-contact-phone'>
+                    <span>如有疑问请拨打400电话咨询</span>
+                    <a href="tel:400-133-5668" class='phone'>400-133-5668</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type='text/javascript' src='/src/components/swiper.js'></script>
+    <script type='text/javascript'>
+        var param_from = Router.getParameter('from')
+        var param_type = Router.getParameter('type') //1-有压力,2-无压力
+
+        $(function() {
+            CommonUtils.setHtmlTitle('新手必读')
+            if (param_from == 'pd') {
+                $('#pd').css('display', 'block')
+                initPdSwiper()
+                if (param_type == '2') {
+                    $('.pd-use-camera').css('display', 'none')
+                    $('.pd-use-electrode-title').css('display', 'none')
+                    $('#pd-train').css('display', 'none')
+                    $('.pd-programme-desc.mt14').text('除了【内置方案】，您还可以通过【麦澜德大设备接收】、【咨询训练顾问接收】、【咨询绑定的医生接收】3种方式来获取更多疗程方案。')
+                }
+            } else if (param_from == 'ck') {
+                $('#ck').css('display', 'block')
+            } else {
+                $('#tab').css('display', 'flex')
+                initPdSwiper()
+                changeTab(sessionStorage.tabType)
+            }
+            initContact()
+            $(window).scrollTop(sessionStorage.scrollTop)
+        })
+
+        /**
+            初始化轮播（盆底训练）
+            @param
+            @return
+         */
+        function initPdSwiper() {
+            var cameraArr = [
+                '/src/assets/img/products/pfmedhaqg/pd/camera-swiper-01.png',
+                '/src/assets/img/products/pfmedhaqg/pd/camera-swiper-02.png',
+                '/src/assets/img/products/pfmedhaqg/pd/camera-swiper-03.png',
+                '/src/assets/img/products/pfmedhaqg/pd/camera-swiper-04.png',
+                '/src/assets/img/products/pfmedhaqg/pd/camera-swiper-05.png',
+                '/src/assets/img/products/pfmedhaqg/pd/camera-swiper-06.png',
+                '/src/assets/img/products/pfmedhaqg/pd/camera-swiper-07.png',
+                '/src/assets/img/products/pfmedhaqg/pd/camera-swiper-08.png'
+            ]
+            var cameraSwiperUtils = new Swiper()
+            cameraSwiperUtils.init({
+                $el: $('#pd-use-camera-swiper-item'),
+                imgs: cameraArr,
+                defaultNo: sessionStorage.swipeCameraIndex ? sessionStorage.swipeCameraIndex : 0,
+                autoPlay: false,
+                clickCallback: function(index) {
+                    saveRecord({
+                        swipeCameraIndex: index,
+                        swipeElectrodeIndex: electrodeSwipeUtils.currIndex
+                    })
+                    CommonUtils.lookImg('/src/assets/img/products/pfmedhaqg/pd/camera-swiper-0'+(index+1)+'.png', cameraArr)
+                }
+            })
+
+            var electrodeArr = [
+                '/src/assets/img/products/pfmedhaqg/pd/electrode-swiper-01.png',
+                '/src/assets/img/products/pfmedhaqg/pd/electrode-swiper-02.png',
+                '/src/assets/img/products/pfmedhaqg/pd/electrode-swiper-03.png',
+                '/src/assets/img/products/pfmedhaqg/pd/electrode-swiper-04.png',
+                '/src/assets/img/products/pfmedhaqg/pd/electrode-swiper-05.png',
+                '/src/assets/img/products/pfmedhaqg/pd/electrode-swiper-06.png',
+                '/src/assets/img/products/pfmedhaqg/pd/electrode-swiper-07.png'
+            ]
+            var electrodeSwipeUtils = new Swiper()
+            electrodeSwipeUtils.init({
+                $el: $('#pd-use-electrode-swiper-item'),
+                imgs: electrodeArr,
+                defaultNo: sessionStorage.swipeElectrodeIndex ? sessionStorage.swipeElectrodeIndex : 0,
+                autoPlay: false,
+                clickCallback: function(index) {
+                    saveRecord({
+                        swipeCameraIndex: cameraSwiperUtils.currIndex,
+                        swipeElectrodeIndex: index
+                    })
+                    CommonUtils.lookImg('/src/assets/img/products/pfmedhaqg/pd/electrode-swiper-0'+(index+1)+'.png', electrodeArr)
+                }
+            })
+        }
+
+        /**
+            初始化联系方式
+            @param
+            @return
+         */
+        function initContact() {
+            if (CommonUtils.getBrowserType() == 'app') {
+                $('.pd-contact-customer').css('display', 'flex')
+                $('.ck-contact-customer').css('display', 'flex')
+            } else {
+                $('.pd-contact-phone').css('display', 'flex')
+                $('.ck-contact-phone').css('display', 'flex')
+            }
+        }
+
+        /**
+            切换tab
+            @param {String} tabType tab类型
+            @return
+         */
+        function changeTab(tabType) {
+            if (tabType != $('.tab-item.active').prop('id')) {
+                $(window).scrollTop(0)
+            }
+            $('.tab-item').removeClass('active')
+            $('.tab-content').removeClass('active')
+            if (tabType == 'pd') {
+                $('#tab-pd').addClass('active')
+                $('#pd').addClass('active')
+            } else {
+                $('#tab-ck').addClass('active')
+                $('#ck').addClass('active')
+            }
+        }
+
+        /**
+            查看图片（盆底训练）
+            @param {Dom} pdImg 盆底训练图片
+            @return
+         */
+        function lookPdImg(pdImg) {
+            saveRecord({})
+            var srcArr = []
+            if (param_type == '2') {
+                srcArr = [
+                    '/src/assets/img/products/pfmedhaqg/pd/programme-img-01.png'
+                ]
+            } else {
+                srcArr = [
+                    '/src/assets/img/products/pfmedhaqg/pd/train-img-01.png',
+                    '/src/assets/img/products/pfmedhaqg/pd/train-img-02.png',
+                    '/src/assets/img/products/pfmedhaqg/pd/train-img-03.png',
+                    '/src/assets/img/products/pfmedhaqg/pd/train-img-04-1.png',
+                    '/src/assets/img/products/pfmedhaqg/pd/train-img-04-2.png',
+                    '/src/assets/img/products/pfmedhaqg/pd/programme-img-01.png'
+                ]
+            }
+            console.log($(pdImg).attr('src'))
+            CommonUtils.lookImg($(pdImg).attr('src'), srcArr)
+        }
+        /**
+            查看图片（产康训练）
+            @param {Dom} ckImg 产康训练图片
+            @return
+         */
+        function lookCkImg(ckImg) {
+            saveRecord({})
+            var srcArr = [
+                '/src/assets/img/products/pfmedhaqg/ck/step-01.png',
+                '/src/assets/img/products/pfmedhaqg/ck/step-02.png',
+                '/src/assets/img/products/pfmedhaqg/ck/step-03.png',
+                '/src/assets/img/products/pfmedhaqg/ck/step-04.png',
+                '/src/assets/img/products/pfmedhaqg/ck/step-05.png',
+                '/src/assets/img/products/pfmedhaqg/ck/step-06.png',
+                '/src/assets/img/products/pfmedhaqg/ck/step-07.png'
+            ]
+            CommonUtils.lookImg($(ckImg).attr('src'), srcArr)
+        }
+
+        /**
+            保存记录
+            @param {Number} swipeCameraIndex 压力探头轮播序号
+            @param {Number} swipeElectrodeIndex 阴道电极轮播序号
+            @return
+         */
+        function saveRecord({swipeCameraIndex, swipeElectrodeIndex}) {
+            sessionStorage.scrollTop = $(window).scrollTop()
+            if (swipeCameraIndex) {
+                sessionStorage.swipeCameraIndex = swipeCameraIndex
+            }
+            if (swipeElectrodeIndex) {
+                sessionStorage.swipeElectrodeIndex = swipeElectrodeIndex
+            }
+            if ($('.tab-item.active').prop('id') == 'tab-pd') {
+                sessionStorage.tabType = 'pd'
+            } else {
+                sessionStorage.tabType = 'ck'
+            }
+        }
+
+        /**
+            页面跳转-训练顾问（盆底）
+            @param
+            @return
+         */
+        function goPdCustomer() {
+            CommonUtils.appFun(function() {
+                window.jsInterface.jumpToCustomer(JSON.stringify({type:'CSP0027'}))
+            }, function() {
+                window.webkit.messageHandlers.jumpToCustomer.postMessage({type:'CSP0027'})
+            })
+        }
+
+        /**
+            页面跳转-训练顾问（产康）
+            @param
+            @return
+         */
+        function goCkCustomer() {
+            CommonUtils.appFun(function() {
+                window.jsInterface.jumpToCustomer(JSON.stringify({type:'CSP0028'}))
+            }, function() {
+                window.webkit.messageHandlers.jumpToCustomer.postMessage({type:'CSP0028'})
+            })
+        }
+    </script>
+</body>
+</html>

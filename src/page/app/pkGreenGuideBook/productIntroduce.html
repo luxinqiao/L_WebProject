@@ -1,0 +1,299 @@
+<!--
+* 文件描述：产品介绍
+* 创建人：殷俊
+* 创建时间：2019-07-10
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>产品介绍</title>
+    <style>
+        * {
+            user-select: none;
+        }
+        #main {
+            padding: 0.52rem 0 0.37rem 0;
+            background-color: #fff;
+        }
+        #download {
+            display: none;
+            position: fixed; z-index: 98;
+            top: 0; left: 0; right: 0;
+            height: 0.52rem;
+            background-color: #fff9f5;
+        }
+        .download-logo {
+            position: absolute;
+            top: 0.07rem; left: 0.12rem;
+            width: 0.34rem; height: 0.36rem;
+        }
+        .download-title {
+            position: absolute;
+            top: 0.05rem; left: 0.54rem;
+            line-height: 0.22rem;
+            font-size: 0.15rem;
+            color: #ff2c79;
+        }
+        .download-subTitle {
+            position: absolute;
+            top: 0.25rem; left: 0.54rem;
+            line-height: 0.18rem;
+            font-size: 0.13rem;
+            color: #C79AAD;
+        }
+        .download-btn {
+            position: absolute;
+            top: 0.1rem; right: 0.12rem;
+            width: 0.74rem; height: 0.28rem;
+            text-align: center; line-height: 0.28rem;
+            border-radius: 0.15rem;
+            font-size: 0.12rem;
+            color: #fff; background-color: #ff2c79;
+        }
+        .title {
+            position: relative;
+            margin-left: 0.13rem;
+            display: flex;
+            justify-content: center; align-items: center;
+        }
+        .title>.no {
+            width: 0.2rem; height: 0.2rem;
+            text-align: center; line-height: 0.2rem;
+            border-radius: 0.2rem;
+            font-size: 0.16rem;
+            background-color: #ef5e8f; color: #fff;
+        }
+        .title>.text {
+            margin-left: 0.08rem;
+            line-height: 0.2rem;
+            letter-spacing: 0.01rem;
+            font-size: 0.13rem; font-weight: bold;
+            color: #ef5e8f;
+        }
+        .desc {
+            padding: 0 0.12rem;
+            line-height: 0.24rem;
+            font-size: 0.14rem; text-align: justify;
+        }
+        .desc.bold {
+            font-weight: bold;
+        }
+        .desc>.mark {
+            position: relative;
+            top: -0.03rem;
+            display: inline-block;
+            margin-right: 0.03rem;
+            width: 0.05rem; height: 0.05rem;
+            border-radius: 0.05rem;
+            background-color: #ff2c79;
+        }
+        .desc>.red {
+            font-size: 0.14rem;
+        }
+        .img {
+            display: block;
+            margin: auto 0.12rem;
+        }
+        .img>.left {
+            float: left;
+            width: 1.7rem; height: 100%;
+        }
+        .img>.right {
+            float: right;
+            width: 1.7rem; height: 100%;
+        }
+        .img>.full {
+            width: 100%; height: 100%;
+        }
+        .mt8 {
+            margin-top: 0.08rem;
+        }
+        .mt15 {
+            margin-top: 0.15rem;
+        }
+        .mt24 {
+            margin-top: 0.24rem;
+        }
+        .document {
+            display: none;
+            padding: 0 12px 40px 12px;
+        }
+        .document-title {
+            font-size: 18px;
+            color: #285edd;
+        }
+        .document-content {
+            margin-top: 10px;
+            line-height: 22px;
+            font-size: 14px;
+        }
+        .document-content>span:nth-child(1) {
+            color: #888;
+        }
+        .document-content>span:nth-child(2) {
+            color: #6592fa;
+        }
+
+    </style>
+</head>
+<body>
+    <div id='main'>
+        <div id='download'>
+            <img class='download-logo' src='/src/assets/img/lt02/wrightinNewer/download-logo.png'>
+            <p class='download-title'>澜渟</p>
+            <p class='download-subTitle'>盆底肌修复 免费凯格尔运动</p>
+            <button class='download-btn' onClick='downloadApp()'>下载App</button>
+        </div>
+        <div class='step mt24'>
+            <div class='title'>
+                <span class='no'>1</span>
+                <span class='text'>快速了解产品</span>
+            </div>
+            <div class='desc mt15'>
+                澜渟凯格尔球（盆底肌肉康复器）是一套由5个水滴形状、圆滑的锥体组成。5个锥体体积由大到小，重量由轻到重，使用时选择一个合适重量的锥体，放入阴道，采用卧位或站位，收缩盆底肌肉，夹住锥体，使其不至于滑出阴道。
+            </div>
+            <div class='img mt8' style='height: 1.81rem;'>
+                <img class='full' src='/src/assets/img/pkGreenGuideBook/productIntroduce/p1.png' onclick='lookImg(this)'></img>
+            </div>
+        </div>
+        <div class='step mt24'>
+            <div class='title'>
+                <span class='no'>2</span>
+                <span class='text'>凯格尔球作用</span>
+            </div>
+            <div class='desc mt15'>
+                凯格尔球用于分娩后或阴道肌力下降的女性锻炼阴道肌肉，提高盆底肌肉收缩能力，缓解压力性尿失禁、阴道子宫等器官膨出或脱垂、慢性疼痛、便秘等症状。
+            </div>
+        </div>
+        <div class='step mt24'>
+            <div class='title'>
+                <span class='no'>3</span>
+                <span class='text'>五球大小不同有缘由</span>
+            </div>
+            <div class='desc mt15'>
+                澜渟凯格尔球套装内含5个球。从左到右，1-5号，体积由大到小，重量由轻到重。最大的球重量最小且球体角度最大，适合松弛的阴道轻松夹住球体，刺激本体感觉；最小的球重量最大切球体角度最小，适合训练后期提升盆底肌力，紧致阴道。而训练都是循序渐进的，也就是由轻到重、从大到小的过程。
+            </div>
+            <div class='img mt8' style='height: 3.57rem;'>
+                <img class='full' src='/src/assets/img/pkGreenGuideBook/productIntroduce/p2.png' onclick='lookImg(this)'></img>
+            </div>
+        </div>
+        <div class='step mt24'>
+            <div class='title'>
+                <span class='no'>4</span>
+                <span class='text'>产品使用有禁忌</span>
+            </div>
+            <div class='desc mt15 bold'>注意事项</div>
+            <div class='desc mt8'>
+                <span class='mark'></span>
+                <span class='red'>阴道有伤口时应避免使用。</span>
+            </div>
+            <div class='desc mt8'>
+                <span class='mark'></span>
+                <span class='red'>使用前或使用中如有问题，建议向医生咨询。</span>
+            </div>
+            <div class='desc mt8'>
+                <span class='mark'></span>
+                <span class='red'>月经期间不要使用。</span>
+            </div>
+            <div class='desc mt8'>
+                <span class='mark'></span>
+                <span class='red'>盆底肌肉康复器应专人专用，禁止交叉使用。</span>
+            </div>
+            <div class='desc mt8'>
+                <span class='mark'></span>
+                <span class='red'>性生活时或性生活后不要立刻使用盆底肌肉康复器。</span>
+            </div>
+            <div class='desc mt15 bold'>禁忌症</div>
+            <div class='desc mt8'>
+                <span class='mark'></span>
+                <span class='red'>经期和不明原因出血时禁用。</span>
+            </div>
+            <div class='desc mt8'>
+                <span class='mark'></span>
+                <span class='red'>阴道炎、尿道炎急性期禁用。</span>
+            </div>
+            <div class='desc mt8'>
+                <span class='mark'></span>
+                <span class='red'>不明原因过敏时禁用。</span>
+            </div>
+            <div class='desc mt8'>
+                <span class='mark'></span>
+                <span class='red'>阴道壁有伤口或切口，建议痊愈一月后再使用。</span>
+            </div>
+        </div>
+    </div>
+    <div class='document'>
+        <p class='document-title'>参考文献[5]</p>
+        <p class='document-content' onclick='window.location.href="https://kns.cnki.net/kcms/detail/detail.aspx?filename=HNYX201919086&dbcode=CJFQ&dbname=CJFDTEMP&v="'>
+            <span>[1] </span>
+            <span>Kegel运动训练对初产妇经阴道分娩后盆底功能恢复及生活质量的影响</span>
+        </p>
+        <p class='document-content' onclick='window.location.href="http://gb.oversea.cnki.net/kcms/detail/detail.aspx?recid=&FileName=YJZY201927039&DbName=CJFDLAST2019&DbCode=CJFD"'>
+            <span>[2] </span>
+            <span>Kegel训练护理干预对产后盆底肌功能障碍的影响</span>
+        </p>
+        <p class='document-content' onclick='window.location.href="http://gb.oversea.cnki.net/kcms/detail/detail.aspx?recid=&FileName=QYZJ201406004&DbName=CJFDLAST2015&DbCode=CJFD"'>
+            <span>[3] </span>
+            <span>Kegel运动对孕妇盆底肌力作用的观察</span>
+        </p>
+        <p class='document-content' onclick='window.location.href="http://cjrh.bjmu.edu.cn/fileup/HTML/2018-1-95.shtml"'>
+            <span>[4] </span>
+            <span>阴道康复器应用于产后盆底康复治疗的研究进展</span>
+        </p>
+        <p class='document-content' onclick='window.location.href="https://medlineplus.gov/ency/patientinstructions/000141.htm"'>
+            <span>[5] </span>
+            <span>Kegel exercises - self-care</span>
+        </p>
+    </div>
+    <script type='text/javascript' src='/src/utils/downloadApp.js'></script>
+    <script type='text/javascript' src='/src/utils/openApp.js'></script>
+    <script>
+        $(function() {
+            CommonUtils.setHtmlTitle('产品介绍')
+
+            if ((CommonUtils.getBrowserType() == 'wechat' || CommonUtils.getBrowserType() == 'browser') && CommonUtils.getParameter('from')!='xcx') {
+                $('#download').css('display', 'block')
+            } else if (CommonUtils.getBrowserType() == 'app' || CommonUtils.getParameter('from')=='xcx') {
+                $('#main').css('padding-top', 0)
+            }
+
+            CommonUtils.checkIos(function(is_submit) {
+                if (is_submit == '1') {
+                    $('.document').css('display', 'block')
+                }
+            })
+            $(window).scrollTop(sessionStorage.scrollTop)
+            sessionStorage.scrollTop = 0
+        })
+
+        /**
+            查看图片
+            @param {Dom} img 图片
+            @return
+         */
+        function lookImg(img) {
+            sessionStorage.scrollTop = $(window).scrollTop()
+            var srcArr = [
+                '/src/assets/img/pkGreenGuideBook/productIntroduce/p1.png',
+                '/src/assets/img/pkGreenGuideBook/productIntroduce/p2.png'
+            ]
+            CommonUtils.lookImg($(img).attr('src'), srcArr)
+        }
+
+        /**
+                页面跳转-下载App
+                @param
+                @return
+             */
+             function downloadApp() {
+                if (CommonUtils.getBrowserType() == 'wechat') {
+                    Download_wechat('user') 
+                } else {
+                    openApp('lanting://',()=>{
+                        Download('user',()=>{})
+                    },'inviteApp/downUser') 
+                }
+            }
+    </script>
+</body>
+</html>

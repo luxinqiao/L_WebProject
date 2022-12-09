@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/src/assets/css/programNew/programDetail.css?t=20210126" media="screen">
+    <link rel="stylesheet" href="/src/assets/css/programNew/programDetail_print.css?t=20210126" media="print">
+</head>
+<body>
+<div style='height:100%;'>
+    <div class="programDetail">
+        <div class="programDetail-title">
+            <div class="programDetail-card">
+                <div class="programDetail-header">
+                    <div class="programDetail-title-item">
+                        <span class="programDetail-title-name">方案名称：</span>
+                        <span class="programDetail-title-content programDetail-title-programName-span"></span>
+                        <input class="programDetail-title-content programDetail-title-programName-input"></input>
+                    </div>
+                    <div class="programDetail-title-item">
+                        <span class="programDetail-title-name">方案描述：</span>
+                        <span class="programDetail-title-content programDetail-title-remake-span"></span>
+                        <input class="programDetail-title-content programDetail-title-remake-input"></input>
+                    </div>
+                    <div class="programDetail-title-item">
+                        <span class="programDetail-title-name">临床描述：</span>
+                        <span class="programDetail-title-content programDetail-title-clinic-span"></span>
+                        <input class="programDetail-title-content programDetail-title-clinic-input"></input>
+                    </div>
+                    <div class="programDetail-title-item">
+                        <span class="programDetail-title-name">类型：</span>
+                        <span class="programDetail-title-content programDetail-title-type-span"></span>
+                        <select class="programDetail-title-content programDetail-title-type-select" onchange='changeType()'>
+                            <!-- 动态添加数据 -->
+                        </select>
+                    </div>
+                    <div class="programDetail-title-item">
+                        <span class="programDetail-title-name">子类型：</span>
+                        <span class="programDetail-title-content programDetail-title-subtype-span"></span>
+                        <select class="programDetail-title-content programDetail-title-subtype-select">
+                            <!-- 动态添加数据 -->
+                        </select>
+                    </div>
+                    <br/>
+                    <div class="programDetail-title-item">
+                        <span class="programDetail-title-name">医疗名称：</span>
+                        <span class="programDetail-title-content programDetail-title-medicalName-span"></span>
+                        <input class="programDetail-title-content programDetail-title-medicalName-input"></input>
+                    </div>
+                    <div class="programDetail-title-item">
+                        <span class="programDetail-title-name">医疗描述：</span>
+                        <span class="programDetail-title-content programDetail-title-medicalRemake-span"></span>
+                        <input class="programDetail-title-content programDetail-title-medicalRemake-input"></input>
+                    </div>
+                    <div class="programDetail-title-item">
+                        <span class="programDetail-title-name">医疗临床描述：</span>
+                        <span class="programDetail-title-content programDetail-title-medicalClinic-span"></span>
+                        <input class="programDetail-title-content programDetail-title-medicalClinic-input"></input>
+                    </div>
+                    <div class="programDetail-title-item" id='programDetail-train'>
+                        <span class="programDetail-title-name">自由训练：</span>
+                        <span class="programDetail-title-content programDetail-title-train-span"></span>
+                        <select class="programDetail-title-content programDetail-title-train-select">
+                            <option value="3">凯格尔</option>
+                            <option value="4">游戏</option>
+                        </select>
+                    </div>
+                    <div class="programDetail-title-item">
+                        <span class="programDetail-title-name">文件名称：</span>
+                        <span class="programDetail-title-content programDetail-title-fileName"></span>
+                    </div>
+                    <br/>
+                    <div class="programDetail-title-item">
+                        <span class="programDetail-title-name">总次数：</span>
+                        <span class="programDetail-title-content programDetail-title-total"></span>
+                    </div>
+                    <div class="programDetail-title-item">
+                        <span class="programDetail-title-name">总时长：</span>
+                        <span class="programDetail-title-content programDetail-title-time"></span>
+                    </div>
+
+                    <div class='programDetail-btn edit' onclick='goEditProgram()'>
+                        <img src='/src/assets/img/programNew/btn-edit.png'>
+                        <span>编辑</span>
+                    </div>
+                    <div class='programDetail-btn addStep' onclick='addStep()'>
+                        <img src='/src/assets/img/programNew/btn-add.png'>
+                        <span>新增步骤</span>
+                    </div>
+                    <div class='programDetail-btn exitEdit' onclick='exitEditProgram()'>
+                        <img src='/src/assets/img/programNew/btn-cancel.png'>
+                        <span>取消</span>
+                    </div>
+                    <div class='programDetail-btn save' onclick='saveProgram()'>
+                        <img src='/src/assets/img/programNew/btn-save.png'>
+                        <span>保存</span>
+                    </div>
+                </div>
+                <div class="programDetail-cardBody">
+                    <table class="programDetail-content">
+                        <thead class="programDetail-thead">
+                            <tr>
+                                <!-- 动态添加数据 -->
+                            </tr>
+                        </thead>
+                        <tbody class="programDetail-tbody">
+                            <!-- 动态添加数据 -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="program-loading">
+        <div class="program-loading-box">
+            <img src="/src/assets/img/programNew/loading_beauty.gif" alt="">
+            <div>加载中...</div>
+        </div>
+    </div>
+    <div class='dialog-shade'>
+        <div class='dialog-left'>
+            <div class='component-title'>组件模板</div>
+            <div class='component-content'>
+                <!-- 动态添加数据 -->
+            </div>
+        </div>
+        <div class='dialog-main'>
+            <div class='dialog-head'>
+                <span class='dialog-head-title'>新增</span>
+                <span class='dialog-head-close' onclick='closeDialog()'></span>
+            </div>
+            <div class='dialog-content'>
+                <!-- 0.公共 -->
+                <div class='dialog-content-conditions-common' id='conditions-common'>
+                    <div class='dialog-content-condition' key='itemType' id='componentType'>
+                        <label class='label'>治疗类型：</label>
+                        <div class='checkbox'>
+                            <span class='active' val='1' onclick='changeComponentType(1)'>电刺激</span>
+                            <span val='2' onclick='changeComponentType(2)'>触发电刺激</span>
+                            <span val='3' onclick='changeComponentType(3)'>凯格尔</span>
+                            <span val='4' onclick='changeComponentType(4)'>多媒体</span>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='itemName'>
+                        <label class='label'>治疗项名称：</label>
+                        <div class='input'>
+                            <input type='text' onblur='validCondition({input:this,type:"required"})'>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='itemDurationFloat_S'>
+                        <label class='label'>治疗项时长(分)：</label>
+                        <div class='input'>
+                            <input type='number' min='1' max='60' placeholder='请输入1-60' onblur='validCondition({input:this,type:"section",min:1,max:60})'>
+                        </div>
+                    </div>
+                </div>
+                <!-- 1.电刺激 -->
+                <div class='dialog-content-conditions' id='conditions-stim' component-type='1'>
+                    <div class='dialog-content-condition' key='stimWorkTimeFloat_S'>
+                        <label class='label'>刺激时间(s)：</label>
+                        <div class='input'>
+                            <input type='number' min='1' max='20' placeholder='请输入1-20' onblur='validCondition({input:this,type:"section",min:1,max:20})'>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='stimRestTimeFloat_S'>
+                        <label class='label'>休息时间(s)：</label>
+                        <div class='input'>
+                            <input type='number' min='1' max='20' placeholder='请输入1-20' onblur='validCondition({input:this,type:"section",min:1,max:20})'>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='stimFreq1Int_Hz'>
+                        <label class='label'>刺激频率(Hz)：</label>
+                        <div class='input'>
+                            <input type='number' min='2' max='250' placeholder='请输入2-250' onblur='validCondition({input:this,type:"section",min:2,max:250})'>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='stimPulseWidth1Int_mS'>
+                        <label class='label'>脉冲宽度(μs)：</label>
+                        <div class='input'>
+                            <input type='number' min='20' max='1000' placeholder='请输入20-1000' onblur='validCondition({input:this,type:"section",min:20,max:1000})'>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='stimInverterFreqBool' id='stimFreq'>
+                        <label class='label'>变频：</label>
+                        <div class='checkbox'>
+                            <span val='true' onclick='changeStimFreq(true)'>是</span>
+                            <span class='active' val='false' onclick='changeStimFreq(false)'>否</span>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='stimFreq2Int_Hz'>
+                        <label class='label'>刺激频率2(Hz)：</label>
+                        <div class='input'>
+                                <input type='number' min='2' max='250' placeholder='请输入2-250' onblur='validCondition({input:this,type:"section",min:2,max:250})'>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='stimPulseWidth2Int_mS'>
+                        <label class='label'>脉冲宽度2(μs)：</label>
+                        <div class='input'>
+                                <input type='number' min='20' max='1000' placeholder='请输入20-1000' onblur='validCondition({input:this,type:"section",min:20,max:1000})'>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='stimFreq3Int_Hz'>
+                        <label class='label'>刺激频率3(Hz)：</label>
+                        <div class='input'>
+                                <input type='number' min='2' max='250' placeholder='请输入2-250' onblur='validCondition({input:this,type:"section",min:2,max:250})'>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='stimPulseWidth3Int_mS'>
+                        <label class='label'>脉冲宽度3(μs)：</label>
+                        <div class='input'>
+                                <input type='number' min='20' max='1000' placeholder='请输入20-1000' onblur='validCondition({input:this,type:"section",min:20,max:1000})'>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='stimRampUpFloat_S'>
+                        <label class='label'>上升时间(s)：</label>
+                        <div class='input'>
+                            <input type='number' min='0' max='20' placeholder='请输入0-20' onblur='validCondition({input:this,type:"section",min:0,max:20})'>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='stimRampDnFloat_S'>
+                        <label class='label'>下降时间(s)：</label>
+                        <div class='input'>
+                            <input type='number' onblur='validCondition({input:this,type:"required"})'>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2.触发电刺激 -->
+                <div class='dialog-content-conditions' id='conditions-ets' component-type='2'>
+                    <div class='dialog-content-condition' key='stimWorkTimeFloat_S'>
+                        <label class='label'>刺激时间(s)：</label>
+                        <div class='input'>
+                            <input type='number' min='1' max='20' placeholder='请输入1-20' onblur='validCondition({input:this,type:"section",min:1,max:20})'>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='stimRestTimeFloat_S'>
+                        <label class='label'>休息时间(s)：</label>
+                        <div class='input'>
+                            <input type='number' min='1' max='20' placeholder='请输入1-20' onblur='validCondition({input:this,type:"section",min:1,max:20})'>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='stimFreq1Int_Hz'>
+                        <label class='label'>刺激频率(Hz)：</label>
+                        <div class='input'>
+                            <input type='number' min='2' max='250' placeholder='请输入2-250' onblur='validCondition({input:this,type:"section",min:2,max:250})'>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='stimPulseWidth1Int_mS'>
+                        <label class='label'>脉冲宽度(μs)：</label>
+                        <div class='input'>
+                            <input type='number' min='20' max='1000' placeholder='请输入20-1000' onblur='validCondition({input:this,type:"section",min:20,max:1000})'>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='stimInverterFreqBool' id='etsFreq'>
+                        <label class='label'>变频：</label>
+                        <div class='checkbox'>
+                            <span val='true' onclick='changeEtsFreq(true)'>是</span>
+                            <span class='active' val='false' onclick='changeEtsFreq(false)'>否</span>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='stimFreq2Int_Hz'>
+                        <label class='label'>刺激频率2(Hz)：</label>
+                        <div class='input'>
+                            <input type='number' min='2' max='250' placeholder='请输入2-250' onblur='validCondition({input:this,type:"section",min:2,max:250})'>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='stimPulseWidth2Int_mS'>
+                        <label class='label'>脉冲宽度2(μs)：</label>
+                        <div class='input'>
+                            <input type='number' min='20' max='1000' placeholder='请输入20-1000' onblur='validCondition({input:this,type:"section",min:20,max:1000})'>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='stimFreq3Int_Hz'>
+                        <label class='label'>刺激频率3(Hz)：</label>
+                        <div class='input'>
+                            <input type='number' min='2' max='250' placeholder='请输入2-250' onblur='validCondition({input:this,type:"section",min:2,max:250})'>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='stimPulseWidth3Int_mS'>
+                        <label class='label'>脉冲宽度3(μs)：</label>
+                        <div class='input'>
+                                <input type='number' min='20' max='1000' placeholder='请输入20-1000' onblur='validCondition({input:this,type:"section",min:20,max:1000})'>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='stimRampUpFloat_S'>
+                        <label class='label'>上升时间(s)：</label>
+                        <div class='input'>
+                            <input type='number' min='0' max='20' placeholder='请输入0-20' onblur='validCondition({input:this,type:"section",min:0,max:20})'>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='stimRampDnFloat_S'>
+                        <label class='label'>下降时间(s)：</label>
+                        <div class='input'>
+                            <input type='number' onblur='validCondition({input:this,type:"required"})'>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='etsStimBelowBool' id='etsStimBelow'>
+                        <label class='label'>触发方式：</label>
+                        <div class='checkbox'>
+                            <span val='true' onclick='changeEtsStimBelow(true)'>低于阈值触发</span>
+                            <span class='active' val='false' onclick='changeEtsStimBelow(false)'>高于阈值触发</span>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='etsManualThresholdBool' id='etsManualThreshold'>
+                        <label class='label'>阈值控制方式：</label>
+                        <div class='checkbox'>
+                            <span val='true' onclick='changeEtsManualThreshold(true)'>手动阈值</span>
+                            <span class='active' val='false' onclick='changeEtsManualThreshold(false)'>自动阈值</span>
+                        </div>
+                    </div>
+                    <div class='dialog-content-condition' key='etsThresholdFloat_mV' style='display:none;'>
+                        <label class='label'>阀值(μV)：</label>
+                        <div class='input'>
+                            <input type='number' onblur='validCondition({input:this,type:"required"})'>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3.凯格尔 -->
+                <div class='dialog-content-conditions' id='conditions-kegel' component-type='3'>
+                    <div id='kegelChart'></div>
+                </div>
+                <!-- 4.多媒体 -->
+                <div class='dialog-content-conditions' id='conditions-game' component-type='4'>
+                    <div><img id='gameImg'></div>
+                </div>
+            </div>
+            <div class='dialog-button'>
+                <span class='dialog-button-saveTemplate' onclick='saveTemplate()'>保存模板</span>
+                <button class='dialog-button-cancel' onclick='closeDialog()'>取消</button>
+                <button class='dialog-button-confirm' onclick='saveItemData()'>确定</button>
+            </div>
+        </div>
+    </div>
+    <div id='dialog-tip'>保存成功</div>
+</div>
+</body>
+<script type="application/javascript" src="https://cdn.bootcdn.net/ajax/libs/babel-polyfill/7.10.1/polyfill.min.js"></script>
+<script type='text/javascript' src='/src/utils/base64.js'></script>
+<script type='text/javascript' src='/src/utils/CommonUtils.js'></script>
+<script type="application/javascript" src="/src/page/js/programNew/programDetail.js?t=20210126"></script>
+</html>

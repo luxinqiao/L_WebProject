@@ -1,0 +1,41 @@
+<!--
+    文件描述：盆底生物刺激反馈仪软件（医疗版）
+    创建人：卢信桥
+    创建时间：2020-12-23
+ -->
+<html>
+    <head>
+        <link rel='stylesheet' href='/src/assets/css/inviteAPP/downMedUser.css'>
+    </head>
+    <body>
+        <div class='banner'>
+            <img src='/src/assets/img/inviteAPP/downMed/bg.png'>
+        </div>
+        <div class='btn'>
+            <div>下载盆底生物刺激反馈仪软件App</div>
+        </div>
+        
+        <script type='text/javascript' src='/src/utils/remStyle.js'></script>
+        <script type='text/javascript' src='/src/utils/CommonUtils.js'></script>
+        <script type='text/javascript'>
+            CommonUtils.loadCommon()
+            CommonUtils.setHtmlTitle('盆底生物刺激反馈仪软件')
+            if (CommonUtils.getBrowserType()=='wechat' && CommonUtils.getAppType()=='android') {
+                DialogUtils.weichatDl()
+            }
+            $(".btn").click(function() {
+                if (CommonUtils.getBrowserType()=='wechat' && CommonUtils.getAppType()=='android') {
+                    if ($('#weichat').length <= 0) {
+                        DialogUtils.weichatDl()
+                        return
+                    }
+                }
+                if (CommonUtils.getAppType()=='android') {
+                    window.location.href = 'https://www.pgyer.com/9Psd'
+                } else {
+                    window.location.href = 'https://www.pgyer.com/lwcQ'
+                }
+            })
+        </script>
+    </body>
+</html>

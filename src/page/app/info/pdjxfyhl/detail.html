@@ -1,0 +1,53 @@
+<!--
+    文件描述：盆底肌修复仪产品介绍-详情
+    创建人：赵志银
+    创建时间：2020-09-09
+-->
+<html>
+    <head>
+        <title>盆底肌修复仪</title>
+        <style>
+            #main {
+                height: 100%;
+                overflow: auto;
+            }
+            #main>img {
+                display: block;
+                width: 100%; height: 400px;
+            }
+            #main>img.visible {
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id='main'>
+            <img id='img1' class='visible' src='./src/assets/img/info/pdjxfyhl/detail/1.jpg?t=20200909'>
+            <img id='img2' class='visible' src='./src/assets/img/info/pdjxfyhl/detail/2.jpg?t=20200909'>
+            <img id='img3'>
+            <img id='img4'>
+            <img id='img5'>
+            <img id='img6'>
+            <img id='img7'>
+            <img id='img8'>
+            <img id='img9'>
+            <img id='img10'>
+            <img id='img11'>
+        </div>
+        
+        <script>
+            $(function() {
+                CommonUtils.setHtmlTitle('盆底肌修复仪')
+                var windowH = $('#main').height()
+                $('#main').scroll(function() {
+                    $('img').each(function(i, img) {
+                        if ($(img).offset().top < windowH && !$(img).hasClass('visible')) {
+                            $(img).addClass('visible').attr('src', './src/assets/img/info/pdjxfyhl/detail/'+(i+1)+'.jpg?t=20200909')
+                            return false
+                        }
+                    })
+                })
+            })
+        </script>
+    </body>
+</html>

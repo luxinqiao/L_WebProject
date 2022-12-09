@@ -1,0 +1,91 @@
+<!--
+ * 文件描述：新手指导（训练前的准备工作）
+ * 创建人：赵志银
+ * 创建时间：2019-06-24
+-->
+<html>
+<head>
+    <title>训练前的准备工作</title>
+    <link rel="stylesheet prefetch" href="./src/third/jquery/photoswipe/photoswipe.css">
+    <link rel="stylesheet prefetch" href="./src/third/jquery/photoswipe/default-skin.css">
+</head>
+<body>
+    <div class='content'>
+        <h2>训练前的准备工作</h2>
+        <p style="font-size: 14px;color: #999;">训练前要做哪些准备，我来告诉你</p>
+        <p style='margin-top:20px;'>训练前，要确保训练仪已充满电，以防训练过程中因电量不足，终止训练。充电操作详见
+            <span style='text-decoration:underline;color:#3333ff;' onclick='goFirstUse()'>设备首次使用必了解的技能</span>
+        </p>
+        <br/>
+        <p>在舒适安静的环境下，选择适合自己的训练姿势。正确的训练姿势详见
+            <span style='text-decoration:underline;color:#3333ff;' onclick='goCorrectTrain()'>解锁正确的训练姿势</span>
+        </p>
+        <br/>
+        <p>上述前期工作已就绪，接下来，需要打开我们的训练仪开关，选择方案进行训练。</p>
+        <div class='img_des' style='margin-top:20px;'>
+            <div class="roundNum">1</div>
+            <p>打开训练仪电源</p>
+        </div>
+        <p>长按训练仪电源开关1-3秒，电源指示灯显示绿色，并开始闪烁，则训练仪开机完成。</p>
+        <div class="my-gallery" data-pswp-uid="1">
+            <figure>
+                <div class="img-dv" style='width:100%;'>
+                    <a href="./src/assets/img/newGuidance190624/doBeforeTrain/p1.png" data-size="885x549">
+                        <img src="./src/assets/img/newGuidance190624/doBeforeTrain/p1.png">
+                    </a>
+                </div>
+                <div class='img_des' style='margin-top:20px;'>
+                    <div class="roundNum">2</div>
+                    <p>放入训练仪到阴道</p>
+                </div>
+                <p>在训练仪探头前端涂抹一点润滑剂，将训练仪尾部稍长的一端指向人体正面，缓缓将训练仪移入阴道内。训练仪柄部接触外阴唇为较佳位置。</p>
+                <figcaption style="display:none;"></figcaption>
+            </figure>
+            <figure>
+                <div class="img-dv">
+                    <a href="./src/assets/img/newGuidance190624/doBeforeTrain/p2.png" data-size="972x366">
+                        <img src="./src/assets/img/newGuidance190624/doBeforeTrain/p2.png">
+                    </a>
+                </div>
+                <div class='img_des' style='margin-top:20px;'>
+                    <div class="roundNum">3</div>
+                    <p>打开APP，选择方案进行训练</p>
+                </div>
+                <p>从手机桌面找到澜渟APP，点击打开APP，登录澜渟APP后，进入澜渟页面。选中【盆底肌肉训练仪】，点击进入，选中某一方案进行训练。</p>
+                <figcaption style="display:none;"></figcaption>
+            </figure>
+            <figure>
+                <div class="img-dv">
+                    <a href="./src/assets/img/newGuidance190624/doBeforeTrain/p3.png" data-size="750x1334">
+                        <img src="./src/assets/img/newGuidance190624/doBeforeTrain/p3.png" style="width: 260px;height:auto;">
+                    </a>
+                </div>
+                <figcaption style="display:none;"></figcaption>
+            </figure>
+        </div>
+    </div>
+    <script src="./src/third/jquery/photoswipe/photoswipe.js"></script>
+    <script src="./src/third/jquery/photoswipe/photoswipe-ui-default.js"></script>
+    <script type='text/javascript'>
+        CommonUtils.setHtmlTitle('训练前的准备工作');
+        /**
+            跳转--首次使用必了解技能
+            @param
+            @return
+        */
+        function goFirstUse() {
+            CommonUtils.stopProp();
+            window.location.href = '/#/newGuidance190624/firstUse';
+        }
+        /**
+            跳转--解剖正确的训练姿势
+            @param
+            @return
+        */
+        function goCorrectTrain() {
+            CommonUtils.stopProp();
+            window.location.href = '/#/newGuidance190624/correctTrain';
+        }
+    </script>
+</body>
+</html>

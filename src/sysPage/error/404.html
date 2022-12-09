@@ -1,0 +1,33 @@
+<html>
+<head>
+    <style>
+	#error {
+	    position: relative;
+	    width: 100%; height: 100%;
+	    background-color: white;
+	}
+	#error>div {
+	    position: absolute;
+	    top: 0; right: 0; bottom: 260px; left: 0;
+	    background-image: url(./src/assets/img/error/404.png);
+	    background-repeat: no-repeat;
+	    background-size: 120px 120px;
+	    background-position: center center;
+	}
+	#error>span {
+	    position: absolute;
+	    top: 0; right: 0; bottom: 100px; left: 0;
+	    margin: auto;
+	    width: 200px; height: 30px;
+	    text-align: center;
+	    font-size: 24px;
+	}
+    </style>
+</head>
+<body>
+    <div id='error'>
+	<div></div>
+	<span>页面找不到了</span>
+    </div>
+</body>
+</html>

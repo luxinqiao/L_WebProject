@@ -1,0 +1,315 @@
+/*
+ * 文件描述：新年活动-首页-详情
+ * 创建人：赵志银
+ * 创建时间：2019-12-30
+ */
+#content {
+    position: relative;
+    width: 100%; height: auto;
+}
+.banner {
+    position: relative;
+    display: block;
+    width: 100%; height: auto;
+}
+.main {
+    position: absolute;
+    top: 7.8rem; left: 0;
+    padding: 0.48rem 0.24rem 0.86rem 0.24rem;
+    width: 100%; height: auto;
+    background: url('/src/assets/img/newYear/details/bg.png') no-repeat;
+    background-size: 100% 100%;
+}
+.list {
+    position: relative;
+}
+.title {
+    display: block;
+    width: 5.06rem; height: 0.62rem;
+    margin: 0 auto 0.4rem auto;
+}
+.gift>div {
+    position: relative;
+    width: 100%; height: 2.4rem;
+    background: url('/src/assets/img/newYear/details/giftbg.png') no-repeat;
+    background-size: 100% 100%;
+}
+.gift>div>img:nth-child(1) {
+    position: absolute;
+    top: -0.12rem; left: 0.34rem;
+    width: 0.48rem; height: 1.3rem;
+}
+.gift>div>img:nth-child(2) {
+    position: absolute;
+    top: 0; left: 0.9rem; bottom: 0;
+    margin: auto;
+    width: 1.78rem; height: 1.76rem;
+}
+.gift>div>div:nth-of-type(1){
+    position: absolute;
+    top: 0.22rem; left: 2.92rem;
+    height: 0.8rem;
+    line-height: 0.8rem;
+}
+.gift>div>div:nth-of-type(1)>span{
+    font-size: 0.36rem; color: #9D3901; font-weight: bold;
+}
+.gift>div>div:nth-of-type(1)>span:nth-of-type(2){
+    margin: 0 0.04rem;
+    font-size: 0.56rem; 
+}
+.gift>div>div:nth-of-type(2){
+    position: absolute;
+    top: 1.02rem; left: 2.92rem;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    font-size: 0.28rem; color: #C65D02;
+}
+.gift>div>div:nth-of-type(3){
+    position: absolute;
+    top: 1.36rem; right: 0.34rem;
+    height: 0.9rem;
+    line-height: 0.9rem;
+}
+.gift>div>div:nth-of-type(3)>span{
+    font-size: 0.26rem; color: #C65D02; 
+}
+.gift>div>div:nth-of-type(3)>span:nth-of-type(2){
+    margin: 0 0.04rem;
+    font-size: 0.64rem; font-weight: bold;
+}
+.gift>div>div:nth-of-type(3)>span:nth-of-type(3){
+    margin-left: 0.1rem;
+    color: #C8220F;
+}
+.gift>div:nth-of-type(2) {
+    margin-top: 0.28rem;
+}
+.ways {
+    position: relative;
+    margin-top: 0.72rem;
+}
+.ways>img:nth-of-type(2) {
+    display: block;
+    width: 100%; height: 2.4rem;
+}
+.ways>img:nth-of-type(3) {
+    position: absolute;
+    top: 0.34rem; right: 0;
+    width: 0.7rem; height: 0.86rem;
+}
+.record {
+    position: relative;
+    margin-top: 0.72rem;
+}
+.record>img:nth-of-type(2) {
+    position: absolute;
+    top: 0.14rem; left: 0;
+    width: 1rem; height: 1.22rem;
+}
+.record>div {
+    position: relative;
+    width: 100%; height: 4.38rem;
+    background: url('/src/assets/img/newYear/details/rulebg.png') no-repeat;
+    background-size: 100% 100%;
+}
+.record>div>div:nth-of-type(1) {
+    position: absolute;
+    top: 0.38rem; left: 0;
+    width: 3.52rem; height: 2.24rem;
+    border-right: 1px dashed #F1974F;
+}
+.record>div>div:nth-of-type(1)>p:nth-of-type(1) {
+    height: 0.32rem; 
+    line-height: 0.32rem; text-align: center;
+    font-size: 0.32rem; color: #9D3901;
+}
+.record>div>div:nth-of-type(1)>p:nth-of-type(2) {
+    position: absolute;
+    top: 0.84rem; left: 0;
+    height: 1.34rem; width: 100%;
+    line-height: 1.34rem; text-align: center;
+    font-size: 0.32rem; color: #9D3901;
+}
+.record>div>div:nth-of-type(1)>p:nth-of-type(2)>span:nth-of-type(1) {
+    font-size: 0.96rem; color: #A61A0B; font-weight: bold;
+}
+.record>div>div:nth-of-type(1)>p:nth-of-type(2)>span:nth-of-type(2) {
+    font-size: 0.32rem; color: #A61A0B;
+}
+.record>div>div:nth-of-type(2) {
+    position: absolute;
+    top: 0.38rem; right: 0;
+    width: 3.38rem; height: 2.24rem;
+}
+.record>div>div:nth-of-type(2)>p {
+    height: 0.32rem; 
+    line-height: 0.32rem; text-align: center;
+    font-size: 0.32rem; color: #9D3901;
+}
+.record>div>div:nth-of-type(2)>p>span {
+    height: 0.32rem; 
+    font-size: 0.32rem; color: #9D3901;
+}
+.record>div>div:nth-of-type(2)>img {
+    position: absolute;
+    top: 0.62rem; left: 0; right: 0;
+    margin: auto;
+    height: 1.76rem; width: 1.76rem;
+}
+.record>div>p {
+    position: absolute;
+    bottom: 0.3rem; left: 0; right: 0;
+    margin: auto;
+    width: 4.48rem; height: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; align-items: center;
+    background: -moz-linear-gradient(top, #FED087 0%, #F78E39 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FED087), color-stop(100%,#F78E39));
+    background: -webkit-linear-gradient(top, #FED087 0%,#F78E39 100%);
+    background: -o-linear-gradient(top, #FED087 0%,#F78E39 100%);
+    background: -ms-linear-gradient(top, #FED087 0%,#F78E39 100%);
+    background: linear-gradient(to bottom, #FED087 0%,#F78E39 100%);
+    border-radius: 0.4rem;
+}
+.record>div>p>span {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 0.32rem;
+    line-height: 0.32rem; 
+    font-size: 0.32rem; color: #CB300E; font-weight: bold;
+}
+.rule {
+    margin-top: 0.72rem;
+}
+.rule>img:nth-of-type(2) {
+    position: absolute;
+    top: 0.04rem; right: 0;
+    width: 0.98rem; height: 1.22rem;
+}
+.rule>div {
+    position: relative;
+    padding: 0.4rem 0.36rem;
+    width: 100%; height: auto;
+    background: url('/src/assets/img/newYear/details/rulebg.png') no-repeat;
+    background-size: 100% 100%;
+}
+.rule>div>p {
+    margin-bottom: 0.16rem;
+    line-height: 0.4rem;
+    font-size: 0.28rem; color: #9D3901;
+}
+.rule>div>p:last-child {
+    margin-bottom: 0;
+}
+.btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; align-items: center;
+    width: 100%; height: 1rem;
+    background-color: #B02600;
+    border-radius: 0.5rem;
+}
+.btn>div {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: 0.36rem;
+    line-height: 0.36rem; 
+    font-size: 0.36rem; color: #FFE4C0;
+}
+.invitbtn {
+    margin-top: 0.68rem;
+}
+.get {
+    position: fixed; 
+    bottom: 0.3rem; left: 0; right: 0;
+    margin: auto; width: 7.02rem;
+}
+.time {
+    position: fixed; 
+    bottom: 0; left: 0; right: 0;
+    background-color: #EF5E8F;
+    border-radius: 0;
+}
+.time>div>span:nth-of-type(1) {
+    margin-right: 0.24rem;
+    font-size: 0.32rem; color: #fff;
+}
+.time>div {
+    flex-direction: row;
+    height: 0.48rem;
+    line-height: 0.48rem;
+}
+.time>div>i {
+    display: inline-block;
+    font-style: normal;
+    width: 0.48rem; height: 0.48rem;
+    line-height: 0.48rem; text-align: center;
+    font-size: 0.32rem; color: #fff;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.time>div>span:nth-of-type(2),.time>div>span:nth-of-type(3), .time>div>span:nth-of-type(4)  {
+    margin: 0 0.14rem;
+    font-size: 0.28rem; color: rgba(0, 0, 0, 0.4);
+}
+.result {
+    position: fixed;
+    z-index: 99;
+    top: 0; right: 0; bottom: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+.result>div {
+    position: relative;
+    margin: 2.8rem 0.82rem 0  0.82rem;
+}
+.result>div>div {
+    position: relative;
+    width: 100%; height: 6.64rem;
+}
+.result>div>div>img {
+    display: block;
+    width: 100%; height: 6.64rem;
+}
+.result>div>div>div {
+    position: absolute;
+    bottom: 0.6rem; left: 0; right: 0;
+    margin: auto;
+    width: 3.6rem; height: 0.8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; align-items: center;
+    line-height: 0.8rem;
+    background: -moz-linear-gradient(top, #F2E2AE 0%, #FABE65 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F2E2AE), color-stop(100%,#FABE65));
+    background: -webkit-linear-gradient(top, #F2E2AE 0%,#FABE65 100%);
+    background: -o-linear-gradient(top, #F2E2AE 0%,#FABE65 100%);
+    background: -ms-linear-gradient(top, #F2E2AE 0%,#FABE65 100%);
+    background: linear-gradient(to bottom, #F2E2AE 0%,#FABE65 100%);
+    border-radius: 0.4rem;
+}
+.result>div>div>div>div {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    color: #BE3829; font-weight: bold;
+}    
+.result>div>img {
+    position: relative;
+    display: block;
+    margin: 0.46rem auto 0 auto;
+    width: 0.82rem; height: 0.8rem;
+}
+.end {
+    position: fixed; 
+    bottom: 0; left: 0; right: 0;
+    background-color: #BBBBBB;
+    border-radius: 0;
+}
+.end>div {
+    font-size: 0.32rem; color: #fff;
+}

@@ -1,0 +1,52 @@
+<!--
+ * 文件描述：邀请注册（澜渟）
+ * 创建人：赵志银
+ * 创建时间：2019-12-18
+-->
+<html>
+    <head>
+        <link rel='stylesheet' href='/src/assets/css/inviteAPP/inviteUser.css'>
+    </head>
+    <body>
+        <div id='head' style='display: none;'>邀您加入澜渟</div>
+        <div id='open' style='display: none;'>
+            <img src='/src/assets/img/inviteAPP/inviteUser/logo.png'>
+            <div class='msg'>
+                <p>澜渟</p>
+                <p>盆底肌修复 免费凯格尔运动</p>
+            </div>
+            <div class='download' onclick='downloadApp()'>下载App</div>
+        </div>
+        <div id='content' style='display: none;'>
+            <img src='/src/assets/img/inviteAPP/inviteUser/user.png' class='banner'>
+            <div>新用户福利</div>
+            <div class='coupon'>
+                <div>
+                    <div class='price'></div>
+                </div>
+                <div>
+                    <div class='title'></div>
+                </div>
+            </div>
+            <input type="number"  placeholder='请输入您的手机号码' oninput="if(value.length>11)value=value.slice(0,11);value=value.replace(/[^\d]/g,'') " maxlength="11" class='phone'>
+            <div class='btn' onclick='get()'>
+                <div>立即领取</div>
+            </div>
+        </div>
+
+        <div class='none' style='display: none;'>
+            <img src="/src/assets/img/vip/none.png">
+            <div>邀请码已失效</div>
+        </div>
+        
+
+        <script type='text/javascript' src='/src/utils/remStyle.js'></script>
+        <script type='text/javascript' src='/src/utils/CommonUtils.js'></script>
+        <script type='text/javascript' src='/src/utils/downloadApp.js'></script>
+        <script type='text/javascript' src='/src/utils/openApp.js'></script>
+        <script type='text/javascript'>
+            CommonUtils.loadCommon();
+            CommonUtils.appendScript('/src/page/js/inviteAPP/inviteUser.js');
+        </script>
+    </body>
+</html>

@@ -1,0 +1,121 @@
+.newYear_record{
+    height: 100%;
+}
+.newYear_header{
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    height: 0.88rem; width: 100%;
+    background-color: #fff;
+    text-align: center; line-height: 100%;
+    z-index: 99;
+}
+.newYear_header span{
+    line-height: 0.88rem; color: #333;
+    font-size: 0.36rem;
+}
+.newYear_header div{
+    position: absolute;
+    top: 0; left: 0;
+    height: 0.88rem; width: 0.88rem;
+}
+.newYear_header img{
+    position: absolute;
+    top: 0.28rem; left: 0.24rem;
+    height: 0.32rem; width: 0.32rem;
+}
+.record_body{
+    position: relative;
+    min-height: 100%;
+    background-color: #FE9D49;
+}
+.record_body .record_bg{
+   width: 100%;
+}
+.record_content{
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+}
+.record_num{
+    position: relative;
+    width: 6.62rem; height: 2.48rem;
+    margin: 0.88rem auto 0.24rem auto;
+}
+.record_num img{
+    display: block;
+    width: 6.62rem; height: 2.48rem;
+}
+.record_people{
+    position: absolute;
+    top: 0; left: 0;
+    width: 6.62rem; height: 2.48rem;
+}
+.record_people p{
+    display: inline-block;
+    height: 2.48rem; width: auto;
+    line-height: 2.48rem;
+    color: #FFD7B8;
+    vertical-align: middle;
+}
+.record_people p:nth-child(1){
+    margin-left: 0.64rem;
+}
+.record_people p:nth-child(2){
+    margin-left: 1.72rem;
+}
+.record_people #peopleNum{
+    font-size: 1rem; color: #FFEED8;
+}
+.record_remark{
+    text-align: center; color: #BE3829;
+    font-size: 0.24rem; line-height: 0.34rem;
+}
+.record_box{
+    margin-top: 0.48rem;
+    padding-bottom: 0.24rem;
+    background-image: linear-gradient(transparent 0.38rem, #FFC77C, #FE9D49 7.4rem);
+}
+.record_box img{
+    display: block;
+    width: 100%; height: 0.38rem;
+}
+.record_list{
+    padding: 0 0.1rem 0 0.08rem;
+    border-left: 0.01rem solid #C61605;
+    border-right: 0.01rem solid #C61605;
+}
+.list_content{
+    min-height: 6.62rem;
+    padding: 0.2rem 0.26rem 0 0.26rem;
+    background-color: #FFE5C8;
+}
+.list_content p{
+    font-size: 0.24rem; line-height: 6.62rem;
+    vertical-align: middle; text-align: center;
+    color: #9D3901;
+}
+.record_item{
+    margin-bottom: 0.4rem;
+}
+.list_content div:nth-last-child(1){
+    margin-bottom: 0;
+}
+.record_item span:nth-child(1){
+    float: left; font-weight: bold;
+    font-size: 0.32rem; line-height: 0.44rem;
+    color: #9D3901;
+}
+.record_item span:nth-child(2){
+    margin-left: 0.36rem;
+    font-size: 0.32rem; line-height: 0.44rem;
+    color: #9D3901; font-weight: bold;
+}
+.record_item span:nth-child(3){
+    float: right;
+    font-size: 0.28rem; line-height: 0.44rem;
+    color: rgba(157, 57, 1, 0.7);
+}
+#record_default{
+    display: none;
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset='utf-8'/>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0'>
+	<title></title>
+	<link rel='stylesheet' href='/src/assets/css/trainWeb/Train_Search.css'>
+</head>
+<body>
+	<div id='main'>
+		<div class='condition'>
+			<label class='label'>手机号 : </label>
+			<div class='inputDiv'>
+				<input type='text' id='phoneText'>
+			</div>
+		</div>
+		<div class='condition'>
+			<button class='searchBtn' onclick='searchTrain()'>查 询</button>
+		</div>
+	</div>
+	<script type='text/javascript' src='/src/utils/CommonUtils.js'></script>
+	<script type='text/javascript'>
+		CommonUtils.loadCommon();
+		CommonUtils.appendScript('/src/utils/RegUtils.js');
+		CommonUtils.appendScript('/src/page/js/trainWeb/Train_Search.js');
+	</script>
+</body>
+</html>

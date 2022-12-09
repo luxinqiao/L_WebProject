@@ -1,0 +1,395 @@
+<!--
+    文件描述：新手必读-澜渟2代非医疗
+    创建人：卢信桥
+    创建时间：2021-06-03
+ -->
+<html>
+    <head>
+        <title>新手必读</title>
+        <link rel='stylesheet' href='/src/assets/css/utilStyle/swiper.css'>
+        <style>
+            #main {
+                padding: 0.52rem 0 0.37rem 0;
+                background-color: #fff;
+            }
+            #download {
+                display: none;
+                position: fixed; z-index: 98;
+                top: 0; left: 0; right: 0;
+                height: 0.52rem;
+                background-color: #fff9f5;
+            }
+            .download-logo {
+                position: absolute;
+                top: 0.07rem; left: 0.12rem;
+                width: 0.34rem; height: 0.36rem;
+            }
+            .download-title {
+                position: absolute;
+                top: 0.05rem; left: 0.54rem;
+                line-height: 0.22rem;
+                font-size: 0.15rem;
+                color: #ff2c79;
+            }
+            .download-subTitle {
+                position: absolute;
+                top: 0.25rem; left: 0.54rem;
+                line-height: 0.18rem;
+                font-size: 0.13rem;
+                color: #C79AAD;
+            }
+            .download-btn {
+                position: absolute;
+                top: 0.1rem; right: 0.12rem;
+                width: 0.74rem; height: 0.28rem;
+                text-align: center; line-height: 0.28rem;
+                border-radius: 0.15rem;
+                font-size: 0.12rem;
+                color: #fff; background-color: #ff2c79;
+            }
+            .swiper-title {
+                position: relative;
+                margin: auto; padding-left: 0.12rem;
+                width: 1.43rem; height: 0.25rem;
+            }
+            .swiper-title-text {
+                position: absolute; z-index: 2;
+                top: 0; left: 0; right: 0;
+                text-align: center; line-height: 0.21rem;
+                font-size: 0.15rem; font-weight: bold;
+            }
+            .swiper-title-mark {
+                position: absolute; z-index: 1;
+                bottom: 0; left: 0; right: 0;
+                height: 0.15rem;
+                background-color: #ffc7db;
+            }
+            #swiper-content {
+                margin-left: 0.12rem;
+                height: 1.39rem;
+            }
+            .swiper-notice {
+                margin-left: 0.12rem;
+            }
+            .swiper-notice>.red {
+                color: #ff2c79;
+            }
+            #banner>img {
+                width: 100%;
+            }
+            .stepTitle {
+                padding-top: 0.24rem;
+                background: url(/src/assets/img/lt02/wrightinNewer/imgBg.png) no-repeat center center;
+                background-size: 100% 100%;
+            }
+            .stepTitle-content {
+                position: relative;
+                height: 0.25rem;
+            }
+            .stepTitle-text {
+                position: absolute; z-index: 2;
+                top: 0; left: 0; right: 0;
+                margin: auto;
+                width: 1.43rem;
+                text-align: center; line-height: 0.21rem;
+                font-size: 0.15rem; font-weight: bold;
+            }
+            .stepTitle-mark {
+                position: absolute; z-index: 1;
+                top: 0.1rem; left: 0; right: 0;
+                margin: auto;
+                width: 1.43rem; height: 0.15rem;
+                background-color: #ffc7db;
+            }
+            .title {
+                position: relative;
+                margin-left: 0.09rem;
+            }
+            .title>img {
+                margin: 0;
+            }
+            .desc {
+                padding: 0 0.12rem;
+                line-height: 0.24rem;
+            }
+            .desc>.red {
+                color: #ff2c79;
+            }
+            .img {
+                display: block;
+                margin: auto 0.12rem;
+            }
+            .img>.left {
+                float: left;
+                width: 1.7rem; height: 100%;
+            }
+            .img>.right {
+                float: right;
+                width: 1.7rem; height: 100%;
+            }
+            .img>.full {
+                width: 100%; height: 100%;
+            }
+            .subTitle {
+                position: relative;
+                margin-left: 0.12rem; padding-left: 0.08rem;
+            }
+            .subTitle>.mark {
+                position: absolute;
+                top: 0.09rem; left: 0;
+                width: 0.05rem; height: 0.05rem;
+                background: url(/src/assets/img/wireless/circle.png) no-repeat center center;
+                background-size: 0.05rem 0.05rem;
+            }
+            .subTitle>.text {
+                line-height: 0.24rem;
+                font-size: 0.14rem; font-weight: bold;
+                color: #ff2c79;
+            }
+            .bottom-item {
+                height: 0.34rem;
+                display: flex;
+                justify-content: center;
+            }
+            .bottom-item>span {
+                line-height: 0.34rem;
+                font-size: 0.13rem;
+            }
+            .bottom-item>img {
+                margin-left: 0.07rem;
+                width: 1.07rem; height: 0.34rem;
+            }
+            .bottom-item>a {
+                margin-left: 0.08rem;
+                line-height: 0.34rem;
+                font-size: 0.13rem;
+                color: #7694CF;
+                text-decoration: none;
+            }
+            .mt6 {
+                margin-top: 0.06rem;
+            }
+            .mt8 {
+                margin-top: 0.08rem;
+            }
+            .mt12 {
+                margin-top: 0.12rem;
+            }
+            .mt24 {
+                margin-top: 0.24rem;
+            }
+            .mt30 {
+                margin-top: 0.3rem;
+            }
+            .mt-76 {
+                margin-top: -0.76rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div id='main'>
+            <div id='download'>
+                <img class='download-logo' src='/src/assets/img/lt02/wrightinNewer/download-logo.png'>
+                <p class='download-title'>澜渟</p>
+                <p class='download-subTitle'>盆底肌修复 免费凯格尔运动</p>
+                <button class='download-btn' onClick='downloadApp()'>下载App</button>
+            </div>
+            <div id='banner'>
+                <img src='/src/assets/img/lt02/wrightinNewer/banner.png'>
+            </div>
+            <div id='swiper' class='mt24'>
+                <div class='swiper-title'>
+                    <span class='swiper-title-text'>如何使用修复仪</span>
+                    <span class='swiper-title-mark'></span>
+                </div>
+                <div id='swiper-content' class='mdSwiper mt12'></div>
+                <div class='swiper-notice mt6'><font class='red'>注意：</font>主机使用前需充满电，再进行使用。</div>
+            </div>
+            <div class='stepTitle mt24' style='height: 1.31rem;'>
+                <div class='stepTitle-content'>
+                    <span class='stepTitle-text'>科学4步 开启训练</span>
+                    <span class='stepTitle-mark'></span>
+                </div>
+            </div>
+            <div class='step mt-76'>
+                <div class='title'>
+                    <img src='/src/assets/img/lt02/wrightinNewer/title01.png' style='width:0.81rem; height:0.27rem;'>
+                </div>
+                <div class='desc mt6'>
+                    选择【盆底筛查/评估】，填写您的个人信息，完成一系列盆底肌收缩和放松动作，通过相关参数分析，生成报告。
+                </div>
+                <div class='img mt8' style='height: 1.7rem;'>
+                    <img class='full' src='/src/assets/img/lt02/wrightinNewer/step01.png' onclick='lookImg("/src/assets/img/lt02/wrightinNewer/step01.png")'></img>
+                </div>
+            </div>
+            <div class='step mt30'>
+                <div class='title'>
+                    <img src='/src/assets/img/lt02/wrightinNewer/title02.png' style='width:0.73rem; height:0.27rem;'>
+                </div>
+                <div class='desc mt8'>
+                    盆底筛查/评估结束后，选择您目前最严重的问题，澜渟将根据您的报告结果，结合大数据平台，为您定制专属盆底方案。
+                </div>
+                <div class='img mt6' style='height: 1.7rem;'>
+                    <img class='full' src='/src/assets/img/lt02/wrightinNewer/step02.png' onclick='lookImg("/src/assets/img/lt02/wrightinNewer/step02.png")'></img>
+                </div>
+            </div>
+            <div class='step mt30'>
+                <div class='title'>
+                    <img src='/src/assets/img/lt02/wrightinNewer/title03.png' style='width:0.73rem; height:0.27rem;'>
+                </div>
+                <div class='desc mt8'>
+                    完成专属方案定制后，澜渟平台将在3分钟内快速为您生成专属疗程方案，并发送到【盆底肌修复仪-我的方案】内。
+                </div>
+                <div class='img mt6' style='height: 1.7rem;'>
+                    <img class='full' src='/src/assets/img/lt02/wrightinNewer/step03.png' onclick='lookImg("/src/assets/img/lt02/wrightinNewer/step03.png")'></img>
+                </div>
+            </div>
+            <div class='step mt30'>
+                <div class='title'>
+                    <img src='/src/assets/img/lt02/wrightinNewer/title04.png' style='width:0.73rem; height:0.27rem;'>
+                </div>
+                <div class='subTitle mt6'>
+                    <span class='mark'></span>
+                    <span class='text'>疗程方案</span>
+                </div>
+                <div class='desc mt8'>
+                    专属疗程方案是根据您的盆底肌状况及问题进行针对性治疗修复。1个疗程方案由多节训练方案组成，每节训练方案是由4种模式中的1种或多种模式组合而成。
+                </div>
+                <div class='img mt6' style='height: 2.51rem;'>
+                    <img class='full' src='/src/assets/img/lt02/wrightinNewer/step04-1.png' onclick='lookImg("/src/assets/img/lt02/wrightinNewer/step04-1.png")'></img>
+                </div>
+                <div class='desc mt8'>
+                    1个疗程方案训练结束后，建议您重新进行盆底筛查/评估，看看自己的盆底肌力有没有提升，定制新的专属方案，继续下一轮疗程训练哦！坚持训练2-3个疗程，效果更佳！
+                </div>
+                <div class='img mt6' style='height: 1.83rem;'>
+                    <img class='full' src='/src/assets/img/lt02/wrightinNewer/step04-2.png' onclick='lookImg("/src/assets/img/lt02/wrightinNewer/step04-2.png")'></img>
+                </div>
+                <div class='desc mt8'>
+                    <font class='red'>注：</font>如果您的医生或产康师为您推送了方案，也可遵从医生或产康师的要求训练。
+                </div>
+            </div>
+            <div class='stepTitle mt30' style='height: 1.31rem;'>
+                <div class='stepTitle-content'>
+                    <span class='stepTitle-text'>4种方式 获取方案</span>
+                    <span class='stepTitle-mark'></span>
+                </div>
+            </div>
+            <div class='step mt-76'>
+                <div class='desc mt8'>
+                    除了【盆底筛查/评估定制专属方案】，您还可以通过【麦澜德大设备接收】、【咨询训练顾问接收】、【咨询绑定的医生接收】3种方式来获取更多疗程方案。
+                </div>
+                <div class='img mt6' style='height: 1.45rem;'>
+                    <img class='full' src='/src/assets/img/lt02/wrightinNewer/stepLast.png' onclick='lookImg("/src/assets/img/lt02/wrightinNewer/stepLast.png")'></img>
+                </div>
+                <div class='desc mt8'>
+                    <font class='red'>*</font>：部分型号不支持【麦澜德大设备接收】、【咨询绑定的医生接收】两种获取方案的方式，具体根据您所购买的修复仪型号配置决定。
+                </div>
+            </div>
+            <div class='bottom mt24'>
+                <p class='bottom-item'>
+                    <span>如还有疑问请点击</span>
+                    <img onclick='goAsk()' src='/src/assets/img/lt02/wrightinNewer/bottom-contact.png'>
+                </p>
+                <p class='bottom-item mt12'>
+                    <span>或拨打400电话咨询 </span>
+                    <a href='tel:400-133-5668'>400-133-5668</a>
+                </p>
+            </div>
+        </div>
+        
+        <script type='text/javascript' src='/src/utils/downloadApp.js'></script>
+        <script type='text/javascript' src='/src/utils/openApp.js'></script>
+        <script type='text/javascript' src='/src/utils/SwiperUtils.js'></script>
+        <script type='text/javascript'>
+            $(function() {
+                CommonUtils.setHtmlTitle('新手必读')
+
+                if (CommonUtils.getBrowserType() == 'wechat' || CommonUtils.getBrowserType() == 'browser') {
+                    $('#download').css('display', 'block')
+                } else if (CommonUtils.getBrowserType() == 'app') {
+                    $('#main').css('padding-top', 0)
+                }
+                $(window).scrollTop(sessionStorage.scrollTop)
+                sessionStorage.scrollTop = 0
+                CommonUtils.resetRem()
+                SwipeUtils.init({
+                    $el: $('#swiper-content'),
+                    imgs: [
+                        '/src/assets/img/lt02/wrightinNewer/swipe01.png',
+                        '/src/assets/img/lt02/wrightinNewer/swipe02.png',
+                        '/src/assets/img/lt02/wrightinNewer/swipe03.png',
+                        '/src/assets/img/lt02/wrightinNewer/swipe04.png',
+                        '/src/assets/img/lt02/wrightinNewer/swipe05.png',
+                        '/src/assets/img/lt02/wrightinNewer/swipe06.png',
+                        '/src/assets/img/lt02/wrightinNewer/swipe07.png'
+                    ],
+                    autoPlay: false,
+                    clickCallback: function(index) {
+                        lookImg('/src/assets/img/lt02/wrightinNewer/swipe0' + (index+1) + '.png')
+                    }
+                })
+            })
+            
+            /**
+                页面跳转-下载App
+                @param
+                @return
+             */
+            function downloadApp() {
+                if (CommonUtils.getBrowserType() == 'wechat') {
+                    Download_wechat('user') 
+                } else {
+                    openApp('lanting://',()=>{
+                        Download('user',()=>{})
+                    },'inviteApp/downUser') 
+                }
+            }
+
+            /**
+                页面跳转-训练顾问
+                @param
+                @return
+             */
+            function goAsk() {
+                if (CommonUtils.getBrowserType() == 'app') {
+                    CommonUtils.appFun(function() {
+                        window.jsInterface.jumpToCustomer(JSON.stringify({type:'CSP0001'}))
+                    }, function() {
+                        window.webkit.messageHandlers.jumpToCustomer.postMessage({type:'CSP0001'})
+                    })
+                } else if (CommonUtils.getBrowserType() == 'wechat') {
+                    Download_wechat('user') 
+                } else {
+                    openApp('lanting://',()=>{
+                        Download('user',()=>{})
+                    },'inviteApp/downUser') 
+                }
+            }
+    
+            /**
+                查看图片
+                @param
+                @return
+             */
+            function lookImg(src) {
+                sessionStorage.scrollTop = $(window).scrollTop()
+                var srcArr = [
+                    '/src/assets/img/lt02/wrightinNewer/swipe01.png',
+                    '/src/assets/img/lt02/wrightinNewer/swipe02.png',
+                    '/src/assets/img/lt02/wrightinNewer/swipe03.png',
+                    '/src/assets/img/lt02/wrightinNewer/swipe04.png',
+                    '/src/assets/img/lt02/wrightinNewer/swipe05.png',
+                    '/src/assets/img/lt02/wrightinNewer/swipe06.png',
+                    '/src/assets/img/lt02/wrightinNewer/swipe07.png',
+                    '/src/assets/img/lt02/wrightinNewer/step01.png',
+                    '/src/assets/img/lt02/wrightinNewer/step02.png',
+                    '/src/assets/img/lt02/wrightinNewer/step03.png',
+                    '/src/assets/img/lt02/wrightinNewer/step04-1.png',
+                    '/src/assets/img/lt02/wrightinNewer/step04-2.png',
+                    '/src/assets/img/lt02/wrightinNewer/stepLast.png'
+                ]
+                CommonUtils.lookImg(src, srcArr)
+            }
+        </script>
+    </body>
+</html>

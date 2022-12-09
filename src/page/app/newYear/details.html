@@ -1,0 +1,107 @@
+<!--
+ * 文件描述：新年活动-首页-详情
+ * 创建人：赵志银
+ * 创建时间：2019-12-30
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>活动详情</title>
+    <link rel="stylesheet" href="./src/assets/css/newYear/details.css">
+</head>
+<body>
+    <div id='content'>
+        <img src="./src/assets/img/newYear/details/banner.png" class='banner'>
+        <div class='main'>
+            <div class='list gift'>
+                <img src="./src/assets/img/newYear/details/t1.png" class='title'>
+                <div>
+                    <img src="./src/assets/img/newYear/details/one.png">
+                    <img src="./src/assets/img/newYear/details/giftone.png">
+                    <div>
+                        <span>成功邀请</span><span>19</span><span>人送</span>
+                    </div>
+                    <div>盆底肌肉康复器</div>
+                    <div>
+                        <span>价值：</span><span>398</span><span>元</span>
+                    </div>
+                </div>
+                <div>
+                    <img src="./src/assets/img/newYear/details/two.png">
+                    <img src="./src/assets/img/newYear/details/gifttwo.png">
+                    <div>
+                        <span>成功邀请</span><span>9</span><span>人送</span>
+                    </div>
+                    <div>抑菌人体润滑剂</div>
+                    <div>
+                        <span>价值：</span><span>49</span><span>元</span>
+                    </div>
+                </div>
+            </div>
+            <div class='list ways'>
+                <img src="./src/assets/img/newYear/details/t2.png" class='title'>
+                <img src="./src/assets/img/newYear/details/way.png">
+                <img src="./src/assets/img/newYear/details/stone1.png">
+            </div>
+            <div class='list record'>
+                <img src="./src/assets/img/newYear/details/t3.png" class='title'>
+                <img src="./src/assets/img/newYear/details/stone2.png">
+                <div>
+                    <div>
+                        <p>我已邀请</p>
+                        <p><span id="inviteNum"></span><span>人</span></p>
+                    </div>
+                    <div>
+                        <p><span>再邀请</span><span id="rewardNum"></span><span>人可得</span></p>
+                        <img src="./src/assets/img/newYear/details/record1.png" class="giftImg">
+                    </div>
+                    <p onclick='inviteDetail()'>
+                        <span>查看邀请记录</span>
+                    </p>
+                </div>
+            </div>
+            <div class='list rule'>
+                <img src="./src/assets/img/newYear/details/t4.png" class='title'>
+                <img src="./src/assets/img/newYear/details/stone3.png">
+                <div>
+                    <p>1.被邀请用户需下载APP并登录，方为有效用户，未登录APP为无效用户。</p>
+                    <p>2.一等奖与二等奖不可同时获得，活动结束后可在“我的-活动奖品”中查看。</p>
+                    <p>3.凡是通过作弊手段刷注册量的用户，一经查出直接取消活动资格。</p>
+                    <p>4.奖品将于活动结束后7个工作日内寄出，如工作人员发现地址有异常，将会电话联系核实。</p>
+                    <p>5.除产品质量原因以外不支持退换货，如有疑问可电话联系18021392303（微信同号）进行咨询。</p>
+                </div>
+            </div>
+            <div class='invitbtn btn' onclick='shareActivity()' style='display: none;'>
+                <div id='invite'>立即邀请</div>
+            </div>
+        </div>
+        <div class='btn time' style='display: none;'>
+            <div id='residueTime'><span>活动倒计时</span><i></i><span>天</span><i></i><span>:</span><i></i><span>:</span><i></i></div>
+        </div>
+        <div class='btn get' style='display: none;' onclick='get()'>
+            <div>去领奖</div>
+        </div>
+        <div class='btn end' style='display: none;'>
+            <div>本次活动已结束</div>
+        </div>
+    </div>
+
+    <div class='result' onclick='close()' style='display: none;'>
+        <div>
+            <div>
+                <img src="./src/assets/img/newYear/details/result1.png" id="resultgift">
+                <div class='btn get' style='display: none;' onclick='get()'>
+                    <div>去领奖</div>
+                </div>
+            </div>
+            <img src="./src/assets/img/newYear/details/cancle.png" onclick='close()'>
+        </div>
+    </div>
+</body>
+<script type='text/javascript' src='/src/utils/remStyle.js'></script>
+<script type='text/javascript' src='./src/page/js/newYear/details.js'></script>
+
+</html>

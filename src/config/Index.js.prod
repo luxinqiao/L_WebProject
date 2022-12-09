@@ -1,0 +1,33 @@
+//请求地址
+var request_path = {
+    Common: 'https://api-live.wrightin.com/v1/',
+    live: 'https://api-live.wrightin.com/',
+    Know: 'https://api-know.wrightin.com/v1/',
+    Common_rih: 'https://api-common.wrightin.com/v1/',
+    rec: 'https://api-rec.wrightin.com/v1/',
+    rec_V5: 'https://api-rec.wrightin.com/rec/v5/',
+    rih:'https://api-rih.wrightin.com',
+    Rih:'https://api-rih.wrightin.com/API/V1/',
+    sts_request: 'https://api-rih.wrightin.com/sts-server/sts.php',
+    lesson: 'https://api-lesson.wrightin.com/v1/',
+    c_request: 'https://c.wrightin.com/v1/',
+    lesson_v2: 'https://api-lesson.wrightin.com/',
+    oss: 'https://rightinhome.oss-cn-hangzhou.aliyuncs.com',
+    programme: 'https://admin.wrightin.com/',
+    independent: 'https://api-independent.wrightin.com',
+    user_mobile: 'https://user.wrightin.com/',
+    doc_mobile: 'https://doc.wrightin.com/',
+    medhs_mobile: 'https://medhs.wrightin.com/',
+    medha_mobile: 'https://medha.wrightin.com/',
+    medhd_mobile: 'https://medhd.wrightin.com/'
+};
+
+//页面根路径
+var page_root = {
+    app: '/src/page/app/',
+    error: '/src/sysPage/error/'
+};
+
+//友盟统计
+//var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+//document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1275548525'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1275548525' type='text/javascript'%3E%3C/script%3E"));

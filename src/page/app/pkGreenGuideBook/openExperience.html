@@ -1,0 +1,94 @@
+<!--
+* 文件描述：盆底肌肉康复器详情页
+* 创建人：殷俊
+* 创建时间：2019-06-27
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>开箱有惊喜</title>
+    <link rel="stylesheet prefetch" href="./src/third/jquery/photoswipe/photoswipe.css">
+    <link rel="stylesheet prefetch" href="./src/third/jquery/photoswipe/default-skin.css">
+    <link rel="stylesheet" href="./src/assets/css/pkGreenGuideBook/openExperience.css">
+</head>
+<body>
+<div class='content' style='padding-bottom:100px;'>
+    <h2>开箱有惊喜：猜猜看里面有些什么？</h2>
+    <p class='subText'>收到包裹的那一刻，是否是很惊喜啊，想迫不及待的打开包裹。包裹里有哪些东西啊？</p>
+    <div class="my-gallery" data-pswp-uid="1">
+        <figure>
+            <div class="img-dv">
+                <a href="./src/assets/img/pkGreenGuideBook/openExperience/1-1.png" data-size="1005x465">
+                    <img src="./src/assets/img/pkGreenGuideBook/openExperience/1-1.png">
+                </a>
+            </div>
+            <figcaption></figcaption>
+            <p>哇，里面装了我们期待已久的盆底肌肉康复器。</p>
+            <div class='img_des'>
+                <div class="roundNum">1</div>
+                <p>打开包装盒</p>
+            </div>
+            <p>因售价不同，包装盒有所不同，请以实际收到的包裹为主。下面以圆筒包装为例。</p>
+            <p>内含不同规格的盆底肌肉康复器5只，用户手册一本。</p>
+        </figure>
+        <figure>
+            <div class="img-dv">
+                <a href="./src/assets/img/pkGreenGuideBook/openExperience/1-2.jpg" data-size="1005x549">
+                    <img src="./src/assets/img/pkGreenGuideBook/openExperience/1-2.jpg">
+                </a>
+            </div>
+            <figcaption></figcaption>
+            <div class='img_des'>
+                <div class="roundNum">2</div>
+                <p>取出盆底肌肉康复器</p>
+            </div>
+            <p>拧开包装盒，拿出盆底肌肉康复器，手感舒适，该盆底肌肉康复器的材质是高分子材料-硅胶，亲肤无伤害。</p>
+            <p>每个盆底肌肉康复器的大小重量都不同哦，请根据盆底功能的好差来选择合适规格的盆底肌肉康复器进行训练。</p>
+        </figure>
+        <figure>
+            <div class="img-dv">
+                <a href="./src/assets/img/pkGreenGuideBook/openExperience/1-3@3x.png" data-size="1005x549">
+                    <img src="./src/assets/img/pkGreenGuideBook/openExperience/1-3.png">
+                </a>
+            </div>
+            <figcaption></figcaption>
+        </figure>
+    </div>
+</div>
+<div class='document'>
+    <p class='document-title'>参考文献[5]</p>
+    <p class='document-content' onclick='window.location.href="https://kns.cnki.net/kcms/detail/detail.aspx?filename=HNYX201919086&dbcode=CJFQ&dbname=CJFDTEMP&v="'>
+        <span>[1] </span>
+        <span>Kegel运动训练对初产妇经阴道分娩后盆底功能恢复及生活质量的影响</span>
+    </p>
+    <p class='document-content' onclick='window.location.href="http://gb.oversea.cnki.net/kcms/detail/detail.aspx?recid=&FileName=YJZY201927039&DbName=CJFDLAST2019&DbCode=CJFD"'>
+        <span>[2] </span>
+        <span>Kegel训练护理干预对产后盆底肌功能障碍的影响</span>
+    </p>
+    <p class='document-content' onclick='window.location.href="http://gb.oversea.cnki.net/kcms/detail/detail.aspx?recid=&FileName=QYZJ201406004&DbName=CJFDLAST2015&DbCode=CJFD"'>
+        <span>[3] </span>
+        <span>Kegel运动对孕妇盆底肌力作用的观察</span>
+    </p>
+    <p class='document-content' onclick='window.location.href="http://cjrh.bjmu.edu.cn/fileup/HTML/2018-1-95.shtml"'>
+        <span>[4] </span>
+        <span>阴道康复器应用于产后盆底康复治疗的研究进展</span>
+    </p>
+    <p class='document-content' onclick='window.location.href="https://medlineplus.gov/ency/patientinstructions/000141.htm"'>
+        <span>[5] </span>
+        <span>Kegel exercises - self-care</span>
+    </p>
+</div>
+</body>
+<script src="./src/third/jquery/photoswipe/photoswipe.js"></script>
+<script src="./src/third/jquery/photoswipe/photoswipe-ui-default.js"></script>
+<script>
+    CommonUtils.setHtmlTitle('开箱有惊喜')
+    CommonUtils.checkIos(function(is_submit) {
+        if (is_submit == '1') {
+            $('.document').css('display', 'block')
+        }
+    })
+</script>
+</html>

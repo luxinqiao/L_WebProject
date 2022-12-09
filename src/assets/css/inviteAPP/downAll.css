@@ -1,0 +1,104 @@
+/*
+ * 文件描述：下载澜渟医生和澜渟医生样式
+ * 创建人：赵志银
+ * 创建时间：2019-12-25
+*/
+body {
+    background-color: #fff;
+}
+#head {
+    position: fixed; z-index: 2;
+    top: 0; left: 0; right: 0;
+    height: 0.86rem;
+    line-height: 0.86rem; text-align: center;
+    border-bottom: 1px solid #f4f4f4;
+    font-size: 0.36rem;
+    background-color: #fff;
+}
+#main {
+    padding: 0.28rem 0.24rem 0.74rem 0.24rem;
+    background: linear-gradient(to bottom, #F9CDDA 0%,#26C2C4 100%);
+}
+.list {
+    position: relative;
+    width: 7.02rem; height: 5.6rem;
+    margin: 0.32rem auto 0 auto;
+    border-radius: 0.24rem;
+    background-color: #fff;
+}
+.list:first-child {
+    margin-top: 0;
+}
+.list-logo {
+    position: absolute;
+    top: 0.34rem; left: 0.28rem;
+    width: 0.8rem; height: 0.8rem;
+}
+.list-title {
+    position: absolute;
+    top: 0.3rem; left: 1.32rem;
+    line-height: 0.5rem;
+    letter-spacing: 0.036rem;
+    font-size: 0.36rem;
+    color: #333;
+}
+.list-subTitle {
+    position: absolute;
+    top: 0.8rem; left: 1.32rem;
+    line-height: 0.34rem;
+    font-size: 0.24rem;
+    color: #999;
+}
+.list-downloadBtn {
+    position: absolute;
+    top: 0.4rem; right: 0.28rem;
+    width: 1.8rem; height: 0.66rem;
+    border-radius: 0.47rem;
+    font-size: 0.26rem;
+    background-color: #FF2C79; color: #fff;
+}
+.list-contentImg {
+    position: absolute;
+    top: 1.72rem; left: 0.32rem;
+    width: 2.52rem; height: 3.66rem;
+}
+.list-contentDesc {
+    position: absolute;
+    padding-left: 0.36rem;
+    height: 0.34rem; width: 2rem;
+}
+.list-contentDesc>.mark {
+    position: absolute;
+    top: 0.12rem; left: 0;
+    width: 0.12rem; height: 0.12rem;
+    border-radius: 100%;
+    background-color: #EF5E8F;
+    opacity: 0.23;
+}
+.list-contentDesc>.text {
+    position: absolute;
+    top: 0; left: 0.36rem;
+    height: 0.34rem;
+    line-height: 0.34rem;
+    letter-spacing: 0.0392rem;
+    color: #666;
+    font-size: 0.24rem;
+}
+.list-detail {
+    position: absolute;
+    bottom: 0.16rem; right: 0.24rem;
+    width: 1.28rem; height: 0.34rem;
+}
+.list-detail>span {
+    position: absolute;
+    top: 0; left: 0;
+    width: 1.12rem; height: 0.34rem;
+    line-height: 0.34rem;
+    font-size: 0.24rem;
+    color: #999;
+}
+.list-detail>img {
+    position: absolute;
+    top: 0.08rem; right: 0;
+    width: 0.16rem; height: 0.16rem;
+}

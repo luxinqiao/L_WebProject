@@ -1,0 +1,63 @@
+<!--
+    文件描述：盆底肌修复仪产品介绍-详情
+    创建人：卢信桥
+    创建时间：2020-08-13
+-->
+<html>
+    <head>
+        <title>盆底肌修复仪</title>
+        <style>
+            #main {
+                height: 100%;
+                overflow: auto;
+            }
+            #main>img {
+                display: block;
+                width: 100%; height: 400px;
+            }
+            #main>img.visible {
+                height: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id='main'>
+            <img id='img1' class='visible' src='./src/assets/img/info/pdjxfypp/detail/1.png?t=20200814'>
+            <img id='img2' class='visible' src='./src/assets/img/info/pdjxfypp/detail/2.png?t=20200814'>
+            <img id='img3'>
+            <img id='img4'>
+            <img id='img5'>
+            <img id='img6'>
+            <img id='img7'>
+            <img id='img8'>
+            <img id='img9'>
+            <img id='img10'>
+            <img id='img11'>
+            <img id='img12'>
+            <img id='img13'>
+            <img id='img14'>
+            <img id='img15'>
+            <img id='img16'>
+            <img id='img17'>
+            <img id='img18'>
+            <img id='img19'>
+            <img id='img20'>
+            <img id='img21'>
+        </div>
+        
+        <script>
+            $(function() {
+                CommonUtils.setHtmlTitle('盆底生物刺激反馈仪')
+                var windowH = $('#main').height()
+                $('#main').scroll(function() {
+                    $('img').each(function(i, img) {
+                        if ($(img).offset().top < windowH && !$(img).hasClass('visible')) {
+                            $(img).addClass('visible').attr('src', './src/assets/img/info/pdjxfypp/detail/'+(i+1)+'.png?t=20200814')
+                            return false
+                        }
+                    })
+                })
+            })
+        </script>
+    </body>
+</html>

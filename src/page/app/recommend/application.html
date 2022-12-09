@@ -1,0 +1,46 @@
+<!--
+    文件描述：申请加入
+    创建人：段素栋
+    创建时间：2019-12-03
+-->
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="./src/assets/css/recommend/application.css">
+</head>
+<body>
+    <div class="application">
+        <div class="header">
+            <img src="./src/assets/img/recommend/application/header.png" alt="">
+        </div>
+        <div class="application_content">
+            <img class="content_bg" src="./src/assets/img/recommend/application/content_bg.png" alt="">
+            <div class="content_title">加入“推荐大使”</div>
+            <img class="content_step_title" src="./src/assets/img/recommend/application/content_step.png" alt="">
+            <div class="content_step">
+                <div class="content_step_left">
+                    <img src="./src/assets/img/recommend/application/content_step_left.png" alt="">
+                    <img src="./src/assets/img/recommend/application/content_step_arrow.png" alt="">
+                </div>
+                <div class="content_step_right">
+                    <img src="./src/assets/img/recommend/application/content_step_right.png" alt="">
+                </div>
+                <div class="content_step_center">
+                    <img src="./src/assets/img/recommend/application/content_step_center.png" alt="">
+                    <img src="./src/assets/img/recommend/application/content_step_arrow.png" alt="">
+                </div>
+                <div></div>
+            </div>
+            <div class="content_input_title">赶快输入您的手机号，加入“推荐大使”赚赏金吧！</div>
+            <div class="content_input">
+                <input id="ipt" type="number" placeholder="请输入手机号" oninput="if(value.length>11)value=value.slice(0,11);value=value.replace(/[^0-9]/ig,'')" maxlength="11">
+            </div>
+            <div class="content_submit" onclick="goJoin()">立即加入赚赏金</div>
+        </div>
+        <div class="rule" onclick="goRule()">申请规则</div>
+    </div>
+    <script src='./src/page/js/recommend/application.js?t=20200927'></script>
+    <script type='text/javascript' src='/src/utils/downloadApp.js'></script>
+    <script type='text/javascript' src='/src/utils/remStyle.js'></script>
+</body>
+</html>

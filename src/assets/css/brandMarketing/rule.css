@@ -1,0 +1,45 @@
+#main {
+    display: none;
+    padding: 0.4rem 0 0.3rem 0;
+    background: rgba(0, 0, 0, 0.8);
+}
+#rule {
+    margin: auto; padding: 0.05rem;
+    width: 3.35rem;
+    border: 0.03rem solid #FFF8E4; border-radius: 0.22rem;
+    background: linear-gradient(-30deg, #ED262A 0%, #F0D141 100%);
+}
+.rule-content {
+    position: relative;
+    padding: 0.24rem 0 0.3rem 0;
+    height: 100%;
+    border-radius: 0.22rem;
+    background-color: #fff;
+}
+.rule-close {
+    position: absolute;
+    top: 0; right: 0;
+    width: 0.46rem; height: 0.46rem;
+    background: url(/src/assets/img/brandMarketing/rule/close.png) no-repeat center center;
+    background-size: 0.13rem 0.125rem;
+}
+.rule-title {
+    display: block;
+    margin: auto;
+    width: 1.15rem; height: 0.22rem;
+}
+.rule-section {
+    margin-left: 0.15rem;
+    font-size: 0.15rem;
+    color: #333;
+}
+.rule-section>span {
+    font-size: 0.15rem; font-weight: bold;
+    color: #333;
+}
+.rule-section>p {
+    margin-top: 0.06rem;
+    line-height: 0.23rem;
+    font-size: 0.15rem;
+    color: #666;
+}

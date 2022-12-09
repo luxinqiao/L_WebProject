@@ -1,0 +1,45 @@
+@media screen and (min-width: 240px) {html{font-size:65.75px;}}
+@media screen and (min-width: 320px) {html{font-size:85.33px;}}
+@media screen and (min-width: 360px) {html{font-size:96px;}}
+@media screen and (min-width: 375px) {html{font-size:100px;}}
+@media screen and (min-width: 400px) {html{font-size:106.67px;}}
+@media screen and (min-width: 414px) {html{font-size:110.4px;}}
+@media screen and (min-width: 440px) {html{font-size:117.33px;}}
+@media screen and (min-width: 480px) {html{font-size:128px;}}
+@media screen and (min-width: 520px) {html{font-size:138.67px;}}
+@media screen and (min-width: 540px) {html{font-size:144px;}}
+@media screen and (min-width: 560px) {html{font-size:149.33px;}}
+@media screen and (min-width: 600px) {html{font-size:160px;}}
+@media screen and (min-width: 640px) {html{font-size:170.67px;}}
+@media screen and (min-width: 680px) {html{font-size:181.33px;}}
+@media screen and (min-width: 720px) {html{font-size:192px;}}
+@media screen and (min-width: 750px) {html{font-size:200px;}}
+@media screen and (min-width: 760px) {html{font-size:202.67px;}}
+@media screen and (min-width: 800px) {html{font-size:213.33px;}}
+@media screen and (min-width: 960px) {html{font-size:256px;}}
+.box{
+    margin-top: 0.1rem;
+    background-color: #ffffff;
+    color: #000;
+}
+.title{
+    margin-left: 0.34rem;
+    padding-top: 0.21rem;
+    font-size: 0.17rem;
+}
+.imgsbox{
+    padding-top: 0.16rem;
+    padding-bottom: 0.25rem;
+}
+.imgsboxtop{
+    padding-top: 0.29rem;
+    padding-bottom: 0.25rem;
+}
+.imgs{
+    width: 100%;
+}
+.txt{
+    line-height: 0.25rem;
+    padding: 0 0.23rem;
+    font-size: 0.14rem;
+}

@@ -1,0 +1,120 @@
+#top {
+    height: 50px;
+    background-color: #ef5e8f;
+}
+
+#top>* {
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    color: #fff;
+}
+#top>#title {
+    float: left;
+    margin-left: 20px;
+}
+#top>#name {
+    float: left;
+    margin-left: 15px;
+}
+#top>#hospital {
+    float: right;
+    margin-right: 20px;
+}
+
+#detail {
+    clear: both;
+    margin: 10px 0 0 20px;
+}
+
+#detail>div {
+    float: left;
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+#detail>div>.question>font {
+    color: #ff3333;
+}
+
+#detail>div>.answer {
+    margin-top: 10px;
+}
+
+#detail>div.oneSelect>.answer>.answerItem {
+    float: left;
+    width: 100%;
+    margin-bottom: 8px;
+}
+#detail>div.oneSelect>.answer>.answerItem>img {
+    float: left;
+    width: 15px; height: 15px;
+    margin-top: 4px;
+}
+#detail>div.oneSelect>.answer>.answerItem>span {
+    float: left;
+    margin-left: 10px;
+}
+#detail>div.oneSelect>.answer>.answerItem>span.gray {
+    color: #999;
+}
+#detail>div.oneSelect>.answer>.answerItem>.answerOther {
+    float: left;
+    width: 100%;
+    margin-top: 10px; padding: 15px 0 15px 10px;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+#detail>div.manySelect>.answer>.answerItem {
+    float: left;
+    width: 100%;
+    margin-bottom: 8px;
+}
+#detail>div.manySelect>.answer>.answerItem>img {
+    float: left;
+    width: 15px; height: 15px;
+    margin-top: 4px;
+}
+#detail>div.manySelect>.answer>.answerItem>span {
+    float: left;
+    margin-left: 10px;
+}
+#detail>div.manySelect>.answer>.answerItem>span.gray {
+    color: #999;
+}
+#detail>div.manySelect>.answer>.answerItem>.answerOther {
+    float: left;
+    width: 100%;
+    margin-top: 10px; padding: 15px 0 15px 10px;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+
+#detail>div.fill>.answer {
+    float: left;
+    width: 100%;
+    text-decoration: underline;
+    color: #ef5e8f;
+}
+
+#detail>div.short>.answer {
+    float: left;
+    width: 100%;
+    text-decoration: underline;
+    color: #ef5e8f;
+}
+#detail>div.short>.answer>.answerText {
+    float: left;
+    width: 100%;
+    margin: 10px 0; padding: 15px 0 15px 10px;
+    border-radius: 5px;
+    background-color: #fafafa;
+}
+#detail>div.short>.answer>.answerImg {
+    float: left;
+    width: 200px; height: 240px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}

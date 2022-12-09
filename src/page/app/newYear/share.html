@@ -1,0 +1,63 @@
+<!--
+ * 文件描述：新年活动-首页-分享
+ * 创建人：段素栋
+ * 创建时间：2019-12-30
+-->
+<html>
+<title>邀请注册</title>
+<head>
+    <link rel='stylesheet' href='./src/assets/css/newYear/share.css'/>
+</head>
+<body>
+<div class="newYear_share">
+    <div class="share_head">
+        <img src="./src/assets/img/newYear/share/banner.png">
+    </div>
+    <div class="share_body">
+        <div class="share_body_content">
+            <div class="newUser">
+                <img src="./src/assets/img/newYear/share/newUser.png" alt="">
+            </div>
+            <div class="content_card">
+                <img onclick="phoneFocus()" src="./src/assets/img/newYear/share/card.png" alt="">
+            </div>
+            <div class="content_receive">
+                <img src="./src/assets/img/newYear/share/border-top.png" alt="">
+                <div class="receive">
+                    <div class="receive_box">
+                        <input id="phone" type="text" placeholder="请输入手机号" oninput="if(value.length>11)value=value.slice(0,11);value=value.replace(/[^0-9]/ig,'')">
+                        <div>
+                            <input id="code" type="text" placeholder="请输入验证码" oninput="if(value.length>6)value=value.slice(0,6);value=value.replace(/[^0-9]/ig,'')">
+                            <span id="sendCode" onclick="sendCode()">发送验证码</span>
+                        </div>
+                        <div onclick="receive()">
+                            <img src="./src/assets/img/newYear/share/receive.png" alt="">
+                            <p>立即领取</p>
+                            <h1>
+                                <img src="./src/assets/img/newYear/share/userTip.png" alt="">
+                            </h1>
+                        </div>
+                    </div>
+                </div>
+                <img src="./src/assets/img/newYear/share/border-bottom.png" alt="">
+            </div>
+            <div class="share_rule">
+                <img class="rule_title" src="./src/assets/img/newYear/share/rule.png" alt="">
+                <div class="rule_content">
+                    <img src="./src/assets/img/newYear/share/rule_bg.png" alt="">
+                    <div class="rule_box">
+                        <p>1.新用户专属优惠券使用方式</p>
+                        <span> 下载并登录澜渟APP，新用户专属课程优惠券会自动放入您的账户，点击【我的】【优惠券】即可找到</span>
+                        <p>2.参与新年活动 </p>
+                        <span>登录澜渟APP后可点击首页弹窗海报或首页最上方的活动图进入活动页面，点击“立即邀请”按钮并分享至他人，即可参与新年活动，超多奖品等你哟~</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='./src/page/js/newYear/share.js'></script>
+<script type='text/javascript' src='/src/utils/downloadApp.js'></script>
+<script type='text/javascript' src='/src/utils/remStyle.js'></script>
+</body>
+</html>

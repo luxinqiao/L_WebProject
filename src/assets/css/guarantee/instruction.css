@@ -1,0 +1,53 @@
+#main{
+    background-color: #fff;
+    padding: 0.1rem 0.26rem;
+    padding-bottom: 0.4rem;
+}
+.content h1{
+    font-size: 0.4rem;
+    line-height: 0.6rem;
+    margin: 0 auto;
+    width: 3.8rem;
+    text-align: center;
+}
+.content h2{
+    font-size: 0.36rem;
+    line-height: 0.52rem;
+    margin-top: 0.2rem;
+}
+.content p{
+    font-size: 0.3rem;
+    line-height: 0.46rem;
+    display: flex;
+}
+.content span{
+    margin-right: 0.18rem;
+}
+.formlist{
+    margin-top: 0.14rem;
+}
+.formlist p{
+    margin-left: 0.18rem;
+}
+table{
+    border-collapse:collapse;
+    width: 100%;
+    text-align: center;
+    margin-top: 0.1rem;
+}
+td{
+    height: 0.8rem;
+}
+.titlelist{
+    background-color: #9cc2e5;
+    font-weight: bold;
+}
+.formlist table p{
+    margin-left: 0.1rem;
+}
+
+.content h3{
+    margin-top: 0.2rem;
+    font-size: 0.32rem;
+    line-height: 0.4rem;
+}

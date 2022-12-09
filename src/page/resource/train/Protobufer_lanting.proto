@@ -1,0 +1,53 @@
+syntax = 'proto3';
+package lanting;
+
+//设备类型
+enum DeviceType
+{
+    NoneDeviceType = 0;
+    Android = 1;
+    IOS = 2;
+    PC = 3;
+    WEB = 4;
+}
+
+//评估筛查类型
+enum ScreenType
+{
+    NoneScreenType = 0;
+    RapidScreen = 1;
+    StandardScreen = 2;
+    StandardAssess = 3;
+}
+
+//评估原始数据保存类型
+message AssessOriginalDataSaveFormat
+{
+    double originalVal = 1;
+    double templateVal = 2;
+}
+
+//评估数据文件
+message AssessFileData
+{
+    DeviceType deviceType = 1;//设备类型
+    string hardwareString = 2;//硬件版本
+    string systemVersion = 3;//系统版本
+    string softVersion = 4; //软件版本
+    string deviceSerielNumber = 5;
+    string structVersion = 6;
+    ScreenType assessType = 7;  //评估筛查类型
+    repeated AssessOriginalDataSaveFormat assessOriginalDataArray=8; //原始数据数组;
+}
+
+//用户意见反馈
+message UserFeedBack
+{
+    string ufbUID    = 1;//唯一UID
+    string ufbUIUID  = 2;//用户UID
+    string ufbTitle  = 3;//标题
+    string ufbDesc   = 4;//描述
+    string ufbImages = 5;//图片 json字符串
+}
+
+

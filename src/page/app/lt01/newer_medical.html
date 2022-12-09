@@ -1,0 +1,311 @@
+<!--
+    文件描述：新手必读（1代医疗）
+    创建人：卢信桥
+    创建时间：2021-04-08
+ -->
+<html>
+<head>
+    <title></title>
+    <style>
+        #main {
+            padding-bottom: 0.72rem;
+            background-color: #fff;
+        }
+        #banner>img {
+            width: 100%;
+        }
+        .title {
+            position: relative;
+            margin-left: 0.09rem;
+            height: 0.44rem;
+        }
+        .title>.no {
+            position: absolute;
+            top: 0; left: 0;
+            line-height: 0.44rem;
+            font-size: 0.36rem; font-weight: bold;
+            color: #ff2c79;
+            opacity: 0.29;
+        }
+        .title>.text {
+            position: absolute;
+            top: 0.18rem; left: 0.1rem;
+            line-height: 0.22rem;
+            font-size: 0.16rem; font-weight: bold;
+        }
+        .desc {
+            padding: 0 0.12rem;
+            line-height: 0.24rem;
+            font-size: 0.14rem;
+        }
+        .desc>.red {
+            color: #ff2c79;
+        }
+        .img {
+            display: block;
+            margin: auto 0.12rem;
+        }
+        .img>.left {
+            float: left;
+            width: 1.7rem; height: 100%;
+        }
+        .img>.right {
+            float: right;
+            width: 1.7rem; height: 100%;
+        }
+        .img>.full {
+            width: 100%; height: 100%;
+        }
+        .subTitle {
+            position: relative;
+            margin-left: 0.12rem; padding-left: 0.08rem;
+        }
+        .subTitle>.mark {
+            position: absolute;
+            top: 0.09rem; left: 0;
+            width: 0.05rem; height: 0.05rem;
+            background: url(/src/assets/img/wireless/circle.png) no-repeat center center;
+            background-size: 0.05rem 0.05rem;
+        }
+        .subTitle>.text {
+            line-height: 0.24rem;
+            font-size: 0.14rem; font-weight: bold;
+            color: #ff2c79;
+        }
+        .bottom-item {
+            height: 0.36rem;
+            display: flex;
+            justify-content: center;
+        }
+        .bottom-item>span {
+            line-height: 0.36rem;
+            font-size: 0.13rem;
+        }
+        .bottom-item>img {
+            margin-left: 0.07rem;
+            width: 1.07rem; height: 0.36rem;
+        }
+        .bottom-item>a {
+            margin-left: 0.08rem;
+            height: 0.29rem;
+            line-height: 0.29rem;
+            font-size: 0.13rem;
+            color: #7694CF;
+        }
+        .try {
+            position: fixed;
+            bottom: 0.12rem; left: 0.12rem; right: 0.12rem;
+            height: 0.44rem;
+            text-align: center; line-height: 0.44rem;
+            border-radius: 0.24rem;
+            font-size: 0.16rem;
+            background-color: #ff2c79; color: #fff;
+        }
+        .mt6 {
+            margin-top: 0.06rem;
+        }
+        .mt8 {
+            margin-top: 0.08rem;
+        }
+        .mt12 {
+            margin-top: 0.12rem;
+        }
+        .mt24 {
+            margin-top: 0.24rem;
+        }
+        .mt30 {
+            margin-top: 0.3rem;
+        }
+    </style>
+</head>
+<body>
+    <div id='main'>
+        <div id='banner'>
+            <img src='/src/assets/img/lt01/newer_medical/banner.png' onclick='lookImg("/src/assets/img/lt01/newer_medical/banner.png")'>
+        </div>
+        <div class='step mt12'>
+            <div class='title'>
+                <span class='no'>01</span>
+                <span class='text'>识别盆底肌</span>
+            </div>
+            <div class='desc mt6'>
+                盆底肌是指像弹簧床一样承托和支撑膀胱、子宫、直肠等盆腔脏器的盆底底部肌肉，具有控制排尿排便，托起器官、维持阴道紧缩度和增进性快感等功能。
+            </div>
+            <div class='img mt8' style='height: 0.9rem;'>
+                <img class='left' src='/src/assets/img/lt01/newer_medical/step01-1.png' onclick='lookImg("/src/assets/img/lt01/newer_medical/step01-1.png")'></img>
+                <img class='right' src='/src/assets/img/lt01/newer_medical/step01-2.png' onclick='lookImg("/src/assets/img/lt01/newer_medical/step01-2.png")'></img>
+            </div>
+        </div>
+        <div class='step mt30'>
+            <div class='title'>
+                <span class='no'>02</span>
+                <span class='text'>如何找到盆底肌</span>
+            </div>
+            <div class='img mt6' style='height: 1.66rem;'>
+                <img class='left' src='/src/assets/img/lt01/newer_medical/step02-1.png' onclick='lookImg("/src/assets/img/lt01/newer_medical/step02-1.png")'></img>
+                <img class='right' src='/src/assets/img/lt01/newer_medical/step02-2.png' onclick='lookImg("/src/assets/img/lt01/newer_medical/step02-2.png")'></img>
+            </div>
+            <div class='desc mt8'>
+                <font class='red'>注意：</font>日常生活中，不要刻意进行中断小便动作，养成这种不好的习惯或者在膀胱充盈的时候进行凯格尔运动，反而会削弱盆底肌的力量，甚至导致尿路感染。
+            </div>
+        </div>
+        <div class='step mt30'>
+            <div class='title'>
+                <span class='no'>03</span>
+                <span class='text'>方案获取</span>
+            </div>
+            <div class='img mt6' style='height: 1.44rem;'>
+                <img class='full' src='/src/assets/img/lt01/newer_medical/step03.png' onclick='lookImg("/src/assets/img/lt01/newer_medical/step03.png")'></img>
+            </div>
+            <div class='desc mt8'>
+                除内置方案外，您可选择通过盆底筛查/评估、电脑推送、顾问推送3种形式来获取更多训练方案。
+            </div>
+        </div>
+        <div class='step mt30'>
+            <div class='title'>
+                <span class='no'>04</span>
+                <span class='text'>盆底筛查/评估</span>
+            </div>
+            <div class='img mt6' style='height: 1.04rem;'>
+                <img class='full' src='/src/assets/img/lt01/newer_medical/step04.png' onclick='lookImg("/src/assets/img/lt01/newer_medical/step04.png")'></img>
+            </div>
+            <div class='desc mt8'>
+                选择盆底筛查/评估，填写您的个人信息，完成一系列盆底肌收缩和放松动作，通过相关参数分析，生成报告。
+            </div>
+        </div>
+        <div class='step mt30'>
+            <div class='title'>
+                <span class='no'>05</span>
+                <span class='text'>定制专属方案</span>
+            </div>
+            <div class='img mt6' style='height: 1.44rem;'>
+                <img class='full' src='/src/assets/img/lt01/newer_medical/step05.png' onclick='lookImg("/src/assets/img/lt01/newer_medical/step05.png")'></img>
+            </div>
+            <div class='desc mt8'>
+                选择您目前最严重的问题，将根据您的训练结果报告，结合澜渟大数据平台，为您定制只适合您的专属方案。
+            </div>
+        </div>
+        <div class='step mt30'>
+            <div class='title'>
+                <span class='no'>06</span>
+                <span class='text'>盆底康复训练</span>
+            </div>
+            <div class='subTitle mt6'>
+                <span class='mark'></span>
+                <span class='text'>方案训练</span>
+            </div>
+            <div class='desc mt8'>
+                方案训练会您的盆底肌状况及问题进行针对性治疗修复。训练有4种模式，分别是神经肌肉电刺激、肌电触发电刺激、凯格尔模板训练、多媒体游戏训练。
+            </div>
+            <div class='img mt8' style='height: 1.01rem;'>
+                <img class='full' src='/src/assets/img/lt01/newer_medical/step06-1.png' onclick='lookImg("/src/assets/img/lt01/newer_medical/step06-1.png")'></img>
+            </div>
+            <div class='desc mt8'>
+                建议您选择最近定制的专属方案进行训练，这是最适合您当前盆底肌状况的方案哦！
+            </div>
+            <div class='img mt6' style='height: 1.45rem;'>
+                <img class='full' src='/src/assets/img/lt01/newer_medical/step06-2.png' onclick='lookImg("/src/assets/img/lt01/newer_medical/step06-2.png")'></img>
+            </div>
+            <div class='desc mt24'>
+                方案要坚持训练，训练结束后，赶快进行盆底筛查/评估，看看自己的盆底肌力有没有提升，定制新的专属方案，继续下一轮方案训练哦！
+            </div>
+            <div class='img mt6' style='height: 1.84rem;'>
+                <img class='full' src='/src/assets/img/lt01/newer_medical/step06-3.png' onclick='lookImg("/src/assets/img/lt01/newer_medical/step06-3.png")'></img>
+            </div>
+            <div class='desc mt24'>
+                <font class='red'>注：</font>如果您的医生或产康师为您推送了方案，也可遵从医生或产康师的要求训练。
+            </div>
+            <div class='subTitle mt30'>
+                <span class='mark'></span>
+                <span class='text'>自由训练</span>
+            </div>
+            <div class='desc mt8'>
+                自由训练是开放式辅助训练，分为凯格尔训练和趣味游戏训练，跟着模板或游戏界面主动进行收缩放松训练，在方案治疗的同时可隔1天进行一次自由训练，提升治疗修复效果。
+            </div>
+            <div class='desc mt8'>
+                <font class='red'>注：</font>如果您的肌力较差（快肌、慢肌肌力等级2级以下），自由训练难度较大，等到肌力提升后再做自由训练哦。
+            </div>
+        </div>
+        <div class='bottom mt24'>
+            <p class='bottom-item'>
+                <span>如还有疑问请点击</span>
+                <img onclick='goAsk()' src='/src/assets/img/lt01/newer_medical/bottom-contact.png'>
+            </p>
+            <p class='bottom-item mt12'>
+                <span>或拨打400电话咨询 </span>
+                <a href='javascript:void(0)' onclick='call()'>400-133-5668</a>
+            </p>
+        </div>
+        <div class='try' onclick='goTry()'>体验一下</div>
+    </div>
+
+    <script type='text/javascript'>
+        $(function() {
+            $(window).scrollTop(sessionStorage.scrollTop)
+            sessionStorage.scrollTop = 0
+            CommonUtils.resetRem()
+        })
+
+        /**
+            页面跳转-训练顾问
+            @param
+            @return
+         */
+        function goAsk() {
+            CommonUtils.appFun(function() {
+                window.jsInterface.jumpToCustomer(JSON.stringify({type:'CSP0009'}))
+            }, function() {
+                window.webkit.messageHandlers.jumpToCustomer.postMessage({type:'CSP0009'})
+            })
+        }
+        /**
+            页面跳转-体验一下
+            @param
+            @return
+         */
+        function goTry() {
+            CommonUtils.appFun(function() {
+                window.jsInterface.tryIt()
+            }, function() {
+                window.webkit.messageHandlers.tryIt.postMessage(null)
+            })
+        }
+
+        /**
+            查看图片
+            @param
+            @return
+         */
+        function lookImg(src) {
+            sessionStorage.scrollTop = $(window).scrollTop()
+            var srcArr = [
+                '/src/assets/img/lt01/newer_medical/banner.png',
+                '/src/assets/img/lt01/newer_medical/step01-1.png',
+                '/src/assets/img/lt01/newer_medical/step01-2.png',
+                '/src/assets/img/lt01/newer_medical/step02-1.png',
+                '/src/assets/img/lt01/newer_medical/step02-2.png',
+                '/src/assets/img/lt01/newer_medical/step03.png',
+                '/src/assets/img/lt01/newer_medical/step04.png',
+                '/src/assets/img/lt01/newer_medical/step05.png',
+                '/src/assets/img/lt01/newer_medical/step06-1.png',
+                '/src/assets/img/lt01/newer_medical/step06-2.png',
+                '/src/assets/img/lt01/newer_medical/step06-3.png'
+            ]
+            CommonUtils.lookImg(src, srcArr)
+        }
+
+        /**
+            打电话
+            @param
+            @return
+         */
+         function call() {
+            if(CommonUtils.getAppType() == 'android' && CommonUtils.getBrowserType() == 'app') {
+                window.jsInterface.call('400-133-5668')
+            } else {
+                window.location.href = 'tel:400-133-5668'
+            }
+        }
+    </script>
+</body>
+</html>

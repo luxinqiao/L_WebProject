@@ -1,0 +1,16 @@
+/**
+* 文件描述：盆底肌肉康复器详情页
+* 创建人：殷俊
+* 创建时间：2019-07-14
+*/
+.noticeText {
+    margin-top: 20px;
+}
+
+.hint {
+    margin-top: 20px;
+}
+
+.hint>p:nth-child(1) {
+    color: #ef5e8f;
+}

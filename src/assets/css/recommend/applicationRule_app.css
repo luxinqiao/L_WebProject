@@ -1,0 +1,75 @@
+/*
+ * 文件描述：申请加入（APP内嵌） 样式
+ * 创建人：段素栋
+ * 创建时间：2019-12-03
+*/
+#rootPage {
+    width: 100%; height: auto !important;
+}
+.applicationRule_header{
+    position: fixed;
+    top: 0; left: 0;
+    height: 0.88rem; width: 100%;
+    background-color: #fff;
+    text-align: center; line-height: 100%;
+    z-index: 99;
+}
+.applicationRule_header span{
+    line-height: 0.88rem; color: #333;
+    font-size: 0.36rem;
+}
+.applicationRule_header div{
+    position: absolute;
+    top: 0; left: 0;
+    height: 0.88rem; width: 0.88rem;
+}
+.applicationRule_header img{
+    position: absolute;
+    top: 0.28rem; left: 0.24rem;
+    height: 0.32rem; width: 0.32rem;
+}
+.head_replace{
+    height: 0.88rem; width: 100%;
+}
+.applicationRule{
+    position: relative;
+    padding: 0.24rem 0.24rem 0.48rem 0.24rem ;
+}
+.applicationRule .applicationRule_bg{
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    z-index: -1;
+}
+.applicationRule .applicationRule_content{
+
+}
+.applicationRule_content .applicationRule_title{
+    position: relative; height: 2.06rem;
+}
+.applicationRule_content .applicationRule_title img{
+    width: 100%;  height: 100%;
+}
+.applicationRule_content .applicationRule_title div{
+    position: absolute; top: 0.5rem; width: 100%;
+    text-align: center;  color: #fff;
+    font-size: 0.4rem;
+    text-shadow:0 0.02rem 0.02rem rgba(197,105,0,1);
+}
+.applicationRule_content .applicationRule_rule{
+    padding: 0.24rem 0.24rem 0.48rem 0.24rem;
+    border-bottom-left-radius: 0.24rem;
+    border-bottom-right-radius: 0.24rem;
+    background-color: #fff;
+}
+.applicationRule_rule .rule_title{
+    font-size: 0.3rem; font-weight: bold;
+    line-height: 0.42rem; margin-bottom: 0.1rem;
+}
+.applicationRule_rule .marginTop{
+    margin-top: 0.48rem;
+}
+.applicationRule_rule .rule_item{
+    font-size: 0.26rem; line-height: 0.46rem;
+    color: #666; margin-bottom: 0.12rem;
+}

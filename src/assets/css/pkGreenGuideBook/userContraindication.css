@@ -1,0 +1,38 @@
+/**
+* 文件描述：盆底肌肉康复器详情页
+* 创建人：殷俊
+* 创建时间：2019-07-14
+*/
+.subHead {
+    color:#999999;
+}
+
+.img_des {
+    margin-top:20px;
+}
+
+.partition {
+    margin-top: 20px;
+}
+
+.partitionBottom {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.partitionBottom>p:nth-child(1) {
+    color: #ef5e8f;
+}
+
+.criclePosition {
+    margin-top: 10px;
+}
+
+.cricleBef {
+    display:inline-block;
+    width: 12px;
+    height:12px;
+    border-radius: 12px;
+    margin-right:5px;
+    background-color: #ef5e8f;
+}

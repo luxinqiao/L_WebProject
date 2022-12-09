@@ -1,0 +1,319 @@
+<!--
+    文件描述：新手必读
+    创建人：卢信桥
+    创建时间：2020-11-02
+ -->
+<html>
+<head>
+    <title></title>
+    <style>
+        #main {
+            background-color: #fff;
+        }
+        #head {
+            display: none;
+            position: fixed; z-index: 98;
+            top: 0; left: 0; right: 0;
+            height: 0.52rem;
+            background-color: #fff9f5;
+        }
+        .head-logo {
+            position: absolute;
+            top: 0.07rem; left: 0.12rem;
+            width: 0.34rem; height: 0.35rem;
+        }
+        .head-title {
+            position: absolute;
+            top: 0.05rem; left: 0.55rem;
+            line-height: 0.22rem;
+            font-size: 0.15rem;
+            color: #ff2c79;
+        }
+        .head-desc {
+            position: absolute;
+            top: 0.25rem; left: 0.55rem;
+            line-height: 0.18rem;
+            font-size: 0.13rem;
+            color: #C79AAD;
+        }
+        .head-button {
+            position: absolute;
+            top: 0.1rem; right: 0.12rem;
+            width: 0.74rem; height: 0.28rem;
+            text-align: center; line-height: 0.28rem;
+            font-size: 0.12rem;
+            border-radius: 0.15rem;
+            background-color: #ff2c79; color: #fff;
+        }
+        #banner>img {
+            width: 100%;
+        }
+        .title {
+            position: relative;
+            margin-left: 0.09rem;
+            height: 0.44rem;
+        }
+        .title>.no {
+            position: absolute;
+            top: 0; left: 0;
+            line-height: 0.44rem;
+            font-size: 0.36rem; font-weight: bold;
+            color: #ff2c79;
+            opacity: 0.29;
+        }
+        .title>.text {
+            position: absolute;
+            top: 0.18rem; left: 0.1rem;
+            line-height: 0.22rem;
+            font-size: 0.16rem; font-weight: bold;
+        }
+        .subTitle {
+            position: relative;
+            margin-left: 0.12rem; padding-left: 0.08rem;
+        }
+        .subTitle>.mark {
+            position: absolute;
+            top: 0.09rem; left: 0;
+            width: 0.05rem; height: 0.05rem;
+            background: url(/src/assets/img/wireless/circle.png) no-repeat center center;
+            background-size: 0.05rem 0.05rem;
+        }
+        .subTitle>.text {
+            line-height: 0.24rem;
+            font-size: 0.14rem;
+        }
+        .subTitle>.text.noMark {
+            margin-left: 0;
+        }
+        .subTitle>.text>.red {
+            color: #ff2c79;
+        }
+        .subTitle>.subText {
+            line-height: 0.24rem;
+            font-size: 0.12rem;
+            color: #666;
+        }
+        .img {
+            display: block;
+            margin: auto;
+        }
+        .bottom::after {
+            display: block;
+            content: '';
+            height: 0.45rem; width: 100%;
+        }
+        .bottom-item {
+            height: 0.34rem;
+            display: flex;
+            justify-content: center;
+        }
+        .bottom-item>span {
+            line-height: 0.34rem;
+            font-size: 0.13rem;
+        }
+        .bottom-item>img {
+            margin-left: 0.07rem;
+            width: 1.07rem; height: 0.34rem;
+        }
+        .bottom-item>a {
+            margin-left: 0.08rem;
+            height: 0.34rem;
+            line-height: 0.34rem;
+            font-size: 0.13rem;
+            color: #7694CF;
+        }
+        .mt2 {
+            margin-top: 0.02rem;
+        }
+        .mt4 {
+            margin-top: 0.04rem;
+        }
+        .mt6 {
+            margin-top: 0.06rem;
+        }
+        .mt8 {
+            margin-top: 0.08rem;
+        }
+        .mt12 {
+            margin-top: 0.12rem;
+        }
+        .mt14 {
+            margin-top: 0.14rem;
+        }
+        .mt20 {
+            margin-top: 0.2rem;
+        }
+        .mt30 {
+            margin-top: 0.3rem;
+        }
+    </style>
+</head>
+<body>
+    <div id='main'>
+        <div id='head'>
+            <img class='head-logo' src='/src/assets/img/wireless/logo.png'>
+            <span class='head-title'>澜渟</span>
+            <span class='head-desc'>盆底肌修复 免费凯格尔运动</span>
+            <button class='head-button' onclick='openWrightin()'>下载App</button>
+        </div>
+        <div id='banner'>
+            <img src='/src/assets/img/wireless/banner.png' onclick='lookImg("/src/assets/img/wireless/banner.png")'>
+        </div>
+        <div class='step mt12'>
+            <div class='title'>
+                <span class='no'>01</span>
+                <span class='text'>快速认识产品</span>
+            </div>
+            <div class='subTitle mt6'>
+                <span class='mark'></span>
+                <span class='text'>主机</span>
+                <span class='subText'>（即设备）</span>
+            </div>
+            <img class='img mt8' style='width: 3.51rem; height: 1.48rem;' src='/src/assets/img/wireless/product-1.png' onclick='lookImg("/src/assets/img/wireless/product-1.png")'></img>
+            <div class='subTitle mt20'>
+                <span class='mark'></span>
+                <span class='text'>电极片</span>
+                <span class='subText'>（根据不同方案，选择合适的电极片）</span>
+            </div>
+            <img class='img mt8' style='width: 3.51rem; height: 1.2rem;' src='/src/assets/img/wireless/product-2.png' onclick='lookImg("/src/assets/img/wireless/product-2.png")'></img>
+        </div>
+        <div class='step mt30'>
+            <div class='title'>
+                <span class='no'>02</span>
+                <span class='text'>如何开启训练</span>
+            </div>
+            <div class='subTitle mt8'>
+                <span class='mark'></span>
+                <span class='text'>开机：长按主机的开关键4秒，指示灯为绿色，开机成功。</span>
+            </div>
+            <img class='img mt8' style='width: 3.51rem; height: 1.38rem;' src='/src/assets/img/wireless/train-1.png' onclick='lookImg("/src/assets/img/wireless/train-1.png")'></img>
+            <div class='subTitle mt20'>
+                <span class='mark'></span>
+                <span class='text'>蓝牙连接：首次连接蓝牙时，点击【蓝牙标识】自动蓝牙搜索，选择蓝牙设备进行连接，可选择【扫码连接】切换连接方式。下次使用时，将会自动建立蓝牙连接。</span>
+            </div>
+            <img class='img mt2' style='width: 3.19rem; height: 1.66rem;' src='/src/assets/img/wireless/train-2.png' onclick='lookImg("/src/assets/img/wireless/train-2.png")'></img>
+            <div class='subTitle mt12'>
+                <span class='mark'></span>
+                <span class='text'>获取方案：根据自身需要，从【方案库】中获取产康方案。</span>
+            </div>
+            <img class='img mt2' style='width: 3.19rem; height: 1.66rem;' src='/src/assets/img/wireless/train-3.png' onclick='lookImg("/src/assets/img/wireless/train-3.png")'></img>
+            <div class='subTitle mt12'>
+                <span class='mark'></span>
+                <span class='text'>设备连接电极片：将设备背面磁吸点接触电极片的两个触点，自动吸附。</span>
+            </div>
+            <img class='img mt8' style='width: 3.51rem; height: 1.7rem;' src='/src/assets/img/wireless/train-4.png' onclick='lookImg("/src/assets/img/wireless/train-4.png")'></img>
+            <div class='subTitle mt20'>
+                <span class='mark'></span>
+                <span class='text'>贴附电极片：根据不同方案图示指导，将电极片贴附在需要训练的部位，确保电极片与训练部位紧密接触。</span>
+            </div>
+            <img class='img mt10' style='width: 3.51rem; height: 0.92rem;' src='/src/assets/img/wireless/train-5.png' onclick='lookImg("/src/assets/img/wireless/train-5.png")'></img>
+            <div class='subTitle mt20'>
+                <span class='mark'></span>
+                <span class='text'>进行训练：设备选择完全后，点击【开始第xx次训练】后，预设适当的电流强度，立即训练。</span>
+            </div>
+            <img class='img mt4' style='width: 3.26rem; height: 1.61rem;' src='/src/assets/img/wireless/train-6.png' onclick='lookImg("/src/assets/img/wireless/train-6.png")'></img>
+            <div class='subTitle mt14'>
+                <span class='mark'></span>
+                <span class='text'>训练结束：自动结束/手动结束，长按设备开关键3秒，指示灯不亮，关机成功。取下电极片，将电极片贴附到收纳板上，以备下次使用。</span>
+            </div>
+            <img class='img mt10' style='width: 3.51rem; height: 1.38rem;' src='/src/assets/img/wireless/train-7.png' onclick='lookImg("/src/assets/img/wireless/train-7.png")'></img>
+        </div>
+        <div class='step mt30'>
+            <div class='title'>
+                <span class='no'>03</span>
+                <span class='text'>如何传输方案</span>
+            </div>
+            <div class='subTitle mt10' style='margin-left: 0;padding-left: 0.03rem;'>
+                <span class='text noMark'>【方案库】中带有【可传输】标识的方案，支持单机训练（可传输到设备中，脱离App训练）。</span>
+            </div>
+            <img class='img mt2' style='width: 3.51rem; height: 1.66rem;' src='/src/assets/img/wireless/program-1.png' onclick='lookImg("/src/assets/img/wireless/program-1.png")'></img>
+            <div class='subTitle mt12' style='padding-left: 0;'>
+                <span class='text noMark'>
+                    使用澜渟您可以体验到最科学的锻炼方法，为了防止肌肉疲劳，我们建议您同一部位的每天训练次数不宜超过<font class='red'>2次</font>，同一部位单次连续训练时长不宜超过<font class='red'>1小时</font>，请勿过量训练。
+                </span>
+            </div>
+        </div>
+        <div class='bottom mt20'>
+            <p class='bottom-item'>
+                <span>如还有疑问请点击</span>
+                <img onclick='goAsk()' src='/src/assets/img/wireless/bottom-contact.png'>
+            </p>
+            <p class='bottom-item mt12'>
+                <span>或拨打电话咨询 </span>
+                <a href='tel:400-133-5668'>400-133-5668</a>
+            </p>
+        </div>
+    </div>
+
+    <script type='text/javascript' src='/src/utils/downloadApp.js?t=202012091602'></script>
+    <script type='text/javascript' src='/src/utils/openApp.js?t=202012091602'></script>
+    <script type='text/javascript'>
+        $(function() {
+            $(window).scrollTop(sessionStorage.scrollTop)
+            sessionStorage.scrollTop = 0
+            CommonUtils.resetRem()
+            if (CommonUtils.getBrowserType() != 'app') {
+                $('#head').css('display', 'block')
+                $('#main').css('padding-top', '0.52rem')
+            }
+        })
+
+        /**
+            页面跳转-训练顾问
+            @param
+            @return
+         */
+        function goAsk() {
+            if (CommonUtils.getBrowserType() == 'app') {
+                CommonUtils.appFun(function() {
+                    window.jsInterface.jumpToCustomer(JSON.stringify({type:'CSP0004'}))
+                }, function() {
+                    window.webkit.messageHandlers.jumpToCustomer.postMessage({type:'CSP0004'})
+                })
+            } else if (CommonUtils.getBrowserType() == 'wechat') {
+                Download_wechat('user') 
+            } else {
+                openApp('lanting://',()=>{
+                    Download('user',()=>{})
+                },'inviteApp/downUser') 
+            }
+        }
+        /**
+            打开澜渟app
+            @param
+            @return
+         */
+        function openWrightin() {
+            if (CommonUtils.getBrowserType() == 'wechat') {
+                Download_wechat('user') 
+            } else {
+                openApp('lanting://',()=>{
+                    Download('user',()=>{})
+                },'inviteApp/downUser') 
+            }
+        }
+        /**
+            查看图片
+            @param
+            @return
+         */
+        function lookImg(src) {
+            sessionStorage.scrollTop = $(window).scrollTop()
+            var srcArr = [
+                '/src/assets/img/wireless/banner.png',
+                '/src/assets/img/wireless/product-1.png',
+                '/src/assets/img/wireless/product-2.png',
+                '/src/assets/img/wireless/train-1.png',
+                '/src/assets/img/wireless/train-2.png',
+                '/src/assets/img/wireless/train-3.png',
+                '/src/assets/img/wireless/train-4.png',
+                '/src/assets/img/wireless/train-5.png',
+                '/src/assets/img/wireless/train-6.png',
+                '/src/assets/img/wireless/train-7.png',
+                '/src/assets/img/wireless/program-1.png'
+            ]
+            CommonUtils.lookImg(src, srcArr)
+        }
+    </script>
+</body>
+</html>

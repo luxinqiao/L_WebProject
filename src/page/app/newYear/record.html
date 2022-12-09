@@ -1,0 +1,45 @@
+<html>
+<title>邀请记录</title>
+<head>
+    <link rel='stylesheet' href='./src/assets/css/newYear/record.css'/>
+</head>
+<body>
+<div class="newYear_record">
+    <div class="newYear_header">
+        <span>邀请记录</span>
+        <div onclick="goBack()">
+            <img src="./src/assets/img/recommend/applicationRule/back.png" alt="">
+        </div>
+    </div>
+    <div class="record_body">
+        <img class="record_bg" src="./src/assets/img/newYear/record/record_bg.png" alt="">
+        <div class="record_content">
+            <div class="record_num">
+                <img src="./src/assets/img/newYear/record/record_num.png" alt="">
+                <div class="record_people">
+                    <p>我已邀请</p>
+                    <p><span id="peopleNum">0</span>人</p>
+                </div>
+            </div>
+            <div class="record_remark">注：只针对邀请有礼活动</div>
+            <div class="record_box">
+                <img src="./src/assets/img/newYear/share/border-top.png" alt="">
+                <div class="record_list">
+                    <div class="list_content">
+                        <p id="record_default">暂无邀请记录</p>
+                        <div class="record_item" style="display: none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+                <img src="./src/assets/img/newYear/share/border-bottom.png" alt="">
+            </div>
+        </div>
+    </div>
+</div>
+<script type='text/javascript' src='./src/page/js/newYear/record.js'></script>
+<script type='text/javascript' src='/src/utils/remStyle.js'></script>
+</body>
+</html>

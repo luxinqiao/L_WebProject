@@ -1,0 +1,67 @@
+<!--
+ * 文件描述：新手指导（训练中，你需要了解的那些事）
+ * 创建人：卢信桥
+ * 创建时间：2019-06-19
+-->
+<html>
+<head>
+    <title>训练中，你需要了解的那些事</title>
+    <link rel="stylesheet prefetch" href="./src/third/jquery/photoswipe/photoswipe.css">
+    <link rel="stylesheet prefetch" href="./src/third/jquery/photoswipe/default-skin.css">
+</head>
+<body>
+    <div class='content'>
+        <h2>训练中，你需要了解的那些事：为你提供更佳体验</h2>
+        <p style='margin-top:40px;'>训练前，如何连接设备，如何获取训练方案，请详见
+            <span style='text-decoration:underline;color:#3333ff;' onclick='goDoBeforeTrain()'>训练前，需要做哪些事：你需要提前了解</span>
+        </p>
+        <br/>
+        <p>训练中，有哪些事情，需要你知道的呢？请看下面：</p>
+        <div class='img_des' style='margin-top:20px;'>
+            <div class="roundNum">1</div>
+            <p>实时调节电流强度</p>
+        </div>
+        <p>在训练的过程中，我们可以根据自身的情况，来调节电流的强度，为你提供更佳体验。</p>
+        <p>注意：</p>
+        <p>1）训练休息中，安全起见，不可调节电流强度。</p>
+        <p>2）设备正常工作中，请勿随意将电极片撕下；如需撕下电极片，请先结束或暂停训练，设备显示绿灯时，方可撕下电极片；</p>
+        <div class='img_des' style='margin-top:20px;'>
+            <div class="roundNum">2</div>
+            <p>退出后台自运行</p>
+        </div>
+        <p>在训练中，无需实时盯着APP，可退出训练页面或同时使用其他APP，训练不受影响，训练休闲两不误。</p>
+        <div class="my-gallery" data-pswp-uid="1">
+            <figure>
+                <div class="img-dv" style='width:100%;'>
+                    <a href="./src/assets/img/newGuidance190619/doInTrain/p1.jpg" data-size="540x961">
+                        <img src="./src/assets/img/newGuidance190619/doInTrain/p1.jpg">
+                    </a>
+                </div>
+                <figcaption style="display:none;"></figcaption>
+                <p>训练结束后，设备会发出“滴滴”声告知。</p>
+            </figure>
+        </div>
+        <div class='img_des' style='margin-top:20px;'>
+            <div class="roundNum">3</div>
+            <p>异常情况，安全提示</p>
+        </div>
+        <p>以下几种情况，会给出安全“预警”：</p>
+        <p>1）电极片脱落：设备会发出“滴滴”声音，同时APP也会给出强提示，告知电极片脱落，请重新贴敷。此时，训练会中止，同时无电刺激。贴敷成功后，点击【继续】，即可继续训练。</p>
+        <p style='margin-bottom:100px;'>2）电量不足：设备电量过低，设备会发出“滴滴”声音，同时APP会给出弱电量提示，为了可以完整进行训练，建议先结束训练，对设备进行充电，充电完成后，再进行训练。</p>
+    </div>
+    <script src="./src/third/jquery/photoswipe/photoswipe.js"></script>
+    <script src="./src/third/jquery/photoswipe/photoswipe-ui-default.js"></script>
+    <script type='text/javascript'>
+        CommonUtils.setHtmlTitle('训练中，你需要了解的那些事');
+        /**
+            跳转--训练前，需要做哪些事
+            @param
+            @return
+        */
+        function goDoBeforeTrain() {
+            CommonUtils.stopProp();
+            window.location.href = '/#/newGuidance190619/doBeforeTrain';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+/*
+ * 文件描述：购买延保
+ * 创建人：赵志银
+ * 创建时间：2019-03-24
+*/
+#main{
+    background-color: #f4f5f5;
+    width: 100%;
+    height: auto;
+}
+#main .banner{
+    position: relative;
+    height: 5rem;
+    color: #333;
+    width: 100%;
+}
+.banner img{
+    width: 100%;
+    height: 5rem;
+}
+.year{
+    position: absolute;
+    bottom: 0;
+    width: 3.2rem;
+    height: 1.5rem;
+    text-align: center;
+    background-color: #fff;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    box-shadow: 3px 0 6px rgba(70,75,70, 0.4);
+}
+.year h1{
+    font-size: 0.33rem;
+    margin: 0.26rem 0 0.1rem 0;
+}
+.year p{
+    font-size: 0.26rem;
+    line-height: 0.26rem;
+}
+.year .price{
+    font-weight: bold;
+}
+.year .dates{
+    margin-top: 0.12rem;
+    font-size: 0.17rem;
+    line-height: 0.17rem;
+}
+.dates span{
+    margin-top: 0.1rem;
+    font-size: 0.16rem;
+    line-height: 0.16rem;
+}
+.yearHalf{
+    background-color: #ea6cac;
+    background-size: 100% 100%;
+    left: 0; right: 3.4rem;
+    margin: auto;
+}
+.yearAll{
+    background-color: #FF2C7D;
+    left: 3.4rem; right: 0;
+    margin: auto;
+}
+.yearAll h1,.yearAll p,.yearAll span,.yearHalf h1,.yearHalf p,.yearHalf span{
+    color: #fff;
+}
+
+.shop{
+    background-color: #fff;
+    box-shadow: none;
+}
+.shop h1,.shop p,.shop span{
+    color: #e9618f;
+}
+.information{
+    padding: 0 0.44rem;
+    background-color: #fff;
+    padding-bottom: 0.1rem;
+}
+.information h1{
+    font-size: 0.4rem;
+    padding: 0.35rem 0 0.14rem 0;
+    font-weight: normal;
+}
+.information h6{
+    font-size: 0.18rem;
+    margin-bottom: 0.14rem;
+    font-weight: normal;
+    color: #e9618f;
+}
+.numberTimes{
+    height: 1.2rem;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 0.17rem;
+    box-sizing: border-box;
+}
+.numberTimes h3{
+    font-weight: normal;
+    font-size: 0.24rem;
+    width: 2.46rem;
+    margin-left: 0.14rem;
+    display: inline-block;
+}
+.numberTimes p{
+    font-size: 0.24rem;
+    display: inline-block;
+}
+.numberTimes .times{
+    font-size: 0.24rem;
+}
+.number span{
+    font-size: 0.24rem;
+}
+.number .numFirst{
+    color: #000;
+}
+.firstTime{
+    margin-right: 0.08rem;
+    font-size: 0.24rem;
+}
+.nextTime{
+    margin-left: 0.08rem;
+    font-size: 0.24rem;
+}
+.service{
+    background-color: #fff;
+    padding: 0 0.5rem;
+    margin-top: 0.2rem;
+    padding-top: 0.08rem;
+    margin-bottom: 2rem;
+}
+.serviceKnow h1{
+    text-align: center;
+    font-size: 0.28rem;
+    margin: 0.44rem 0;
+    
+}
+.serviceKnow dl{
+    text-align: center;
+    margin-right: 0.56rem;
+}
+.serviceKnow img{
+    height: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+.serviceKnow h2{
+    font-size: 0.22rem;
+    margin-bottom: 0.08rem;
+}
+.serviceKnow p{
+    font-size: 0.2rem;
+    color: #e9618f;
+}
+.serviceKnow div{
+    height: 2.4rem;
+    width: 6.4rem;
+}
+.serviceDetails{
+    border-top: 1px solid #f0f0f0;
+    padding-bottom: 100px;
+}
+.serviceDetails h1{
+    text-align: center;
+    font-size: 0.28rem;
+    padding: 0.44rem 0 0.23rem 0;
+}
+.serviceDetails p{
+    font-size: 0.24rem;
+    line-height: 0.5rem;
+}
+.serviceDetails .customer{
+    font-size: 0.24rem;
+    margin-top: 0.2rem;
+    color: #666666;
+    line-height: 0.18rem;
+}
+.customer a{
+    font-size: 0.24rem;
+    color: #FF2C7D;
+    margin: 0 0.1rem;
+    text-decoration: none;
+}
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: -0.01rem;
+    width: 100%;
+    height: 1.5rem;
+    background-color: #fff;
+}
+.total{
+    float: left;
+    font-size: 0.3rem;
+    margin-left: 0.57rem;
+    line-height: 1.5rem;
+}
+.total span{
+    font-size: 0.36rem;
+    color: rgb(233, 97, 143);
+}
+.footer a{
+    width: 3.46rem;
+    height: 1rem;
+    line-height: 1rem;
+    color: #fff;
+    font-size: 0.32rem;
+    background-color: #FF2C7D;
+    border-radius: 6px;
+    float: right;
+    margin: 0.26rem 0.28rem 0 0;
+    text-align: center;
+    text-decoration: none;
+}
+.prize_cover {
+    position: absolute; z-index: 98;
+    width: 100%; height: 100%;
+    text-align: center;
+}
+.prize_cover>div {
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    bottom: 0;
+    left: 0;
+    width: 5rem; 
+    height: 2rem;
+    margin: auto;
+    background-repeat: no-repeat; 
+    background-size: 100% 100%;
+}
+.prize_cover>div>div:nth-child(1) {
+    position: absolute;
+    top: 0; 
+    right: 0; 
+    bottom: 0; left: 0;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+.prize_cover>div>div>p:nth-child(1){
+    border-bottom: 1px solid #333;
+    padding: 0 0.1rem;
+    height: 50%;
+}
+.prize_cover>div>div>p:nth-child(1)>span{
+    line-height: 0.4rem;
+}
+.prize_cover>div>div>p:nth-child(2)>span{
+    display: inline-block;
+    width: 50%;
+    line-height: 1rem;
+}
+.prize_cover>div>div>p:nth-child(2)>span:nth-child(1){
+    border-right: 1px solid #333;
+}

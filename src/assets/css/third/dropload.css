@@ -1,0 +1,25 @@
+.pull-wrapper {
+    position: absolute; z-index: 1;
+    width: 100%; height: 100%;
+    border: 1px red solid;
+}
+.pull-scroller {
+    position: absolute; z-index: 1;
+    width: 100%;
+    padding: 0;
+}
+.pull-scroller>ul {
+    list-style: none;
+    width: 100%;
+    margin: 0; padding: 0;
+}
+.pull-scroller>#pull-down {
+    box-sizing: content-box !important;
+}
+#pull-down, #pull-up {
+    height: 30px;
+    padding: 0 10px;
+    text-align: center; line-height: 30px;
+    font-size: 14px; font-weight: bold;
+    color: #888;
+}

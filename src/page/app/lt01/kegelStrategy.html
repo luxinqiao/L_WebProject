@@ -1,0 +1,271 @@
+<!--
+    文件描述：kegel功能指南
+    创建人：卢信桥
+    创建时间：2021-08-03
+ -->
+<html>
+    <head>
+        <title>凯格尔运动App功能指南</title>
+        <style>
+            #main {
+                padding: 0.52rem 0 0.37rem 0;
+                background-color: #fff;
+            }
+            #download {
+                display: none;
+                position: fixed; z-index: 98;
+                top: 0; left: 0; right: 0;
+                height: 0.52rem;
+                background-color: #fff9f5;
+            }
+            .download-logo {
+                position: absolute;
+                top: 0.07rem; left: 0.12rem;
+                width: 0.34rem; height: 0.36rem;
+            }
+            .download-title {
+                position: absolute;
+                top: 0.05rem; left: 0.54rem;
+                line-height: 0.22rem;
+                font-size: 0.15rem;
+                color: #ff2c79;
+            }
+            .download-subTitle {
+                position: absolute;
+                top: 0.25rem; left: 0.54rem;
+                line-height: 0.18rem;
+                font-size: 0.13rem;
+                color: #C79AAD;
+            }
+            .download-btn {
+                position: absolute;
+                top: 0.1rem; right: 0.12rem;
+                width: 0.74rem; height: 0.28rem;
+                text-align: center; line-height: 0.28rem;
+                border-radius: 0.15rem;
+                font-size: 0.12rem;
+                color: #fff; background-color: #ff2c79;
+            }
+            .title {
+                display: flex;
+                justify-content: center;
+                height: 0.2rem;
+            }
+            .title>.mark {
+                position: relative;
+                top: 0.03rem;
+                width: 0.14rem; height: 0.14rem;
+                text-align: center; line-height: 0.14rem;
+                font-size: 0.13rem;
+                border-radius: 0.14rem;
+                background-color: #ff2c79; color: #fff;
+            }
+            .title>.text {
+                margin-left: 0.04rem;
+                font-size: 0.14rem; font-weight: bold;
+                color: #ff2c79;
+            }
+            .desc {
+                padding: 0 0.12rem;
+                line-height: 0.24rem; text-align: justify;
+                font-size: 0.14rem;
+            }
+            .desc>.red {
+                color: #ff2c79;
+            }
+            .img {
+                display: block;
+                margin: auto 0.12rem;
+            }
+            .img>.full {
+                width: 100%; height: 100%;
+            }
+            .mt6 {
+                margin-top: 0.06rem;
+            }
+            .mt7 {
+                margin-top: 0.07rem;
+            }
+            .mt8 {
+                margin-top: 0.08rem;
+            }
+            .mt13 {
+                margin-top: 0.13rem;
+            }
+            .mt22 {
+                margin-top: 0.22rem;
+            }
+            .mt30 {
+                margin-top: 0.3rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div id='main'>
+            <div id='download'>
+                <img class='download-logo' src='/src/assets/img/lt02/wrightinNewer/download-logo.png'>
+                <p class='download-title'>澜渟</p>
+                <p class='download-subTitle'>盆底肌修复 免费凯格尔运动</p>
+                <button class='download-btn' onClick='downloadApp()'>下载App</button>
+            </div>
+            <div class='step'>
+                <div class='desc mt6'>
+                    打开”澜渟App”，进入凯格尔运动页面，分为7个功能模块：训练数据、训练帮助、适应练习、定制训练计划、自由训练、场景化训练和咨询训练顾问。
+                </div>
+                <div class='img mt8' style='height: 4.94rem;'>
+                    <img class='full' src='/src/assets/img/lt01/kegelStrategy/index.png' onclick='lookImg(this)'></img>
+                </div>
+            </div>
+            <div class='step mt22'>
+                <div class='title'>
+                    <span class='mark'>1</span>
+                    <span class='text'>训练数据</span>
+                </div>
+                <div class='desc mt8'>
+                    顶部展示训练数据，点击可查看凯格尔运动的训练日历和训练记录。
+                </div>
+                <div class='img' style='height: 1.79rem;'>
+                    <img class='full' src='/src/assets/img/lt01/kegelStrategy/step01.png' onclick='lookImg(this)'></img>
+                </div>
+            </div>
+            <div class='step mt30'>
+                <div class='title'>
+                    <span class='mark'>2</span>
+                    <span class='text'>训练帮助</span>
+                </div>
+                <div class='desc mt8'>
+                    在训练帮助中，您可以查看新手教程和常见问题的解答。如有其他疑问，还可点击“咨询训练顾问”，获取专业盆底康复师1对1训练指导建议；也可以点击“意见反馈”，向我们反映您遇到问题或提出产品建议。
+                </div>
+                <div class='img mt7' style='height: 2.42rem;'>
+                    <img class='full' src='/src/assets/img/lt01/kegelStrategy/step02.png' onclick='lookImg(this)'></img>
+                </div>
+                <div class='desc mt7'>
+                    澜渟App提供了4种模式的训练课程，包括适应练习，训练计划、自由训练，场景化训练。您可以根据自身肌力情况或专业人士的指导，选择合适的课程进行凯格尔运动，训练盆底肌功能。训练期间可搭配合适规格的凯格尔球，提升训练效果。
+                </div>
+            </div>
+            <div class='step mt30'>
+                <div class='title'>
+                    <span class='mark'>3</span>
+                    <span class='text'>适应练习</span>
+                </div>
+                <div class='desc mt8'>
+                    如果您是新手，请先在“训练帮助”中阅读《【新手必读】快速上手凯格尔运动》，了解凯格尔运动后，可以选择【适应练习】，尝试跟随语音进行盆底肌的收缩放松。
+                </div>
+                <div class='img mt7' style='height: 2.42rem;'>
+                    <img class='full' src='/src/assets/img/lt01/kegelStrategy/step03-1.png' onclick='lookImg(this)'></img>
+                </div>
+                <div class='desc mt7' style='color: #ff2c79;'>
+                    *注意
+                </div>
+                <div class='desc'>
+                    首次进入任意模式的训练课程时，需要您先设置凯格尔球的训练选项，请根据个人实际情况进行选择。
+                </div>
+                <div class='img mt13' style='height: 1.7rem;'>
+                    <img class='full' src='/src/assets/img/lt01/kegelStrategy/step03-2.png' onclick='lookImg(this)'></img>
+                </div>
+            </div>
+            <div class='step mt30'>
+                <div class='title'>
+                    <span class='mark'>4</span>
+                    <span class='text'>18天强健盆底计划</span>
+                </div>
+                <div class='desc mt8'>
+                    如果您未获得医生或训练顾问自由训练的课程建议，在进行过“适应练习”后，可在首页定制“18天强健盆底计划”进行跟练。该计划以“慢肌-快肌-混合肌”的锻炼顺序来综合恢复盆底肌功能。按照计划安排，完成每天指定课程，循序渐进强健盆底肌力。
+                </div>
+                <div class='img mt7' style='height: 2.42rem;'>
+                    <img class='full' src='/src/assets/img/lt01/kegelStrategy/step04.png' onclick='lookImg(this)'></img>
+                </div>
+            </div>
+            <div class='step mt30'>
+                <div class='title'>
+                    <span class='mark'>5</span>
+                    <span class='text'>自由训练</span>
+                </div>
+                <div class='desc mt8'>
+                    如果您的医生或训练顾问向您建议自由训练，在进行过“适应练习”后，可遵循专业建议选择自由训练课程；如果您熟悉凯格尔运动，并了解自身盆底肌群损伤情况，可选择自由训练中个人肌群较为薄弱、不能熟练掌握的课程多加训练。
+                </div>
+                <div class='img mt7' style='height: 2.41rem;'>
+                    <img class='full' src='/src/assets/img/lt01/kegelStrategy/step05.png' onclick='lookImg(this)'></img>
+                </div>
+            </div>
+            <div class='step mt30'>
+                <div class='title'>
+                    <span class='mark'>6</span>
+                    <span class='text'>场景化训练</span>
+                </div>
+                <div class='desc mt8'>
+                    场景化训练将日常活动与训练融合，分为行走训练，台阶训练和下蹲训练。
+                </div>
+                <div class='desc'>
+                    如果您已经能够熟练地使用躺卧姿势进行训练，可以尝试其他体位，选择多种场景来进行盆底肌训练。场景化训练下盆底肌需要克服重力的作用，从而巩固加强盆底肌功能。
+                </div>
+                <div class='img mt7' style='height: 2.42rem;'>
+                    <img class='full' src='/src/assets/img/lt01/kegelStrategy/step06.png' onclick='lookImg(this)'></img>
+                </div>
+            </div>
+            <div class='step mt30'>
+                <div class='title'>
+                    <span class='mark'>7</span>
+                    <span class='text'>咨询训练顾问</span>
+                </div>
+                <div class='desc mt8'>
+                    您在训练中遇到任何问题，都可以找到我们的训练顾问进行1V1指导，可以向训练顾问发送文字、语音、图片和视频来表达您的任何困扰，训练顾问服务时间为每天09:00-22:00。
+                </div>
+                <div class='img mt8' style='height: 2.4rem;'>
+                    <img class='full' src='/src/assets/img/lt01/kegelStrategy/step07.png' onclick='lookImg(this)'></img>
+                </div>
+            </div>
+        </div>
+        <script type='text/javascript' src='/src/utils/downloadApp.js'></script>
+        <script type='text/javascript' src='/src/utils/openApp.js'></script>
+        <script type='text/javascript'>
+            $(function() {
+                CommonUtils.setHtmlTitle('凯格尔运动App功能指南')
+
+                if ((CommonUtils.getBrowserType() == 'wechat' || CommonUtils.getBrowserType() == 'browser') && CommonUtils.getParameter('from')!='xcx') {
+                    $('#download').css('display', 'block')
+                } else if (CommonUtils.getBrowserType() == 'app' || CommonUtils.getParameter('from')=='xcx') {
+                    $('#main').css('padding-top', '0.12rem')
+                }
+
+                $(window).scrollTop(sessionStorage.scrollTop)
+                sessionStorage.scrollTop = 0
+            })
+            
+            /**
+                查看图片
+                @param
+                @return
+             */
+            function lookImg(img) {
+                sessionStorage.scrollTop = $(window).scrollTop()
+                var srcArr = [
+                    '/src/assets/img/lt01/kegelStrategy/index.png',
+                    '/src/assets/img/lt01/kegelStrategy/step01.png',
+                    '/src/assets/img/lt01/kegelStrategy/step02.png',
+                    '/src/assets/img/lt01/kegelStrategy/step03-1.png',
+                    '/src/assets/img/lt01/kegelStrategy/step03-2.png',
+                    '/src/assets/img/lt01/kegelStrategy/step04.png',
+                    '/src/assets/img/lt01/kegelStrategy/step05.png',
+                    '/src/assets/img/lt01/kegelStrategy/step06.png',
+                    '/src/assets/img/lt01/kegelStrategy/step07.png'
+                ]
+                CommonUtils.lookImg($(img).attr('src'), srcArr)
+            }
+            /**
+                页面跳转-下载App
+                @param
+                @return
+             */
+             function downloadApp() {
+                if (CommonUtils.getBrowserType() == 'wechat') {
+                    Download_wechat('user') 
+                } else {
+                    openApp('lanting://',()=>{
+                        Download('user',()=>{})
+                    },'inviteApp/downUser') 
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!--
+    文件描述：麦澜德私密医疗美容设备
+    创建人：卢信桥
+    创建时间：2021-01-29
+-->
+<html>
+    <head>
+        <title>盆底肌修复仪</title>
+        <style>
+            #main {
+                position: relative;
+            }
+            #img-main {
+                display: block;
+                width: 100%; height: 35.5rem;
+            }
+            #img-qrcode {
+                position: absolute;
+                bottom: 1.9rem; left: 0; right: 0;
+                margin: auto;
+                width: 1.1rem; height: 1.1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div id='main'>
+            <img id='img-main' src='./src/assets/img/info/mldSecret/main.png?t=20210203'>
+            <img id='img-qrcode' src='./src/assets/img/info/mldSecret/qrcode.png?t=20210203'>
+        </div>
+        
+        <script type='text/javascript' src='http://res.wx.qq.com/open/js/jweixin-1.2.0.js'></script>
+        <script type='text/javascript' src='/src/utils/shareUtil.js'></script>
+        <script>
+            $(function() {
+                CommonUtils.setHtmlTitle('麦澜德私密医疗美容设备')
+                initWechatShare()
+            })
+            
+            function initWechatShare() {
+                wechatShare({
+                    title: '私密医美？选麦澜德就对了',
+                    desc: '让我们看看那些医美的仙女们都在用哪家设备做私密？',
+                    link: window.location.href,
+                    icon: 'http://web.wrightin.com/src/assets/img/info/mldSecret/shareImg.png'
+                }, encodeURIComponent(window.location.href.split('#')[0]))
+            }
+        </script>
+    </body>
+</html>

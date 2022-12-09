@@ -1,0 +1,107 @@
+#main {
+    width: 100%; height: 100%;
+    padding-top: 1px;
+    background-color: white;
+    overflow: auto;
+}
+.title {
+    height: 30px;
+}
+.title>span:nth-child(1) {
+    float: left;
+    width: 6px; height: 16px;
+    margin-top: 7px;
+    background-color: #00ab29;
+}
+.title>span:nth-child(2) {
+    float: left;
+    height: 30px;
+    margin-left: 3px;
+    line-height: 30px;
+}
+#scoreDiv {
+    padding-top: 10px;
+}
+#scoreDiv>p:nth-child(1) {
+    text-align: center;
+}
+#scoreDiv>p:nth-child(2) {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 24px;
+    color: #dd3333;
+}
+#tableDiv {
+    margin: 5px 10px 0 10px;
+}
+.rowGroup {
+    position: relative;
+}
+.rowGroup:last-child {
+    border-bottom: 1px solid #666;
+}
+.cell {
+    position: absolute;
+    text-align: center;
+    font-size: 13px;
+    border-top: 1px solid #666; border-left: 1px solid #666;
+}
+.row1 {
+    top: 0;
+}
+.row2 {
+    top: 26px;
+}
+.row3 {
+    top: 52px;
+}
+.col1 {
+    left: 0;
+    width: 18%;
+}
+.col2 {
+    left: 18%;
+    width: 18%;
+}
+.col3 {
+    left: 36%;
+    width: 24%;
+}
+.col4 {
+    left: 60%;
+    width: 20%;
+}
+.col5 {
+    left: 80%;
+    width: 20%;
+    border-right: 1px solid #666;
+}
+.height_one {
+    height: 26px;
+    line-height: 26px;
+}
+.height_two {
+    height: 52px;
+    display: flex;
+    align-items: center; justify-content: center;
+}
+.height_three {
+    height: 78px;
+    display: flex;
+    align-items: center; justify-content: center;
+}
+.bg-green {
+    background-color: #d7f5ef;
+}
+#emgDiv {
+    margin: 10px 10px 0 10px;
+}
+#emgChart {
+    height: 180px;
+}
+#infoDiv {
+    margin: 0 10px 30px 10px;
+}
+#infoDiv>p {
+    padding: 0 5px;
+}

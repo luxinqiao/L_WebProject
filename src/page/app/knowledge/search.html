@@ -1,0 +1,40 @@
+<!--
+    文件描述：百科-提问
+    创建人：卢信桥
+    创建时间：2020-08-05
+-->
+<html>
+<head>
+	<link rel='stylesheet' href='/src/assets/css/knowledge/search.css?t=20200416'>
+</head>
+<body>
+    <div id='main'>
+        <div id='header'>
+            <img id='headerBack' src='/src/assets/img/knowledge/common/back.png' onclick='history.back(-1)'>
+            <div id='headerTitle'>盆底百科</div>
+        </div>
+        <div id='search'>
+            <div id='searchBox'>
+                <img src='/src/assets/img/knowledge/common/search.png'>
+                <input id='searchText' type='text'/>
+                <img id='searchClear' src='/src/assets/img/knowledge/common/clear.png' onclick='clearInput()'>
+            </div>
+            <div id='searchBtn' onclick='search(1)'>搜索</div>
+        </div>
+        <div id='searchHistory'>
+            <!-- 动态添加内容 -->
+        </div>
+        <div id='searchMatch'>
+            <!-- 动态添加内容 -->
+        </div>
+        <div id='searchResult'>
+            <!-- 动态添加内容 -->
+        </div>
+    </div>
+    <script type='text/javascript' src='/src/utils/CommonUtils.js?t=20200416'></script>
+	<script type='text/javascript'>
+        CommonUtils.loadCommon()
+        CommonUtils.appendScript('/src/page/js/knowledge/search.js?t=20200416')
+	</script>
+</body>
+</html>

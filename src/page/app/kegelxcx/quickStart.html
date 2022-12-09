@@ -1,0 +1,424 @@
+<!--
+    文件描述：快速上手
+    创建人：卢信桥
+    创建时间：2021-07-27
+ -->
+<html>
+    <head>
+        <title>新手必读</title>
+        <link rel='stylesheet' href='/src/assets/css/utilStyle/swiper.css'>
+        <style>
+            * {
+                user-select: none;
+            }
+            #main {
+                padding: 0.52rem 0 0.37rem 0;
+                background-color: #fff;
+            }
+            #download {
+                display: none;
+                position: fixed; z-index: 98;
+                top: 0; left: 0; right: 0;
+                height: 0.52rem;
+                background-color: #fff9f5;
+            }
+            .download-logo {
+                position: absolute;
+                top: 0.07rem; left: 0.12rem;
+                width: 0.34rem; height: 0.36rem;
+            }
+            .download-title {
+                position: absolute;
+                top: 0.05rem; left: 0.54rem;
+                line-height: 0.22rem;
+                font-size: 0.15rem;
+                color: #ff2c79;
+            }
+            .download-subTitle {
+                position: absolute;
+                top: 0.25rem; left: 0.54rem;
+                line-height: 0.18rem;
+                font-size: 0.13rem;
+                color: #C79AAD;
+            }
+            .download-btn {
+                position: absolute;
+                top: 0.1rem; right: 0.12rem;
+                width: 0.74rem; height: 0.28rem;
+                text-align: center; line-height: 0.28rem;
+                border-radius: 0.15rem;
+                font-size: 0.12rem;
+                color: #fff; background-color: #ff2c79;
+            }
+            .swiper-title {
+                position: relative;
+                margin: auto; padding-left: 0.12rem;
+                width: 1.43rem; height: 0.25rem;
+            }
+            .swiper-title-text {
+                position: absolute; z-index: 2;
+                top: 0; left: 0; right: 0;
+                text-align: center; line-height: 0.21rem;
+                font-size: 0.15rem; font-weight: bold;
+            }
+            .swiper-title-mark {
+                position: absolute; z-index: 1;
+                bottom: 0; left: 0; right: 0;
+                height: 0.15rem;
+                background-color: #ffc7db;
+            }
+            #swiper-content {
+                margin-left: 0.12rem;
+                height: 1.39rem;
+            }
+            .swiper-notice {
+                margin-left: 0.12rem;
+            }
+            .swiper-notice>.red {
+                color: #ff2c79;
+            }
+            #banner>img {
+                width: 100%;
+            }
+            .stepTitle {
+                padding-top: 0.24rem;
+                background: url(/src/assets/img/lt02/wrightinNewer/imgBg.png) no-repeat center center;
+                background-size: 100% 100%;
+            }
+            .stepTitle-content {
+                position: relative;
+                margin: auto;
+                height: 0.25rem;
+            }
+            .stepTitle-text {
+                position: absolute; z-index: 2;
+                top: 0; left: 0; right: 0;
+                margin: auto;
+                width: 100%;
+                text-align: center; line-height: 0.21rem;
+                font-size: 0.15rem; font-weight: bold;
+            }
+            .stepTitle-mark {
+                position: absolute; z-index: 1;
+                top: 0.1rem; left: 0; right: 0;
+                margin: auto;
+                width: 100%; height: 0.15rem;
+                background-color: #ff2c79;
+                opacity: 0.1;
+            }
+            .title {
+                position: relative;
+                margin-left: 0.13rem;
+            }
+            .desc {
+                padding: 0 0.12rem;
+                line-height: 0.24rem;
+                font-size: 0.14rem; text-align: justify;
+            }
+            .desc>.mark {
+                position: relative;
+                top: -0.03rem;
+                display: inline-block;
+                margin-right: 0.03rem;
+                width: 0.05rem; height: 0.05rem;
+                border-radius: 0.05rem;
+                background-color: #ff2c79;
+            }
+            .desc>.red {
+                font-size: 0.14rem;
+                color: #ff2c79;
+            }
+            .img {
+                display: block;
+                margin: auto 0.12rem;
+            }
+            .img>.left {
+                float: left;
+                width: 1.7rem; height: 100%;
+            }
+            .img>.right {
+                float: right;
+                width: 1.7rem; height: 100%;
+            }
+            .img>.full {
+                width: 100%; height: 100%;
+            }
+            .subTitle {
+                position: relative;
+                margin-left: 0.12rem; padding-left: 0.08rem;
+            }
+            .subTitle>.mark {
+                position: absolute;
+                top: 0.09rem; left: 0;
+                width: 0.05rem; height: 0.05rem;
+                background: url(/src/assets/img/wireless/circle.png) no-repeat center center;
+                background-size: 0.05rem 0.05rem;
+            }
+            .subTitle>.text {
+                line-height: 0.24rem;
+                font-size: 0.14rem; font-weight: bold;
+                color: #ff2c79;
+            }
+            .bottom-item {
+                height: 0.34rem;
+                display: flex;
+                justify-content: center;
+            }
+            .bottom-item>span {
+                line-height: 0.34rem;
+                font-size: 0.13rem;
+            }
+            .bottom-item>img {
+                margin-left: 0.07rem;
+                width: 1.07rem; height: 0.34rem;
+            }
+            .bottom-item>a {
+                margin-left: 0.08rem;
+                line-height: 0.34rem;
+                font-size: 0.13rem;
+                color: #7694CF;
+                text-decoration: none;
+            }
+            .mt6 {
+                margin-top: 0.06rem;
+            }
+            .mt8 {
+                margin-top: 0.08rem;
+            }
+            .mt12 {
+                margin-top: 0.12rem;
+            }
+            .mt15 {
+                margin-top: 0.15rem;
+            }
+            .mt24 {
+                margin-top: 0.24rem;
+            }
+            .mt30 {
+                margin-top: 0.3rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div id='main'>
+            <div id='download'>
+                <img class='download-logo' src='/src/assets/img/lt02/wrightinNewer/download-logo.png'>
+                <p class='download-title'>澜渟</p>
+                <p class='download-subTitle'>盆底肌修复 免费凯格尔运动</p>
+                <button class='download-btn' onClick='downloadApp()'>下载App</button>
+            </div>
+            <div id='banner'>
+                <img src='/src/assets/img/kegelxcx/quickStart/banner.png'>
+            </div>
+            <div class='step mt24'>
+                <div class='title'>
+                    <img src='/src/assets/img/kegelxcx/quickStart/title01.png' style='height:0.27rem;'>
+                </div>
+                <div class='desc mt6'>
+                    盆底肌是指像弹簧床一样承托和支撑膀胱、子宫、直肠等盆腔脏器的盆底底部肌肉，具有控制排尿排便，托起器官、维持阴道紧缩度和增进性快感等功能。
+                </div>
+                <div class='img mt8' style='height: 0.9rem;'>
+                    <img class='left' src='/src/assets/img/kegelxcx/quickStart/step01-1.gif' onclick='lookImg(this)'></img>
+                    <img class='right' src='/src/assets/img/kegelxcx/quickStart/step01-2.png' onclick='lookImg(this)'></img>
+                </div>
+            </div>
+            <div class='step mt30'>
+                <div class='title'>
+                    <img src='/src/assets/img/kegelxcx/quickStart/title02.png' style='height:0.27rem;'>
+                </div>
+                <div class='img mt8' style='height: 1.66rem;'>
+                    <img class='left' src='/src/assets/img/kegelxcx/quickStart/step02-1.png' onclick='lookImg(this)'></img>
+                    <img class='right' src='/src/assets/img/kegelxcx/quickStart/step02-2.png' onclick='lookImg(this)'></img>
+                </div>
+                <div class='desc mt8'>
+                    <span class='red'>注：</span>日常生活中，不要刻意进行中断小便动作，养成这种不好的习惯或者在膀胱充盈的时候进行凯格尔运动，反而会削弱盆底肌的力量，甚至导致尿路感染。
+                </div>
+            </div>
+            <div class='step mt30'>
+                <div class='title'>
+                    <img src='/src/assets/img/kegelxcx/quickStart/title03.png' style='height:0.27rem;'>
+                </div>
+                <div id='swiper' class='mt8'>
+                    <div id='swiper-content' class='mdSwiper mt12'></div>
+                </div>
+                <div class='stepTitle-content mt24' style='width:1.79rem;'>
+                    <span class='stepTitle-text'>判断球体是否合适的方法</span>
+                    <span class='stepTitle-mark'></span>
+                </div>
+                <div class='desc mt12'>
+                    选择某一个球，放入阴道后，无疼痛不适感，平躺、站立时球不掉落，即为合适球号。如果感觉需要屁股紧夹着、不敢说话，说明该球号太重了，不合适，建议换上一号球进行测试。
+                </div>
+                <div class='stepTitle-content mt24' style='width:1.26rem;'>
+                    <span class='stepTitle-text'>如何更换下一号球</span>
+                    <span class='stepTitle-mark'></span>
+                </div>
+                <div class='desc mt12'>
+                    当下蹲、上下台阶、跳跃的时候均可以保持住球不掉的话就可以尝试更换下一号球了。
+                </div>
+            </div>
+            <div class='step mt30'>
+                <div class='title'>
+                    <img src='/src/assets/img/kegelxcx/quickStart/title04.png' style='height:0.27rem;'>
+                </div>
+                <div class='desc mt4'>
+                    根据自身情况或咨询医生的前提下，正确的选择合适的训练课程，完成科学的训练。
+                </div>
+                <div class='img mt8' style='height: 3.16rem;'>
+                    <img class='full' src='/src/assets/img/kegelxcx/quickStart/step04.png' onclick='lookImg(this)'></img>
+                </div>
+                <div class='desc mt8'>
+                    <span class='mark'></span>
+                    <span class='red'>适应练习课程</span>：新用户，跟随语音提示，进行收缩放松盆底肌肉。
+                </div>
+                <div class='desc mt12'>
+                    <span class='mark'></span>
+                    <span class='red'>慢肌训练类课程</span>：跟随语音提示，保持盆底肌收紧状态，直至放松，休息片刻继续锻炼。
+                </div>
+                <div class='desc mt12'>
+                    <span class='mark'></span>
+                    <span class='red'>快肌训练类课程</span>：跟随语音提示，快速收缩和放松盆底肌，休息片刻继续锻炼。
+                </div>
+                <div class='desc mt12'>
+                    <span class='mark'></span>
+                    <span class='red'>混合肌训练类课程</span>：跟随语音提示，混合慢肌和快肌训练，达到完美协调。
+                </div>
+                <div class='desc mt12'>
+                    <span class='mark'></span>
+                    <span class='red'>行走训练类课程</span>：跟随语音提示，在行走的过程中，收缩和放松盆底肌。
+                </div>
+                <div class='desc mt12'>
+                    <span class='mark'></span>
+                    <span class='red'>台阶训练类课程</span>：跟随语音提示，在上下台阶的过程中，收缩和放松盆底肌。
+                </div>
+                <div class='desc mt12'>
+                    <span class='mark'></span>
+                    <span class='red'>下蹲课程</span>：跟随语音提示，在下蹲时收缩盆底肌，起身时放松盆底肌。
+                </div>
+            </div>
+            <div class='step mt30'>
+                <div class='title'>
+                    <img src='/src/assets/img/kegelxcx/quickStart/title05.png' style='height:0.27rem;'>
+                </div>
+                <div class='desc mt6'>
+                    根据美国国立卫生研究院（NIH）的数据，每天坚持做凯格尔运动，最快会在<span class='red'>4-6周</span>后感觉到效果。坚持训练一段时间后，可以到医院进行复查，检验训练的效果。
+                </div>
+                <div class='img mt8' style='height: 0.91rem;'>
+                    <img class='left' src='/src/assets/img/kegelxcx/quickStart/step05-1.png' onclick='lookImg(this)'></img>
+                    <img class='right' src='/src/assets/img/kegelxcx/quickStart/step05-2.png' onclick='lookImg(this)'></img>
+                </div>
+                <div class='desc mt15'>
+                    使用澜渟您可以体验到最科学的锻炼方法，我们建议您每天锻炼<span class='red'>15-20分钟</span>，请勿过量训练。
+                </div>
+            </div>
+            <div class='bottom-item mt24' id='contact' style='display: block; height: auto;'></div>
+        </div>
+        
+        <script type='text/javascript' src='/src/utils/downloadApp.js'></script>
+        <script type='text/javascript' src='/src/utils/openApp.js'></script>
+        <script type='text/javascript' src='/src/utils/SwiperUtils.js'></script>
+        <script type='text/javascript'>
+            $(function() {
+                CommonUtils.setHtmlTitle('快速上手')
+
+                if ((CommonUtils.getBrowserType() == 'wechat' || CommonUtils.getBrowserType() == 'browser') && CommonUtils.getParameter('from')!='xcx') {
+                    $('#download').css('display', 'block')
+                } else if (CommonUtils.getBrowserType() == 'app' || CommonUtils.getParameter('from')=='xcx') {
+                    $('#main').css('padding-top', 0)
+                }
+
+                $(window).scrollTop(sessionStorage.scrollTop)
+                sessionStorage.scrollTop = 0
+                CommonUtils.resetRem()
+                SwipeUtils.init({
+                    $el: $('#swiper-content'),
+                    imgs: [
+                        '/src/assets/img/kegelxcx/quickStart/swipe01.png',
+                        '/src/assets/img/kegelxcx/quickStart/swipe02.png',
+                        '/src/assets/img/kegelxcx/quickStart/swipe03.png',
+                        '/src/assets/img/kegelxcx/quickStart/swipe04.png',
+                        '/src/assets/img/kegelxcx/quickStart/swipe05.png',
+                        '/src/assets/img/kegelxcx/quickStart/swipe06.png',
+                        '/src/assets/img/kegelxcx/quickStart/swipe07.png'
+                    ],
+                    defaultNo: sessionStorage.swipeIndex ? sessionStorage.swipeIndex : 0,
+                    autoPlay: false,
+                    clickCallback: function(index) {
+                        lookImg('/src/assets/img/kegelxcx/quickStart/swipe0' + (index+1) + '.png')
+                        sessionStorage.swipeIndex = index
+                    }
+                })
+                sessionStorage.swipeIndex = 0
+                
+                var $contact = $('#contact')
+                if (Router.getParameter('from') == 'xcx') {
+                    $contact.css({'display':'flex', 'justify-content':'center'})
+                    $contact.append('<span>如还有疑问请拨打400电话咨询</span>')
+                    $contact.append('<span style="margin-left:0.08rem;color:#7694CF;">400-133-5668</span>')
+                } else {
+                    $contact.append('<div style="display:flex;justify-content:center;"><span style="line-height:0.5rem;">如有疑问请点击</span><img style="margin-left:0.03rem;width:1.07rem;height:0.35rem;" src="/src/assets/img/kegelxcx/quickStart/customer.png" onClick="goCustomer()"></div>')
+                    $contact.append('<div style="display:flex;justify-content:center;"><span>或拨打400电话咨询 </span><a href="tel:400-133-5668" style="margin-left:0.08rem;color:#7694CF;text-decoration:none;">400-133-5668</a></div>')
+                }
+            })
+            
+            /**
+                查看图片
+                @param {Dom} img 图片
+                @return
+             */
+            function lookImg(img) {
+                sessionStorage.scrollTop = $(window).scrollTop()
+                var srcArr = [
+                    '/src/assets/img/kegelxcx/quickStart/step01-1.gif',
+                    '/src/assets/img/kegelxcx/quickStart/step01-2.png',
+                    '/src/assets/img/kegelxcx/quickStart/step02-1.png',
+                    '/src/assets/img/kegelxcx/quickStart/step02-2.png',
+                    '/src/assets/img/kegelxcx/quickStart/swipe01.png',
+                    '/src/assets/img/kegelxcx/quickStart/swipe02.png',
+                    '/src/assets/img/kegelxcx/quickStart/swipe03.png',
+                    '/src/assets/img/kegelxcx/quickStart/swipe04.png',
+                    '/src/assets/img/kegelxcx/quickStart/swipe05.png',
+                    '/src/assets/img/kegelxcx/quickStart/swipe06.png',
+                    '/src/assets/img/kegelxcx/quickStart/swipe07.png',
+                    '/src/assets/img/kegelxcx/quickStart/step04.png',
+                    '/src/assets/img/kegelxcx/quickStart/step05-1.png',
+                    '/src/assets/img/kegelxcx/quickStart/step05-2.png'
+                ]
+                CommonUtils.lookImg($(img).attr('src'), srcArr)
+            }
+            /**
+                页面跳转-训练顾问
+                @param
+                @return
+             */
+            function goCustomer() {
+                if (CommonUtils.getBrowserType() == 'app') {
+                    CommonUtils.appFun(function() {
+                        window.jsInterface.jumpToCustomer(JSON.stringify({type:'CSP0020'}))
+                    }, function() {
+                        window.webkit.messageHandlers.jumpToCustomer.postMessage({type:'CSP0020'})
+                    })
+                } else if (CommonUtils.getBrowserType() == 'wechat') {
+                    Download_wechat('user') 
+                } else {
+                    openApp('lanting://',()=>{
+                        Download('user',()=>{})
+                    },'inviteApp/downUser') 
+                }
+            }
+            /**
+                页面跳转-下载App
+                @param
+                @return
+             */
+             function downloadApp() {
+                if (CommonUtils.getBrowserType() == 'wechat') {
+                    Download_wechat('user') 
+                } else {
+                    openApp('lanting://',()=>{
+                        Download('user',()=>{})
+                    },'inviteApp/downUser') 
+                }
+            }
+        </script>
+    </body>
+</html>

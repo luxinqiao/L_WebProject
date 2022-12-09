@@ -1,0 +1,114 @@
+#main {
+    overflow: hidden;
+}
+#banner {
+    position: relative;
+    width: 100%; height: 10rem;
+}
+.banner-img {
+    display: block;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+}
+.banner-rule {
+    position: fixed; z-index: 98;
+    top: 1.96rem; right: 0;
+    width: 0.29rem; height: 0.68rem;
+    line-height: 0.24rem;
+    font-size: 0.18rem;
+    border-radius: 0.05rem 0 0 0.05rem;
+    color: #fff; background: linear-gradient(0deg, #E9667A 0%, #F3ABB5 53%, #E9667A 100%);
+}
+.banner-task {
+    position: absolute;
+    top: 4.61rem; left: 0; right: 0;
+    width: 100%;
+}
+.banner-cash {
+    position: absolute; z-index: 2;
+    top: 9.75rem; left: 0; right: 0;
+    margin: auto;
+    width: 3.49rem;
+}
+#bottomBg {
+    position: relative;
+    height: 9.76rem;
+    background: linear-gradient(0deg, #F8B59B 0%, #FFEEE2 100%);
+}
+.bottom-content {
+    position: absolute;
+    top: 2.22rem; left: 0; right: 0;
+    height: 4.05rem;
+    background: url(/src/assets/img/brandMarketing/index/bottom-content-bg.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+.bottom-content-article-title {
+    position: absolute;
+    top: 0.31rem; left: 0; right: 0;
+    margin: auto;
+    width: 1.7rem;
+}
+.bottom-content-article {
+    position: absolute;
+    top: 0.68rem;
+    width: 1.45rem; height: 0.97rem;
+}
+.bottom-content-article.left {
+    left: 0.41rem;
+}
+.bottom-content-article.right {
+    right: 0.45rem;
+}
+.bottom-content-video-title {
+    position: absolute;
+    top: 1.78rem; left: 0; right: 0;
+    margin: auto;
+    width: 1.7rem;
+}
+.bottom-content-video {
+    position: absolute;
+    width: 0.95rem; height: 1.42rem;
+    bottom: 0.45rem;
+    border-radius: 0.05rem;
+}
+.bottom-content-video.left {
+    left: 0.41rem;
+    background: url(/src/assets/img/brandMarketing/index/video-left.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+.bottom-content-video.center {
+    left: 0; right: 0.04rem;
+    margin: auto;
+    background: url(/src/assets/img/brandMarketing/index/video-center.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+.bottom-content-video.right {
+    right: 0.45rem;
+    background: url(/src/assets/img/brandMarketing/index/video-right.png) no-repeat center center;
+    background-size: 100% 100%;
+}
+.bottom-content-video>img {
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    margin: auto;
+    width: 0.33rem; height: 0.33rem;
+}
+.bottom-join {
+    position: absolute;
+    top: 6.2rem; left: 0; right: 0;
+    margin: auto;
+    width: 3.14rem;
+}
+.bottom-qrcode {
+    position: absolute;
+    bottom: 0.15rem; left: 0; right: 0;
+    margin: auto;
+    width: 3.52rem;
+}
+#rule-shade {
+    position: fixed; z-index: 99;
+    top: 0; bottom: 0; left: 0; right: 0;
+    background-color: #000;
+    opacity: 0.8;
+}

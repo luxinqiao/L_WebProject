@@ -1,0 +1,111 @@
+/*
+ * 文件描述：申请加入H5 样式
+ * 创建人：段素栋
+ * 创建时间：2019-12-03
+*/
+#rootPage {
+    width: 100%; height: auto !important;
+}
+.application{
+    position: relative; height: 100%;
+    background-color: #1eBBB6;
+}
+.application .header{
+    height: 6.22rem;
+}
+.application .header img{
+    width: 100%; height: 100%;
+}
+.application_content{
+    position: relative;
+    margin-top: -1rem; padding: 0.36rem 0.36rem 0.48rem 0.36rem;
+    height: 8.16rem; width: 100%;
+    z-index: 2;
+}
+.application_content .content_bg{
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%; width: 100%;
+    z-index: -1;
+}
+.application_content .content_title{
+    margin-bottom: 0.28rem;
+    text-align: center; line-height: 0.66rem;
+    font-size: 0.48rem; color: #035D7B;
+}
+.application_content .content_step_title{
+    display: block; margin: 0 auto;
+    height: 0.3rem; width: 5.56rem;
+}
+.application_content .content_step{
+    height: 1.74rem; margin-top: 0.4rem;
+}
+.application_content .content_step .content_step_left{
+    float: left;
+}
+.application_content .content_step .content_step_left img:nth-child(1){
+    height: 1.74rem; width: 1.76rem;
+}
+.application_content .content_step .content_step_left img:nth-child(2){
+    position: relative; top: -0.77rem;
+    height: 0.2rem; width: 0.3rem; margin: 0 0.17rem;
+}
+.application_content .content_step .content_step_right{
+    float: right;
+}
+.application_content .content_step .content_step_right img:nth-child(1){
+    height: 1.74rem; width: 1.76rem;
+}
+.application_content .content_step .content_step_center{
+}
+.application_content .content_step .content_step_center img:nth-child(1){
+    height: 1.74rem; width: 1.76rem;
+}
+.application_content .content_step .content_step_center img:nth-child(2){
+    position: relative; top: -0.77rem;
+    height: 0.2rem; width: 0.3rem; margin: 0 0.17rem;
+}
+.application_content .content_step div:nth-last-child(1){
+    clear: both;
+}
+.application_content .content_input_title{
+    margin-top: 0.64rem;
+    font-size: 0.28rem; line-height: 0.4rem;
+    color: #fff; text-align: left;
+}
+.application_content .content_input{
+   margin-top: 0.2rem; padding: 0.16rem 0;
+    border-bottom: 0.02rem solid rgba(255, 255, 255, 0.7);
+}
+.application_content .content_input input{
+    border: none; background-color: transparent;
+    color: #fff; width: 100%;
+}
+.application_content .content_input>input::-webkit-input-placeholder {
+    color: rgba(255, 255, 255, 0.71);
+}
+.application_content .content_input>input:-moz-placeholder {
+    color: rgba(255, 255, 255, 0.71);
+}
+.application_content .content_input>input::-moz-placeholder {
+    color: rgba(255, 255, 255, 0.71);
+}
+.application_content .content_input>input:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.71);
+}
+.application_content .content_submit{
+    margin: 0.84rem 0.1rem 0 0.1rem; height: 0.94rem;
+    background:linear-gradient(270deg,rgba(255,201,62,1) 0%,rgba(255,180,84,1) 100%);
+    border-radius: 0.68rem; text-align: center; color: #fff; line-height: 0.94rem;
+    font-size: 0.4rem; text-shadow:0 0.02rem 0.02rem rgba(255,179,52,1);
+}
+.rule{
+    position: fixed;
+    right: 0; top: 0.64rem;
+    width: 1.3rem; height: 0.6rem;
+    padding-right: 0.1rem;
+    background-color: #FF7144; color: #fff;
+    font-size: 0.26rem; text-align: right;
+    border-radius:0.6rem 0 0 0.6rem; line-height: 0.6rem;
+}
+

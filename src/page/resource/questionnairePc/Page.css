@@ -1,0 +1,58 @@
+.pageDiv{
+	position: relative;
+	width: 100%; height: 50px;
+}
+.pageDiv>#pageDetailSpan{
+	position: absolute;
+	left: 0; bottom: 0;
+}
+.pageDiv>#pageDetailSpan>#detailSpan>a{
+	display: inline-block;
+	height: 24px; width: auto;
+	text-align: center; line-height: 23px;
+	border: 1px solid #ddd;
+	font-size: 14px;
+	color: #888;
+	cursor: pointer;
+}
+.pageDiv>#pageDetailSpan>#detailSpan>a.num{
+	width: 26px;
+	margin: 0 5px;
+	border-radius: 100%;
+}
+.pageDiv>#pageDetailSpan>#detailSpan>a.num:hover, .pageDiv>#pageDetailSpan>#detailSpan>a.num.active{
+	background-color: #ef5e8f; color: white;
+	border: none;
+}
+.pageDiv>#pageDetailSpan>#detailSpan>a.first{
+	width: 50px;
+	margin-right: 10px; padding-left: 6px;
+	background-color: #e0e0e0; color: white;
+	border-top-left-radius: 20px;
+	border-bottom-left-radius: 20px;
+}
+.pageDiv>#pageDetailSpan>#detailSpan>a.prev{
+	width: 60px;
+	margin-right: 18px;
+	border-radius: 7px;
+}
+.pageDiv>#pageDetailSpan>#detailSpan>a.prev:hover{
+	background-color: #ef5e8f; color: white;
+	border: none;
+}
+.pageDiv>#pageDetailSpan>#detailSpan>a.next{
+	width: 60px;
+	margin-left: 18px;
+	border-radius: 7px;
+}
+.pageDiv>#pageDetailSpan>#detailSpan>a.next:hover{
+	background-color: #ef5e8f; color: white;
+	border: none;
+}
+.pageDiv>#pageDetailSpan>#detailSpan>a.last{
+	width: 50px;
+	margin-left: 10px; padding-right: 6px;
+	background-color: #ddd; color: white;
+	border-top-right-radius: 20px;
+	border-bottom-right-radius: 20px;
+}

@@ -1,0 +1,433 @@
+<!--
+    文件描述：新手必读
+    创建人：卢信桥
+    创建时间：2020-11-02
+ -->
+<html>
+<head>
+    <title></title>
+    <style>
+        #main {
+            position: absolute;
+            top: 0; bottom: 0; left: 0; right: 0;
+            background-color: #000;
+        }
+        #main>#tip {
+            position: absolute; z-index: 2;
+            top: 0.29rem; left: 0; right: 0;
+            text-align: center; line-height: 0.21rem;
+            font-size: 0.15rem;
+            color: #fff;
+        }
+        #main>#look {
+            position: absolute; z-index: 1;
+            top: 0; bottom: 0; left: 0; right: 0;
+            overflow: hidden;
+        }
+        #main>#look>div {
+            position: absolute;
+            top: 0; left: -200%;
+            width: 100%; height: 100%;
+        }
+        #main>#look>div#prev {
+            left: -100%;
+        }
+        #main>#look>div#curr {
+            left: 0;
+        }
+        #main>#look>div#next {
+            left: 100%;
+        }
+        #main>#look>div>img {
+            position: absolute;
+            top: 0; bottom: 0; left: 0; right: 0;
+            margin: auto;
+        }
+        #menu {
+            display: none;
+            position: absolute; z-index: 2;
+            top: 0; bottom: 0; left: 0; right: 0;
+        }
+        #menu>.menu-content {
+            position: absolute; z-index: 2;
+            bottom: 0; left: 0; right: 0;
+            height: 1.05rem;
+            background-color: #f6f6f6;
+        }
+        #menu>.menu-content>.save {
+            height: 0.51rem;
+            text-align: center; line-height: 0.51rem;
+            font-size: 0.18rem;
+            background-color: #fff;
+        }
+        #menu>.menu-content>.cancel {
+            margin-top: 0.06rem;
+            height: 0.48rem;
+            text-align: center; line-height: 0.48rem;
+            font-size: 0.18rem;
+            background-color: #fff;
+        }
+        * {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+    </style>
+</head>
+<body>
+    <div id='main' ontouchstart='back()'>
+        <span id='tip'></span>
+        <div id='look'>
+            <!-- 动态添加图片 -->
+        </div>
+        <div id='menu' ontouchstart='hideMenu(true)'>
+            <div class='menu-content'>
+                <p class='save' ontouchstart='saveImg()'>保存图片</p>
+                <p class='cancel' ontouchstart='cancel()'>取消</p>
+            </div>
+        </div>
+    </div>
+    
+    <script type='text/javascript' src='/src/utils/CommonUtils.js'></script>
+    <script type='text/javascript'>
+        CommonUtils.loadCommon()
+
+        var browserType = CommonUtils.getBrowserType()
+        var timeOutFun, time
+        var currUrl = Router.getParameter('url'), urls = JSON.parse(sessionStorage.lookImgs)
+        var prevNo, currNo, nextNo
+        var touchStartX = 0, transing = false, animationInterval = 400
+        
+        $(function() {
+            initNo()
+            initImg()
+            initTouch()
+            refreshImgPosition()
+            refreshTip()
+        })
+
+        /**
+            初始化图片序号
+            @param
+            @return
+         */
+        function initNo() {
+            for (var i=0; i<urls.length; i++) {
+                if (urls[i] == currUrl) {
+                    prevNo = getPrevNo(i)
+                    currNo = i
+                    nextNo = getNextNo(i)
+                    break
+                }
+            }
+        }
+
+        /**
+            初始化图片
+            @param
+            @return
+         */
+        function initImg() {
+            for (var i=0; i<urls.length; i++) {
+                (function(i) {
+                    var $div = $('<div></div>').appendTo($('#look'))
+                    var $img = $('<img style="display:none;">').appendTo($div)
+                    $img.attr('src', urls[i])
+                    $img.load(function() {
+                        if ($img.width() / $img.height() > document.body.offsetWidth / document.body.offsetHeight) {
+                            $img.width('100%').height('auto').css('display', 'block')
+                        } else {
+                            $img.width('auto').height('100%').css('display', 'block')
+                        }
+                    })
+                })(i)
+            }
+        }
+
+        /**
+            初始化触摸事件
+            @param
+            @return
+         */
+        function initTouch() {
+            var look = document.getElementById('look')
+            look.addEventListener('touchstart', touchstart, false)
+            look.addEventListener('touchmove', touchmove, false)
+            look.addEventListener('touchend', touchend, false)
+        }
+        /**
+            触摸开始事件
+            @param {Object} e 触摸参数
+            @return
+         */
+        function touchstart(e) {
+            CommonUtils.stopProp()
+            time = new Date()
+            if (browserType == 'app') {
+                timeOutFun = setTimeout(function() {
+                    showMenu()
+                }, 500)
+            }
+            if (transing) {
+                return
+            }
+            touchStartX = e.targetTouches[0].pageX
+        }
+        /**
+            触摸移动事件
+            @param {Object} e 触摸参数
+            @return
+         */
+        function touchmove(e) {
+            clearTimeout(timeOutFun)
+            if (transing) {
+                return
+            }
+            var moveX = e.targetTouches[0].pageX - touchStartX
+            $('#curr>img').css('transform', 'translateX('+moveX+'px)')
+            if (moveX < 0) {
+                $('#next>img').css('transform', 'translateX('+moveX+'px)')
+            } else if (moveX > 0){
+                $('#prev>img').css('transform', 'translateX('+moveX+'px)')
+            }
+        }
+        /**
+            触摸结束事件
+            @param {Object} e 触摸参数
+            @return
+         */
+        function touchend(e) {
+            clearTimeout(timeOutFun)
+            if (transing) {
+                return
+            }
+            var moveX = e.changedTouches[0].pageX - touchStartX
+            if (Math.abs(moveX) < 5 && new Date() - time < 100) {
+                back()
+            }
+            if (moveX > 50) {
+                transPrev()
+            } else if (moveX < -50) {
+                transNext()
+            } else if (moveX > 0) {
+                transBack()
+            } else if (moveX < 0) {
+                transBack()
+            }
+        }
+        /**
+            轮播滑动上一个
+            @param
+            @return
+         */
+        function transPrev() {
+            transing = true
+            $('#curr>img').css({
+                'transition': 'all ' + animationInterval/1000 + 's',
+                'transform': 'translateX(100%)'
+            })
+            $('#prev>img').css({
+                'transition': 'all ' + animationInterval/1000 + 's',
+                'transform': 'translateX(100%)'
+            })
+            setTimeout(()=> {
+                transClear()
+                currNo = prevNo
+                prevNo = getPrevNo(currNo)
+                nextNo = getNextNo(currNo)
+                refreshImgPosition()
+                refreshTip()
+            }, animationInterval)
+        }
+        /**
+            轮播滑动下一个
+            @param
+            @return
+         */
+        function transNext() {
+            transing = true
+            $('#curr>img').css({
+                'transition': 'all ' + animationInterval/1000 + 's',
+                'transform': 'translateX(-100%)'
+            })
+            $('#next>img').css({
+                'transition': 'all ' + animationInterval/1000 + 's',
+                'transform': 'translateX(-100%)'
+            })
+            setTimeout(()=> {
+                transClear()
+                currNo = nextNo
+                prevNo = getPrevNo(currNo)
+                nextNo = getNextNo(currNo)
+                refreshImgPosition()
+                refreshTip()
+            }, animationInterval)
+        }
+        /**
+            轮播滑动回退
+            @param
+            @return
+         */
+        function transBack() {
+            transing = true
+            $('#curr>img').css({
+                'transition': 'all ' + animationInterval/1000 + 's',
+                'transform': ''
+            })
+            $('#prev>img').css({
+                'transition': 'all ' + animationInterval/1000 + 's',
+                'transform': ''
+            })
+            $('#next>img').css({
+                'transition': 'all ' + animationInterval/1000 + 's',
+                'transform': ''
+            })
+            setTimeout(()=> {
+                transClear()
+            }, animationInterval)
+        }
+        /**
+            轮播滑动清空
+            @param
+            @return
+         */
+        function transClear() {
+            transing = false
+            $('#curr>img').css({
+                'transition': '',
+                'transform': ''
+            })
+            $('#next>img').css({
+                'transition': '',
+                'transform': ''
+            })
+            $('#prev>img').css({
+                'transition': '',
+                'transform': ''
+            })
+        }
+        /**
+            获取上一个序号
+            @param {Number} i 序号
+            @return {Number} 上一个序号
+         */
+        function getPrevNo(i) {
+            if (i == 0) {
+                return urls.length - 1
+            }
+            return i - 1
+        }
+        /**
+            获取下一个序号
+            @param {Number} i 序号
+            @return {Number} 下一个序号
+         */
+        function getNextNo(i) {
+            if (i == urls.length - 1) {
+                return 0
+            }
+            return i + 1
+        }
+
+        /**
+            刷新图片位置顺序
+            @param
+            @return
+         */
+        function refreshImgPosition() {
+            var $divs = $('#look').children('div')
+            if ($divs.length == 1) {
+                $divs.prop('id', 'curr')
+                return
+            }
+            $divs.each(function(i, val) {
+                if (i == prevNo) {
+                    $(this).prop('id', 'prev')
+                } else if (i == nextNo) {
+                    $(this).prop('id', 'next')
+                } else if (i == currNo) {
+                    $(this).prop('id', 'curr')
+                } else {
+                    $(this).prop('id', null)
+                }
+            })
+        }
+
+        /**
+            刷新提示（xx/xx）
+            @param
+            @return
+         */
+        function refreshTip() {
+            $('#tip').text((currNo + 1) + '/' + urls.length)
+        }
+
+        /**
+            返回上一页
+            @param
+            @return
+         */
+        function back() {
+            setTimeout(function() {
+                history.go(-1)
+            }, 100)
+        }
+
+        /**
+            显示菜单（限app环境）
+            @param 
+            @return
+         */
+        function showMenu() {
+            if (browserType == 'app') {
+                $('#menu').css('background-color', 'rgba(0, 0, 0, 0.65)').css('display', 'block')
+            }
+        }
+        /**
+            隐藏菜单（限app环境）
+            @param {Boolean} isStop 是否阻止冒泡
+            @return
+         */
+        function hideMenu(isStop) {
+            if (isStop) {
+                CommonUtils.stopProp()
+            }
+            $('#main').css('background-color', '#000')
+            $('#menu').hide()
+        }
+        
+        /**
+            保存图片（限app环境）
+            @param
+            @return
+         */
+        function saveImg() {
+            CommonUtils.stopProp()
+            var url = urls[currNo]
+            if (url.indexOf('http') == -1) {
+                url = window.location.origin + url
+            }
+            CommonUtils.appFun(function() {
+                window.jsInterface.downloadImg(url)
+            }, function() {
+                window.webkit.messageHandlers.downloadImg.postMessage(url)
+            })
+            setTimeout(function() {
+                hideMenu()
+            }, 500)
+        }
+        /**
+            取消（限app环境）
+            @param
+            @return
+         */
+        function cancel() {
+            CommonUtils.stopProp()
+            hideMenu()
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!--
+ * 文件描述：VIP（线下扫码）
+ * 创建人：赵志银
+ * 创建时间：2019-11-01
+-->
+<html>
+    <head>
+        <link rel='stylesheet' href='/src/assets/css/vip/vip.css'>
+    </head>
+    <body>
+        <div id='head' style='display: none;'>兑换码领取</div>
+        <div id='main'>
+            <div class=' svip vipcard' style='display: none;'>
+                <div>
+                    <div>
+                        <span>会员有效期：</span><span class='days'></span>
+                    </div>
+                </div>
+                <div class='titleInput'>手机号</div>
+                <input type="number"  placeholder='请输入手机号' oninput="if(value.length>11)value=value.slice(0,11);value=value.replace(/[^\d]/g,'') " maxlength="11" class='phone'>
+                <div>
+                    <div class='btn' onclick='get()'>领取</div>
+                </div>
+            </div>
+
+            <div class=' vip vipcard' style='display: none;'>
+                <div>
+                    <div>
+                        <span>会员有效期：</span><span class='days'></span>
+                    </div>
+                </div>
+                <div class='titleInput'>手机号</div>
+                <input type="number"  placeholder='请输入手机号'  oninput="if(value.length>11)value=value.slice(0,11);value=value.replace(/[^\d]/g,'') " maxlength="11" class='phone'>
+                <div>
+                    <div class='btn' onclick='get()'>领取</div>
+                </div>
+            </div>
+
+            <div class='coupon vipcard' style='display: none;'>
+                <div class='title'>
+                    <img class='logo' src='/src/assets/img/vip/coupon-logo.png'>
+                    <div class='name'></div>
+                    <div class='num'></div>
+                </div>
+                <div class='titleInput'>手机号</div>
+                <input type="number"  placeholder='请输入手机号' oninput="if(value.length>11)value=value.slice(0,11);value=value.replace(/[^\d]/g,'') " maxlength="11" class='phone' onchange="change()"> 
+                <div>
+                    <div onclick='get()' class='btn'>领取</div>
+                </div>
+            </div>
+
+            <div class='foot' style='display: none;'>
+                <div>说明：</div>
+                <div>领取成功后，请在有效期内使用，过期作废，不可退款。</div>
+            </div>
+        </div>
+
+        <div class=' none' style='display: none;'>
+            <img src="/src/assets/img/vip/none.png">
+            <div>兑换码已失效</div>
+        </div>
+        
+
+        <script type='text/javascript' src='/src/utils/remStyle.js?t=20201224'></script>
+        <script type='text/javascript' src='/src/utils/CommonUtils.js?t=20201224'></script>
+        <script type='text/javascript' src='/src/utils/downloadApp.js?t=20201224'></script>
+        <script type='text/javascript' src='/src/utils/openApp.js?t=20201224'></script>
+        <script type='text/javascript'>
+            CommonUtils.loadCommon();
+            CommonUtils.appendScript('/src/page/js/vip/vip.js');
+        </script>
+    </body>
+</html>

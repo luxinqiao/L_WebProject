@@ -1,0 +1,62 @@
+<html>
+<head>
+    <title>训练中，你需要了解的那些事</title>
+    <link rel="stylesheet prefetch" href="./src/third/jquery/photoswipe/photoswipe.css">
+    <link rel="stylesheet prefetch" href="./src/third/jquery/photoswipe/default-skin.css">
+</head>
+<body>
+    <div class='content'>
+        <h2>训练中，你需要了解的那些事：为你提供更佳体验</h2>
+        <p style='margin-top:40px;'>训练前，如何连接恢复仪主机，如何获取训练方案等等，请详见
+            <span style='text-decoration:underline;color:#3333ff;' onclick='jumpDoBeforeTrain()'>训练前，需要做哪些事：你需要提前了解</span>
+        </p>
+        <br/>
+        <p>训练中，有哪些事情，需要我知道的呢？请看下面：</p>
+        <div class='img_des' style='margin-top:20px;'>
+            <div class="roundNum">1</div>
+            <p>实时调节电流强度</p>
+        </div>
+        <p>在训练的过程中，我们可以根据自身的情况，来调节电流的强度，为你提供更佳体验。</p>
+        <p>注意：</p>
+        <p>训练休息中，安全起见，不可调节电流强度。</p>
+        <p style='color:red;'>主机正常工作中，请勿随意将电极片撕下；若需撕下电极片，请先将主机中止或手动结束训练，主机绿灯时，方可撕下电极片；</p>
+        <div class='img_des' style='margin-top:20px;'>
+            <div class="roundNum">2</div>
+            <p>退出后台自运行</p>
+        </div>
+        <p>在训练中，无需实时盯着APP，可以退出训练页面，可以浏览APP内的其他信息或退出到后台，浏览其他APP。训练休闲两不误。</p>
+        <div class="my-gallery" data-pswp-uid="1">
+            <figure>
+                <div class="img-dv" style='width:100%;'>
+                    <a href="./src/assets/img/newGuidance190508/doInTrain/p1.jpg" data-size="1080x1920">
+                        <img src="./src/assets/img/newGuidance190508/doInTrain/p1.jpg">
+                    </a>
+                </div>
+                <figcaption style="display:none;"></figcaption>
+                <p>训练结束后，自动结束，同时恢复仪主机会发出“滴滴”声音告知。</p>
+            </figure>
+        </div>
+        <div class='img_des' style='margin-top:20px;'>
+            <div class="roundNum">3</div>
+            <p>异常情况，安全提示</p>
+        </div>
+        <p>以下几种情况，会给出安全“预警”：</p>
+        <p>1）电极片脱落：恢复仪主机会发出“滴滴”声音，同时APP也会给出强提示，告知电极片脱落，请重新贴敷。此时，训练会中止，同时无电刺激。贴敷成功后，点击【继续】，即可继续训练。</p>
+        <p>2）电量不足：恢复仪主机电量过低，恢复仪主机会发出“滴滴”声音，同时APP会给出弱电量提示，为了可以完整进行训练，建议先终止训练，对恢复仪主机进行充电，充电完成后，再进行训练。</p>
+    </div>
+    <script src="./src/third/jquery/photoswipe/photoswipe.js"></script>
+    <script src="./src/third/jquery/photoswipe/photoswipe-ui-default.js"></script>
+    <script type='text/javascript'>
+        CommonUtils.setHtmlTitle('训练中，你需要了解的那些事');
+        /**
+            跳转--训练前，需要做哪些事
+            @param
+            @return
+        */
+        function jumpDoBeforeTrain() {
+            CommonUtils.stopProp();
+            window.location.href = '/#/newGuidance190508/doBeforeTrain';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!--
+    文件描述：训练方案获取方式：您需要知道的获取来源（1代医疗）
+    创建人：卢信桥
+    创建时间：2021-06-18
+ -->
+<html>
+<head>
+    <title>训练方案获取方式：您需要知道的获取来源</title>
+    <link rel="stylesheet prefetch" href="./src/third/jquery/photoswipe/photoswipe.css">
+    <link rel="stylesheet prefetch" href="./src/third/jquery/photoswipe/default-skin.css">
+</head>
+<body>
+    <div class='content'>
+        <h2>训练方案获取方式：您需要知道的获取来源</h2>
+        <p style='margin-top:20px;'></p>
+        <p></p>
+        <p style='margin-top:20px;'>训练方案获取有四种方式：
+            <br/>
+            方式1：进行盆底肌筛查/评估，定制专属方案。
+            <br/>
+            具体攻略详见
+            <span style='text-decoration:underline;color:#3333ff;' onclick='goMuscleSift()'>盆底肌筛查/评估</span>。
+        </p>
+        <div class="my-gallery" data-pswp-uid="1">
+            <figure>
+                <div class="img-dv" style='width:100%;'>
+                    <a href="./src/assets/img/lt01/trainWay_medical/p1.png" data-size="702x480">
+                        <img src="./src/assets/img/lt01/trainWay_medical/p1.png">
+                    </a>
+                </div>
+                <p></p>
+                <p>方式2：从麦澜德大设备接收方案</p>
+                <p>打开盆底生物刺激反馈仪软件APP，在首页点击并进入【获取方案】页面，点击【电脑推送方案】，搜索麦澜德大设备，接收传输的方案。</p>
+                <figcaption style="display:none;"></figcaption>
+            </figure>
+            <figure>
+                <div class="img-dv">
+                    <a href="./src/assets/img/lt01/trainWay_medical/p2.png" data-size="702x480">
+                        <img src="./src/assets/img/lt01/trainWay_medical/p2.png">
+                    </a>
+                </div>
+                <p></p>
+                <p>方式3：咨询训练顾问，获取方案</p>
+                <p>打开盆底生物刺激反馈仪软件APP，在首页点击并进入【获取方案】页面，点击【咨询训练顾问】，描述您的问题，盆底康复专家会为您推荐合适的方案。</p>
+                <figcaption style="display:none;"></figcaption>
+            </figure>
+            <figure>
+                <div class="img-dv">
+                    <a href="./src/assets/img/lt01/trainWay_medical/p3.png" data-size="702x480">
+                        <img src="./src/assets/img/lt01/trainWay_medical/p3.png">
+                    </a>
+                </div>
+                <p></p>
+                <p>方式4：咨询绑定的医生，获取方案。</p>
+                <p>打开盆底生物刺激反馈仪软件APP，在【我的】页面选择【我的医生】，向您绑定的医生描述您的问题，您的医生会为您推荐合适的方案。</p>
+                <figcaption style="display:none;"></figcaption>
+            </figure>
+            <figure>
+                <div class="img-dv">
+                    <a href="./src/assets/img/lt01/trainWay_medical/p4.png" data-size="702x480">
+                        <img src="./src/assets/img/lt01/trainWay_medical/p4.png">
+                    </a>
+                </div>
+                <p></p>
+                <p style='font-weight:bold;'> 温馨提示：</p>
+                <p>1）必须是麦澜德的设备，才可以传输方案到盆底生物刺激反馈仪软件APP上哦；</p>
+                <p>2）接收麦澜德大设备传输的方案，手机连接的网络必须跟大设备在同一个网络下，否则接收不到方案哦。</p>
+                <p>注：部分型号不支持方式3和方式4，具体根据您所购买的设备型号配置决定。</p>
+                <p>通过上述4种方式获取的方案，可在【方案训练】模块下查看。</p>
+                <figcaption style="display:none;"></figcaption>
+            </figure>
+            <figure>
+                <div class="img-dv">
+                    <a href="./src/assets/img/lt01/trainWay_medical/p5.png" data-size="702x482">
+                        <img src="./src/assets/img/lt01/trainWay_medical/p5.png">
+                    </a>
+                </div>
+                <p></p>
+                <figcaption style="display:none;"></figcaption>
+            </figure>
+        </div>
+    </div>
+    <script src="./src/third/jquery/photoswipe/photoswipe.js"></script>
+    <script src="./src/third/jquery/photoswipe/photoswipe-ui-default.js"></script>
+    <script type='text/javascript'>
+        CommonUtils.setHtmlTitle('训练方案获取方式：您需要知道的获取来源')
+        
+        /**
+            跳转--盆底肌筛查/评估
+            @param
+            @return
+        */
+        function goMuscleSift() {
+            CommonUtils.stopProp()
+            window.location.href = '/#/lt01/muscleSift_medical'
+        }
+    </script>
+</body>
+</html>

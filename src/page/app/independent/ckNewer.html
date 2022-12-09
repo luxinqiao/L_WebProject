@@ -1,0 +1,221 @@
+<!--
+    文件描述：独立软件-产康训练-新手必读（三代高端+三代低端）
+    创建人：卢信桥
+    创建时间：2021-03-23
+ -->
+<html>
+<head>
+    <title></title>
+    <style>
+        #main {
+            padding-bottom: 0.5rem;
+            background-color: #fff;
+        }
+        #banner>img {
+            width: 100%;
+        }
+        .desc {
+            padding: 0 0.12rem;
+            line-height: 0.24rem;
+            font-size: 0.14rem;
+        }
+        .desc>.red {
+            font-size: 0.14rem;
+            color: #ff2c79;
+        }
+        .img {
+            display: block;
+            margin: auto 0.12rem;
+        }
+        .img>.full {
+            display: block;
+            margin: auto;
+            width: auto; height: 100%;
+        }
+        .title {
+            position: relative;
+            margin-left: 0.12rem; padding-left: 0.08rem;
+        }
+        .title>.mark {
+            position: absolute;
+            top: 0.09rem; left: 0;
+            width: 0.05rem; height: 0.05rem;
+            background: url(/src/assets/img/wireless/circle.png) no-repeat center center;
+            background-size: 0.05rem 0.05rem;
+        }
+        .title>.text {
+            line-height: 0.24rem;
+            font-size: 0.14rem;
+        }
+        .bottom-item {
+            height: 0.29rem;
+            display: flex;
+            justify-content: center;
+        }
+        .bottom-item>span {
+            height: 0.29rem;
+            line-height: 0.29rem;
+            font-size: 0.13rem;
+        }
+        .bottom-item>img {
+            margin-left: 0.07rem;
+            width: 0.97rem; height: 0.29rem;
+        }
+        .bottom-item>a {
+            margin-left: 0.08rem;
+            height: 0.29rem;
+            line-height: 0.29rem;
+            font-size: 0.13rem;
+            color: #7694CF;
+        }
+        .mt2 {
+            margin-top: 0.02rem;
+        }
+        .mt8 {
+            margin-top: 0.08rem;
+        }
+        .mt10 {
+            margin-top: 0.1rem;
+        }
+        .mt12 {
+            margin-top: 0.12rem;
+        }
+        .mt20 {
+            margin-top: 0.2rem;
+        }
+        .mt24 {
+            margin-top: 0.24rem;
+        }
+        .mt30 {
+            margin-top: 0.3rem;
+        }
+    </style>
+</head>
+<body>
+    <div id='main'>
+        <div id='banner'></div>
+        
+        <div id='bottom' class='mt24'>
+            <p class='bottom-item'>
+                <span>如还有疑问请点击</span>
+                <img onclick='goAsk()' src='/src/assets/img/lt03/newer/bottom-contact.png'>
+            </p>
+            <p class='bottom-item mt12'>
+                <span>或拨打400电话咨询 </span>
+                <a href='tel:400-133-5668'>400-133-5668</a>
+            </p>
+        </div>
+    </div>
+
+    <script type='text/javascript'>
+        var from = Router.getParameter('from')
+        var previewImgs = []
+
+        $(function() {
+            $(window).scrollTop(sessionStorage.scrollTop)
+            sessionStorage.scrollTop = 0
+            CommonUtils.setHtmlTitle('新手必读')
+            CommonUtils.resetRem()
+            initPage()
+        })
+
+        function initPage() {
+            //banner
+            var bannerSrc = ''
+            if (from == 'lt03high') {
+                bannerSrc = '/src/assets/img/independent/ckNewer/banner-high.png'
+            } else if (from == 'lt03low') {
+                bannerSrc = '/src/assets/img/independent/ckNewer/banner-low.png'
+            }
+            var $bannerImg = $('<img>').prop('src', bannerSrc).click(function() {
+                lookImg(bannerSrc)
+            })
+            $('#banner').append($bannerImg)
+            previewImgs.push(bannerSrc)
+            //开机
+            var $step1 = $('<div class="step mt24"></div>')
+            addTitle($step1, '', '开机：长按主机的开关键4秒，指示灯为绿色，开机成功。')
+            addImg($step1, 'mt2', '1.38', '/src/assets/img/independent/ckNewer/step1.png')
+            $('#main').append($step1)
+            //蓝牙连接
+            var $step2 = $('<div class="step mt20"></div>')
+            addTitle($step2, '', '蓝牙连接：首次连接蓝牙时，点击【蓝牙标识】自动蓝牙搜索，选择蓝牙设备进行连接。')
+            addImg($step2, 'mt12', '1.66', '/src/assets/img/independent/ckNewer/step2.png')
+            $('#main').append($step2)
+            //获取方案
+            var $step3 = $('<div class="step mt12"></div>')
+            addTitle($step3, '', '获取方案：根据自身需要，从【方案库】中获取产康方案。')
+            addImg($step3, 'mt2', '1.66', '/src/assets/img/independent/ckNewer/step3.png')
+            $('#main').append($step3)
+            //电极片连接主机
+            var $step4 = $('<div class="step mt12"></div>')
+            addTitle($step4, '', '电极片连接主机：例如，请将电极片连接头插入澜渟设备主机如下图所示通道。')
+            if (from == 'lt03high') {
+                addImg($step4, 'mt8', '1.7', '/src/assets/img/independent/ckNewer/step4-high.png')
+            } else if (from == 'lt03low') {
+                addImg($step4, 'mt8', '1.7', '/src/assets/img/independent/ckNewer/step4-low.png')
+            }
+            $('#main').append($step4)
+            //贴附电极片
+            var $step5 = $('<div class="step mt20"></div>')
+            addTitle($step5, '', '贴附电极片：根据不同方案图示指导，将电极片贴附在需要训练的部位，确保电极片与训练部位紧密接触。')
+            addImg($step5, 'mt12', '1.7', '/src/assets/img/independent/ckNewer/step5.png')
+            $('#main').append($step5)
+            //进行训练
+            var $step6 = $('<div class="step mt20"></div>')
+            addTitle($step6, '', '进行训练：点击【开始第xx次训练】后，预设适当的电流强度，立即训练。')
+            addImg($step6, 'mt2', '1.66', '/src/assets/img/independent/ckNewer/step6.png')
+            $('#main').append($step6)
+            //训练结束
+            var $step7 = $('<div class="step mt12"></div>')
+            addTitle($step7, '', '训练结束：自动结束/手动结束，长按设备开关键3秒，指示灯不亮，关机成功。取下电极片，将电极片贴附到收纳膜上，以备下次使用。')
+            if (from == 'lt03high') {
+                addImg($step7, 'mt10', '1.38', '/src/assets/img/independent/ckNewer/step7-high.png')
+            } else if (from == 'lt03low') {
+                addImg($step7, 'mt10', '1.38', '/src/assets/img/independent/ckNewer/step7-low.png')
+            }
+            $('#main').append($step7)
+            //结尾
+            var $step8 = $('<div class="step mt12"></div>')
+            addDesc($step8, 'mt30', '使用澜渟您可以体验到最科学的锻炼方法，为了防止肌肉疲劳，我们建议您同一部位的每天训练次数不宜超过<span class="red">2次</span>，同一部位单次连续训练时长不宜超过<span class="red">1小时</span>，请勿过量训练。')
+            $('#main').append($step8)
+            //训练顾问/拨打电话
+            $('#main').append($('#bottom'))
+        }
+
+        //添加标题
+        function addTitle($dom, topClass, title) {
+            $dom.append('<div class="title '+topClass+'"><span class="mark"></span><span class="text">'+title+'</span></div>')
+        }
+        //添加描述
+        function addDesc($dom, topClass, desc) {
+            $dom.append('<div class="desc '+topClass+'">'+desc+'</div>')
+        }
+        //添加图片
+        function addImg($dom, topClass, height, img) {
+            var $imgDiv = $('<div class="img '+topClass+'" style="height: '+height+'rem;"></div>')
+            var $img = $('<img class="full">').prop('src', img).click(function() {
+                lookImg(img)
+            })
+            $imgDiv.append($img)
+            $dom.append($imgDiv)
+            previewImgs.push(img)
+        }
+
+        //页面跳转-训练顾问
+        function goAsk() {
+            CommonUtils.appFun(function() {
+                window.jsInterface.jumpToCustomer(JSON.stringify({type:'CSP0004'}))
+            }, function() {
+                window.webkit.messageHandlers.jumpToCustomer.postMessage({type:'CSP0004'})
+            })
+        }
+
+        //查看图片
+        function lookImg(src) {
+            sessionStorage.scrollTop = $(window).scrollTop()
+            CommonUtils.lookImg(src, previewImgs)
+        }
+    </script>
+</body>
+</html>

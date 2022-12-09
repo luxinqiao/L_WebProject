@@ -1,0 +1,110 @@
+<html>
+<head>
+    <title>训练方案获取渠道</title>
+    <link rel="stylesheet prefetch" href="./src/third/jquery/photoswipe/photoswipe.css">
+    <link rel="stylesheet prefetch" href="./src/third/jquery/photoswipe/default-skin.css">
+    <style>
+        .subtitle {
+            text-align: center;
+            color: #ef5e8f !important;
+            font-weight: bold;
+        }
+        .link {
+            text-decoration: underline;
+            color: #f00866;
+        }
+    </style>
+</head>
+<body>
+    <div class='content'>
+        <h2>训练方案获取渠道</h2>
+        <p class='subHead' style="color:#999999;">您需要知道的获取来源</p>
+        <p style='margin-top:20px;'>训练方案获取有四种渠道：</p>
+        <div class='img_des' style='margin-top:20px;padding-bottom: 10px;'>
+            <div class="roundNum">1</div>
+            <p>渠道一</p>
+        </div>
+        <p class='subtitle' style='margin-bottom:20px;'>进行盆底肌筛查，咨询方案顾问获取方案</p>
+        <p>打开澜渟APP，从澜渟页面，选择【家用盆底康复仪】，进入，选择【盆底筛查】，筛查结束后，咨询方案顾问，获取定制方案，具体攻略详见
+            <span class='link' onclick='jumpSearchUnify();'>盆底肌筛查一体化</span>
+        </p>
+        <div class="my-gallery" data-pswp-uid="1" style='margin-bottom:30px;'>
+            <figure>
+                <div class="img-dv" style='width:50%;margin:auto;'>
+                    <a href="./src/assets/img/newGuidance/trainGet/p1@3x.png" data-size="531x1043">
+                        <img src="./src/assets/img/newGuidance/trainGet/p1.png">
+                    </a>
+                </div>
+                <figcaption style="display:none;"></figcaption>
+                <div class='img_des' style='margin-top:20px;padding-bottom: 10px;'>
+                    <div class="roundNum">2</div>
+                    <p>渠道二</p>
+                </div>
+                <p class='subtitle' style='margin-bottom:20px;'>咨询方案顾问，获取方案</p>
+                <p>打开澜渟APP，从澜渟页面，选择【家用盆底康复仪】，进入，选择【方案顾问】，描述您的症状，顾问会根据症状，建议使用的方案。</p>
+            </figure>
+            <figure>
+                <div class="img-dv" style='width:50%;margin:auto;'>
+                    <a href="./src/assets/img/newGuidance/trainGet/p2@3x.png" data-size="531x1005">
+                        <img src="./src/assets/img/newGuidance/trainGet/p2.png">
+                    </a>
+                </div>
+                <figcaption style="display:none;"></figcaption>
+                <div class='img_des' style='margin-top:20px;padding-bottom: 10px;'>
+                    <div class="roundNum">3</div>
+                    <p>渠道三</p>
+                </div>
+                <p class='subtitle' style='margin-bottom:20px;'>咨询绑定关系的医生，由我的医生推送方案</p>
+                <p>打开澜渟APP，从发现页面，选择【我的医生】，进入，描述您的症状，医生会根据症状，建议使用的方案。</p>
+
+                <div class='img_des' style='margin-top:20px;padding-bottom: 10px;'>
+                    <div class="roundNum">4</div>
+                    <p>渠道四</p>
+                </div>
+                <p class='subtitle' style='margin-bottom:20px;'>从医院设备获取方案</p>
+                <p>打开澜渟APP，从澜渟页面，选择【家用盆底训练仪】，进入，找到【方案获取】，点击，搜索医院设备，接收医院设备传输的方案。</p>
+            </figure>
+            <figure>
+                <div class="img-dv" style='width:50%;margin:auto;'>
+                    <a href="./src/assets/img/newGuidance/trainGet/p3@3x.png" data-size="549x977">
+                        <img src="./src/assets/img/newGuidance/trainGet/p3.png">
+                    </a>
+                </div>
+                <figcaption style="display:none;"></figcaption>
+                <p>温馨提示：</p>
+                <p>1）医院的设备必须是麦澜德的设备，才可以传输方案到澜渟APP上哦；</p>
+                <p>2）接收医院大设备传输的方案，首先手机连接的网络必须跟大设备在同一个网络下，否则，接收不到方案哦；</p>
+                <p style='margin-top:20px;'>通过上述四种渠道可以获取方案，那在哪可以查看到已接收的方案呢？</p>
+                <p style='margin-top:20px;'>打开澜渟APP，从澜渟页面，选择【家用盆底训练仪】，进入。可以看到训练方案，所有的训练方案都在此可以查看到。</p>
+            </figure>
+            <figure>
+                <div class="img-dv" style='width:50%;margin:auto;'>
+                    <a href="./src/assets/img/newGuidance/trainGet/p4@3x.png" data-size="527x995">
+                        <img src="./src/assets/img/newGuidance/trainGet/p4.png">
+                    </a>
+                </div>
+                <figcaption style="display:none;"></figcaption>
+            </figure>
+        </div>
+    </div>
+    <script src="./src/third/jquery/photoswipe/photoswipe.js"></script>
+    <script src="./src/third/jquery/photoswipe/photoswipe-ui-default.js"></script>
+    <script type='text/javascript'>
+        CommonUtils.setHtmlTitle('训练方案获取渠道');
+        /**
+            跳转--盆底肌筛查一体化
+            @param
+            @return
+        */
+        function jumpSearchUnify() {
+            CommonUtils.stopProp();
+            var url = window.location.origin+'/#/newGuidance/searchUnify';
+            CommonUtils.appFun(function() {
+                window.jsInterface.jumpPage_guidance(url);
+            }, function() {
+                window.webkit.messageHandlers.jumpPage_guidance.postMessage(url);
+            });
+        }
+    </script>
+</body>
+</html>

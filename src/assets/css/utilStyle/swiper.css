@@ -1,0 +1,57 @@
+.mdSwiper {
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+.mdSwiper>.swiper-item {
+    position: absolute;
+    top: 0; left: -200%;
+    width: 3.2rem; height: 100%;
+    -webkit-user-drag: none;
+}
+.mdSwiper>.swiper-item.prev2 {
+    left: -6.64rem;
+}
+.mdSwiper>.swiper-item.prev {
+    left: -3.32rem;
+}
+.mdSwiper>.swiper-item.curr {
+    left: 0;
+}
+.mdSwiper>.swiper-item.next {
+    left: 3.32rem;
+}
+.mdSwiper>.swiper-item.next2 {
+    left: 6.64rem;
+}
+
+.mdSwiper>.swiper-index {
+    position: absolute; z-index: 1;
+    bottom: 0.06rem; left: 0; right: 0;
+    margin: auto;
+    height: 0.06rem;
+}
+.mdSwiper>.swiper-index>span {
+    float: left;
+    position: relative;
+    margin-left: 0.06rem;
+    width: 0.06rem; height: 0.06rem;
+    border-radius: 0.06rem;
+    background: #ff2c79;
+    opacity: 0.2;
+}
+.mdSwiper>.swiper-index>span.active {
+    opacity: 1;
+}
+.mdSwiper>.swiper-index>span:nth-child(1) {
+    margin-left: 0;
+}
+
+.mdSwiper>.swiper-tip {
+    position: absolute; z-index: 2;
+    top: 0; bottom: 0; left: 0; right: 0;
+    display: flex;
+    align-items: center; justify-content: center;
+    background-color: rgba(0, 0, 0, 0.45); color: #fff;
+}
